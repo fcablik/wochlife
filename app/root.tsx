@@ -17,6 +17,7 @@ import {
 	useLoaderData,
 } from '@remix-run/react'
 import { withSentry } from '@sentry/remix'
+import { useState } from 'react'
 import { AuthenticityTokenProvider } from 'remix-utils/csrf/react'
 import { HoneypotProvider } from 'remix-utils/honeypot/react'
 import { z } from 'zod'
@@ -26,6 +27,7 @@ import { GeneralErrorBoundary } from './components/error-boundary.tsx'
 import { EpicProgress } from './components/progress-bar.tsx'
 import { useTheme } from './components/theme-switch.tsx'
 import { WochToaster } from './components/toaster.tsx'
+import { Button } from './components/ui/button.tsx'
 import { href as iconsHref } from './components/ui/icon.tsx'
 import customComponentsStylesheetUrl from './styles/customComponents.css'
 import fontStyleSheetUrl from './styles/font.css'
@@ -37,7 +39,7 @@ import { csrf } from './utils/csrf.server.ts'
 import { prisma } from './utils/db.server.ts'
 import { getEnv } from './utils/env.server.ts'
 import { honeypot } from './utils/honeypot.server.ts'
-import { combineHeaders, getDomainUrl } from './utils/misc.tsx'
+import { cn, combineHeaders, getDomainUrl } from './utils/misc.tsx'
 import { useNonce } from './utils/nonce-provider.ts'
 import { type Theme, setTheme, getTheme } from './utils/theme.server.ts'
 import { makeTimings, time } from './utils/timing.server.ts'
@@ -200,7 +202,7 @@ function Document({
 				<meta name="viewport" content="width=device-width,initial-scale=1" />
 				<Links />
 			</head>
-			<body className='max-2xl:text-body-base'>
+			<body className="max-4xl:text-body-base">
 				{children}
 				<script
 					nonce={nonce}
@@ -221,12 +223,45 @@ function App() {
 	const nonce = useNonce()
 	const theme = useTheme()
 
-	return (	
+	const [isToggled, setToggled] = useState(false)
+
+	const handleToggle = () => {
+		setToggled(prev => !prev)
+	}
+
+	return (
 		<Document nonce={nonce} theme={theme} env={data.ENV}>
-			<div className="min-h-screen bg-cover bg-center custom-hp-bg-main">
-				<Outlet />
+			<div className="flex flex-col justify-center custom-hp-bg-main min-h-screen bg-cover bg-center">
+				{isToggled && (
+					<div
+						className="z-9999 fixed left-0 top-0 h-full w-full"
+						onClick={handleToggle}
+					/>
+				)}
+				<div
+					className={cn('transition-opacity', isToggled ? 'opacity-10' : '')}
+				>
+					<Outlet />
+					<div className="h-28 md:h-36" />
+					<Menu />
+				</div>
+
+				<div className="max-lg-to-xl:hidden fixed bottom-2 right-2 text-right">
+					<Button
+						size="xs"
+						onClick={handleToggle}
+						type="button"
+						className="text-xs opacity-50 hover:opacity-80"
+						variant="highlight"
+					>
+						see room
+					</Button>
+
+					<div className="mt-1 text-[.55rem] opacity-30">
+						Welcome to my small cozy coding room:)
+					</div>
+				</div>
 			</div>
-			<Menu />
 
 			<Confetti id={data.confettiId} />
 			<WochToaster toast={data.toast} />

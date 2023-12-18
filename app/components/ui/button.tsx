@@ -5,7 +5,7 @@ import * as React from 'react'
 import { cn } from '#app/utils/misc.tsx'
 
 const buttonVariants = cva(
-	'inline-flex items-center justify-center rounded-md text-sm font-medium bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:bg-background disabled:pointer-events-none disabled:opacity-50 transition duration-250',
+	'inline-flex items-center justify-center rounded-2xl text-sm font-medium bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:bg-background disabled:pointer-events-none disabled:opacity-50 transition duration-250',
 	{
 		variants: {
 			variant: {
@@ -16,28 +16,31 @@ const buttonVariants = cva(
 					'bg-destructive/80 text-destructive-foreground hover:bg-destructive',
 				outline:
 					'border border-input hover:bg-backgroundDashboard hover:text-highlight',
-				primary: 'rounded-lg bg-backgroundDashboard border-2 hover:border-highlight',
+				primary: 'bg-backgroundDashboard border-2 hover:border-highlight',
 				secondary:
 					'bg-secondary text-secondary-foreground hover:bg-highlight hover:text-highlight-foreground',
 				ghost: 'hover:bg-accent hover:text-accent-foreground',
 				link: 'text-primary underline-offset-4 hover:underline',
-				
+
 				// highlight w/o Hover
-				highlight: 'rounded-lg shadow-highlight bg-highlight text-highlight-foreground',
-				
+				highlight: 'shadow-highlight bg-highlight text-highlight-foreground',
+
 				// highlight w/ Hover
-				'highlight-secondary': 'font-500 rounded-lg shadow-highlight bg-highlight text-highlight-foreground hover:text-highlight hover:bg-highlight/20 border-2 border-highlight',
-				
+				'highlight-secondary':
+					'font-500 shadow-highlight bg-highlight text-highlight-foreground hover:text-highlight hover:bg-highlight/20 border-2 border-highlight',
+
 				disabled: 'border border-input bg-background cursor-auto opacity-60',
-				activedashboardSidebar: 'rounded-lg shadow-lg shadow-highlight bg-highlight text-highlight-foreground',
-				dashboardSidebar: 'rounded-lg bg-transparent ',
+				activedashboardSidebar:
+					'shadow-lg shadow-highlight bg-highlight text-highlight-foreground',
+				dashboardSidebar: 'bg-transparent ',
 			},
 			size: {
 				default: 'h-10 px-4 py-2',
 				wide: 'px-24 py-5',
-				sm: 'h-9 rounded-md px-3',
-				lg: 'h-11 rounded-md px-8',
-				xl: 'h-12 rounded-md px-6 py-2',
+				xs: 'h-6 px-4',
+				sm: 'h-9 px-3',
+				lg: 'h-11 px-8',
+				xl: 'h-12 px-6 py-2',
 				pill: 'px-12 py-3 leading-3',
 				icon: 'h-10 w-10',
 				dashboardSidebar: 'pl-3 pr-6 py-3 text-lg',

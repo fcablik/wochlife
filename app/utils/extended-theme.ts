@@ -79,9 +79,12 @@ export const extendedTheme = {
 	},
 	boxShadow: {
 		'admin-detail-box': '0px 0px 15px rgba(0, 0, 0, .15)',
-		'menu': '0px -10px 15px rgba(0, 0, 0, .1)',
+		menu: '0px -10px 15px rgba(0, 0, 0, .1)',
 		'menu-container': '5px 0px 15px rgba(0, 0, 0, .1)',
 		'page-container': '0px 10px 10px rgba(0, 0, 0, .1)',
+	},
+	width: {
+		container: '32rem',
 	},
 	minWidth: {
 		'1/2': '50%',
@@ -92,10 +95,13 @@ export const extendedTheme = {
 		'1/2': '50%',
 		'1/3': '33.33%',
 		'2/3': '66.66%',
-		'2/5': "40%",
-		'3/5': "60%",
+		'2/5': '40%',
+		'3/5': '60%',
 	},
 	borderRadius: {
+		'5xl': 'calc(var(--radius) * 5)',
+		'4xl': 'calc(var(--radius) * 4.5)',
+		'3xl': 'calc(var(--radius) * 4)',
 		'2xl': 'calc(var(--radius) * 3)',
 		xl: 'calc(var(--radius) * 2)',
 		lg: 'var(--radius)',
@@ -158,6 +164,8 @@ export const extendedTheme = {
 		'accordion-up': 'accordion-up 0.2s ease-out',
 	},
 	zIndex: {
+		'1': '1',
+		'2': '2',
 		'9': '9',
 		'10': '10',
 		'49': '49',
@@ -171,12 +179,15 @@ export const extendedTheme = {
 		'2001': '2001',
 		'3000': '3000',
 		'3001': '3001',
+		'9999': '9999',
 	},
 	backgroundImage: {
-		'main-gradient-dark':
-			'repeating-linear-gradient(to top, #0D0D0D, #262E30 50%, #0D0D0D 100%)',
-		'main-gradient-light':
-			'repeating-linear-gradient(to top, #EFF3F4, #DEE6E8 50%, #EFF3F4 100%)',
+		'dark-box-gradient':
+			'linear-gradient(to bottom right, rgba(27, 27, 27, 0.8) 0%, rgba(16, 16, 16, 0.8) 50%, rgba(16, 16, 16, .9) 100%)',
+		'menu-box-gradient':
+			'linear-gradient(to bottom right, rgba(24, 24, 24, .86) 0%, rgba(18, 18, 18, .86) 50%, rgba(16, 16, 16, .9) 100%)',
+		'purple-box-gradient':
+			'linear-gradient(to bottom right, rgba(106, 95, 243, .7) 0%, rgba(117, 99, 247, .7) 50%, rgba(130, 96, 245, .7) 100%)',
 	},
 	padding: {
 		'18': '4.5rem',

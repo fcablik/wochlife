@@ -42,7 +42,7 @@ export function ErrorBoundary() {
 
 							<p className='mt-8'>
 								<Button asChild variant="secondary">
-									<Link to="/" className='inline-flex items-center justify-center rounded-md text-sm font-medium transition-colorsh-10 px-4 py-2 gap-2'>
+									<Link to="/" className='inline-flex items-center justify-center transition-colors h-10 px-4 py-2 gap-2'>
 										<Icon name="arrow-left">Back Home</Icon>
 									</Link>
 								</Button>

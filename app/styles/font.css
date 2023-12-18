@@ -1,185 +1,65 @@
-/* nunito-sans-200 - latin_latin-ext */
+/*
+*src/routes
+	public/fonts/source-code-pro/static/SourceCodePro-Black.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-BlackItalic.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-Bold.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-BoldItalic.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-ExtraBold.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-ExtraBoldItalic.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-ExtraLight.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-ExtraLightItalic.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-Italic.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-Light.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-LightItalic.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-Medium.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-MediumItalic.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-Regular.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-SemiBold.ttf 
+	public/fonts/source-code-pro/static/SourceCodePro-SemiBoldItalic.ttf
+*/
+
+/* Source Code Pro - ExtraLight */
 @font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: normal;
-	font-weight: 200;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-200.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-200.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 200;
+    src: url('/fonts/source-code-pro/static/SourceCodePro-ExtraLight.ttf') format('truetype');
 }
-/* nunito-sans-200italic - latin_latin-ext */
+
+/* Source Code Pro - Regular */
 @font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: italic;
-	font-weight: 200;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-200italic.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-200italic.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/source-code-pro/static/SourceCodePro-Regular.ttf') format('truetype');
 }
-/* nunito-sans-300 - latin_latin-ext */
+
+/* Source Code Pro - Medium */
 @font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: normal;
-	font-weight: 300;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-300.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-300.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/source-code-pro/static/SourceCodePro-Medium.ttf') format('truetype');
 }
-/* nunito-sans-300italic - latin_latin-ext */
+
+/* Example for Source Code Pro - SemiBold */
 @font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: italic;
-	font-weight: 300;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-300italic.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-300italic.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/source-code-pro/static/SourceCodePro-SemiBold.ttf') format('truetype');
 }
-/* nunito-sans-regular - latin_latin-ext */
+
+/* Example for Source Code Pro - Bold */
 @font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: normal;
-	font-weight: 400;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-regular.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-regular.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/source-code-pro/static/SourceCodePro-Bold.ttf') format('truetype');
 }
-/* nunito-sans-italic - latin_latin-ext */
-@font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: italic;
-	font-weight: 400;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-italic.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-italic.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* nunito-sans-600 - latin_latin-ext */
-@font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: normal;
-	font-weight: 600;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-600.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-600.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* nunito-sans-600italic - latin_latin-ext */
-@font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: italic;
-	font-weight: 600;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-600italic.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-600italic.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* nunito-sans-700 - latin_latin-ext */
-@font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: normal;
-	font-weight: 700;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-700.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-700.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* nunito-sans-700italic - latin_latin-ext */
-@font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: italic;
-	font-weight: 700;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-700italic.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-700italic.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* nunito-sans-800 - latin_latin-ext */
-@font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: normal;
-	font-weight: 800;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-800.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-800.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* nunito-sans-800italic - latin_latin-ext */
-@font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: italic;
-	font-weight: 800;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-800italic.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-800italic.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* nunito-sans-900 - latin_latin-ext */
-@font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: normal;
-	font-weight: 900;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-900.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-900.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* nunito-sans-900italic - latin_latin-ext */
-@font-face {
-	font-display: swap;
-	font-family: 'Nunito Sans';
-	font-style: italic;
-	font-weight: 900;
-	src:
-		url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-900italic.woff2')
-			format('woff2'),
-		/* Chrome 36+, Opera 23+, Firefox 39+ */
-			url('/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-900italic.woff')
-			format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+
+
+
 /* Font metric overrides reduces CLS from font-swap.
 This is manually inserted, metric generated using CLI commands:
 npx fontpie ./public/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-200.woff2 -weight 200 -style normal 
@@ -187,7 +67,7 @@ npx fontpie ./public/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-300italic
 etc...
 */
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: normal;
 	font-weight: 200;
 	src: local('Arial');
@@ -197,7 +77,7 @@ etc...
 	size-adjust: 98.13%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: italic;
 	font-weight: 200;
 	src: local('Arial Italic');
@@ -207,7 +87,7 @@ etc...
 	size-adjust: 98.13%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: normal;
 	font-weight: 300;
 	src: local('Arial');
@@ -217,7 +97,7 @@ etc...
 	size-adjust: 99.82%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: italic;
 	font-weight: 300;
 	src: local('Arial Italic');
@@ -227,7 +107,7 @@ etc...
 	size-adjust: 99.84%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: normal;
 	font-weight: 400;
 	src: local('Arial');
@@ -237,7 +117,7 @@ etc...
 	size-adjust: 101.62%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: italic;
 	font-weight: 400;
 	src: local('Arial Italic');
@@ -247,7 +127,7 @@ etc...
 	size-adjust: 101.62%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: normal;
 	font-weight: 600;
 	src: local('Arial Bold');
@@ -257,7 +137,7 @@ etc...
 	size-adjust: 95.57%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: italic;
 	font-weight: 600;
 	src: local('Arial Bold Italic');
@@ -267,7 +147,7 @@ etc...
 	size-adjust: 95.57%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: normal;
 	font-weight: 700;
 	src: local('Arial Bold');
@@ -277,7 +157,7 @@ etc...
 	size-adjust: 97.56%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: italic;
 	font-weight: 700;
 	src: local('Arial Bold Italic');
@@ -287,7 +167,7 @@ etc...
 	size-adjust: 97.56%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: normal;
 	font-weight: 800;
 	src: local('Arial Bold');
@@ -297,7 +177,7 @@ etc...
 	size-adjust: 99.75%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: italic;
 	font-weight: 800;
 	src: local('Arial Bold Italic');
@@ -307,7 +187,7 @@ etc...
 	size-adjust: 99.75%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: normal;
 	font-weight: 900;
 	src: local('Arial Bold');
@@ -317,7 +197,7 @@ etc...
 	size-adjust: 102.02%;
 }
 @font-face {
-	font-family: 'Nunito Sans Fallback';
+	font-family: 'Source Code Pro Fallback';
 	font-style: italic;
 	font-weight: 900;
 	src: local('Arial Bold Italic');
@@ -326,3 +206,4 @@ etc...
 	line-gap-override: 0%;
 	size-adjust: 102.02%;
 }
+

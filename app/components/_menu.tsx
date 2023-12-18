@@ -5,19 +5,28 @@ import { Icon } from './ui/icon.tsx'
 
 export function Menu() {
 	function menuItemClassList(isActive: boolean): string {
-		return 'transition-opacity ' + (isActive
-			? 'flex flex-col items-center text-highlight after:absolute after:bottom-0 after:w-12 after:rounded-lg after:border-2 after:border-highlight'
-			: 'flex flex-col items-center opacity-50 hover:text-highlight')
+		return (
+			'transition-opacity ' +
+			(isActive
+				? 'flex flex-col items-center text-highlight md:after:absolute md:after:bottom-0 md:after:w-12 md:after:rounded-3xl md:after:border-2 md:after:border-highlight'
+				: 'flex flex-col items-center opacity-50 hover:text-highlight')
+		)
 	}
-const menuItemTextClassList = "capitalize mt-2"
+	const menuItemTextClassList = 'capitalize mt-1 md:mt-2 font-light'
 
-const menuSidesClassList = "flex items-center justify-evenly md:gap-5 py-3 md:px-6"
+	const menuSidesClassList =
+		'flex items-center justify-evenly md:gap-5 py-2 md:py-5 md:px-6'
 
 	return (
-		<div className="fixed bottom-3 max-md:text-xs md:text-sm w-full md:bottom-12">
+		<div className="fixed custom-bottom-alignment w-full max-md:text-xs md:text-sm">
 			<div className="mx-2">
-				<div className="mx-auto shadow-menu flex max-w-[900px] max-h-[95px] justify-center rounded-xl bg-black/40">
-					<nav className={cn(menuSidesClassList, "shadow-menu-container md:w-3/5 max-md:w-full rounded-xl bg-background-bases")}>
+				<div className="bg-menu-box-gradient mx-auto flex max-h-[95px] max-w-[900px] justify-center rounded-xl shadow-menu md:rounded-2xl">
+					<nav
+						className={cn(
+							menuSidesClassList,
+							'rounded-xl bg-background-bases shadow-menu-container max-md:w-full md:w-3/5 md:rounded-2xl',
+						)}
+					>
 						<NavLink to="/">
 							{({ isActive }) => (
 								<div className={menuItemClassList(isActive)}>
@@ -64,7 +73,7 @@ const menuSidesClassList = "flex items-center justify-evenly md:gap-5 py-3 md:px
 						</NavLink>
 					</nav>
 
-					<div className={cn(menuSidesClassList, "md:w-2/5 max-md:hidden")}>
+					<div className={cn(menuSidesClassList, 'max-md:hidden md:w-2/5')}>
 						<div>socials | links</div>
 
 						<ThemeSwitcher />

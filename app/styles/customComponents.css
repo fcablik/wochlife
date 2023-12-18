@@ -2,24 +2,89 @@
 
 /* custom main BG  */
 .custom-hp-bg-main {
-	background-image: url(/img/main-bg/main-bg.webp);
-	background-attachment: fixed;
+	background-image: url(/img/main-bg/group-1900-2.webp);
+	background-attachment: fixed; /* doesn't work on phones */
 }
 
-@media (max-height: 749px){
-	.custom-hp-bg-main {
-		@apply pt-12;
+@media (max-width: 1499px) {
+	@media (max-height: 749px){
+		.custom-hp-bg-main {
+			@apply pt-8 pb-10;
+		}
+	}
+	@media (min-height: 750px){
+		.custom-hp-bg-main {
+			@apply pt-10 pb-12;
+		}
+	}
+	@media (min-height: 950px){
+		.custom-hp-bg-main {
+			@apply pt-20 pb-14;
+		}
 	}
 }
 
-@media (min-height: 750px){
-	.custom-hp-bg-main {
-		@apply pt-24;
+@media (min-width: 1500px) {
+	@media (max-height: 749px){
+		.custom-hp-bg-main {
+			@apply py-10;
+		}
+	}
+	@media (min-height: 750px){
+		.custom-hp-bg-main {
+			@apply py-12;
+		}
+	}
+	@media (min-height: 950px){
+		.custom-hp-bg-main {
+			@apply py-36;
+		}
 	}
 }
-@media (min-height: 950px){
-	.custom-hp-bg-main {
-		@apply pt-36;
+
+
+@media (min-width: 768px) {
+	@media (max-height: 749px){
+		.custom-bottom-alignment {
+			@apply bottom-8;
+		}
+	}
+	@media (min-height: 750px){
+		.custom-bottom-alignment {
+			@apply bottom-12;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.custom-bottom-alignment {
+		@apply bottom-2;
+	}
+}
+
+
+
+@media (max-height: 799px){
+	.custom-max-heights {
+		@apply max-h-[540px];
+	}
+
+	.custom-max-margin-welcome-box {
+		margin-top: 3.5rem;
+	}
+	.custom-max-margin-projects {
+		@apply mt-10;
+	}
+}
+@media (min-height: 800px){
+	.custom-max-heights {
+		@apply max-h-[564px];
+	}
+	.custom-max-margin-projects{
+		margin-top: 3.8rem;
+	}
+	.custom-max-margin-welcome-box {
+		@apply mt-20;
 	}
 }
 
