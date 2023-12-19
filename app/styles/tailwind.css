@@ -8,102 +8,107 @@
 		/* --font-mono: here if you got it... */
 
 		/* prefixed with foreground because it should look good on the background */
-		--foreground-destructive: hsl(-4, 84%, 60%);
+		--foreground-destructive: -4 84% 60%;
 
-		--background: #fff; /* main text */
-		--background-bases: #fff; /* !headers/footers/sidebars/menus ' bg... */
-		--foreground: #000; /* main bg */
+		--background: 0 0% 100%; /* main text */
+		--background-bases: 0 0% 100%; /* !headers/footers/sidebars/menus ' bg... */
+		--foreground: 0 0% 0%; /* main bg */
 
-		--bg-component: #FFF;
-		--bg-component-light: #E8EEEF;
-		--fg-component: #353535;
-		--bg-gradient-start: #EFF3F4;
-		--bg-gradient-end: #DEE6E8;
+		--bg-component: 0 0% 100%;
+		--bg-component-light: 189 18% 92%;
+		--fg-component: 0 0% 21%;
+		--bg-gradient-start: 192 19% 95%;
+		--bg-gradient-end: 192 18% 89%;
 
-		--background-dashboard: #fff;
-		--foreground-dashboard: #000;
+		--background-dashboard: 0 0% 100%;
+		--foreground-dashboard: 0 0% 0%;
 
-		--muted: hsl(210, 40%, 93%);
-		--muted-foreground: hsl(215.4, 16.3%, 30%);
+		--muted: 210 40% 93%;
+		--muted-foreground: 215.4 16.3% 30%;
 
-		--popover: hsl(0, 0%, 100%);
-		--popover-foreground: hsl(222.2, 84%, 4.9%);
+		--popover: 0 0% 100%;
+		--popover-foreground: 222.2 84% 4.9%;
 
-		--card: hsl(0, 0%, 100%);
-		--card-foreground: hsl(222.2, 84%, 4.9%);
+		--card: 0 0% 100%;
+		--card-foreground: 222.2 84% 4.9%;
 
-		--border: hsl(214.3, 31.8%, 91.4%);
-		--input: hsl(214.3, 31.8%, 91.4%);
-		--input-invalid: hsl(0, 84.2%, 6.2%);
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
+		--input-invalid: 0 84.2% 6.2%;
 
-		--primary: hsl(222.2, 47.4%, 11.2%);
-		--primary-foreground: hsl(210, 40%, 98%);
+		--primary: 222.2 47.4% 11.2%;
+		--primary-foreground: 210 40% 98%;
 
-		--secondary: hsl(210, 20%, 83%);
-		--secondary-foreground: hsl(222.2, 47.4%, 11.2%);
+		--secondary: 210 20% 83%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
 
-		--highlight: #7B5BE0;
-		--highlight-foreground: #fff;
+		--highlight: 254 68% 62%;
+		--highlight-foreground: 0 0% 100%;
+		--highlight-dark: 252 44% 34%;
 
-		--highlight-light: hsl(50, 66%, 36%);
-		--highlight-light-foreground: hsl(219, 62%, 49%);
+		--highlight-light: 50 66% 36%;
+		--highlight-light-foreground: 219 62% 49%;
 
-		--accent: hsl(210, 40%, 90%);
-		--accent-foreground: hsl(222.2, 47.4%, 11.2%);
+		--accent: 210 40% 90%;
+		--accent-foreground: 222.2 47.4% 11.2%;
 
-		--destructive: hsl(0, 70%, 50%);
-		--destructive-foreground: hsl(210, 40%, 98%);
+		--destructive: 0 70% 50%;
+		--destructive-foreground: 210 40% 98%;
 
-		--ring: hsl(215, 2.2%, 65.1%);
+		--ring: 215.4 2.2% 65.1%;
 
 		--radius: 0.5rem;
 	}
 
 	.dark {
-		--background: #000; /* main bg */
-		--background-bases: #101111; /* !headers/footers/sidebars/menus ' bg... */
-		--foreground: #fff; /* main text */
+		/* main bg */
+		--background: 0 0% 0%;
 
+		/* !headers/footers/sidebars/menus ' bg... */
+		--background-bases: 180 3% 6%;
+
+		/* main text */
+		--foreground: 0 0% 100%;
 
 		/* main blocks & components */
-		--bg-component: #161414;
-		--bg-component-light: #353535;
-		--fg-component: #FFFFFF;
-		--bg-gradient-start: #0D0D0D;
-		--bg-gradient-end: #262E30;
+		--bg-component: 0 5% 8%;
+		--bg-component-light: 0 0% 21%;
+		--fg-component: 0 0% 100%;
+		--bg-gradient-start: 0 0% 5%;
+		--bg-gradient-end: 192 12% 17%;
 
-		--background-dashboard: #000;
-		--foreground-dashboard: #fff;
+		--background-dashboard: 0 0% 0%;
+		--foreground-dashboard: 0 0% 100%;
 
-		--foreground-destructive: hsl(-4, 84%, 60%);
+		--foreground-destructive: -4 84% 60%;
 
 		/* others */
-		--muted: hsl(217.2, 32.6%, 12%);
-		--muted-foreground: hsl(215, 2.2%, 65.1%);
+		--muted: 217.2 32.6% 12%;
+		--muted-foreground: 215 2.2% 65.1%;
 
-		--popover: hsl(222.2, 84%, 4.9%);
-		--popover-foreground: hsl(210, 40%, 98%);
+		--popover: 222.2 84% 4.9%;
+		--popover-foreground: 210 40% 98%;
 
-		--card: hsl(222.2, 84%, 4.9%);
-		--card-foreground: hsl(210, 40%, 98%);
+		--card: 222.2 84% 4.9%;
+		--card-foreground: 210 40% 98%;
 
-		--border: hsl(217.2, 32.6%, 17.5%);
-		--input: hsl(217.2, 32.6%, 17.5%);
-		--input-invalid: hsl(0, 62.8%, 3.6%);
+		--border: 217.2 32.6% 17.5%;
+		--input: 217.2 32.6% 17.5%;
+		--input-invalid: 0 62.8% 3.6%;
 
-		--primary: hsl(210, 40%, 98%);
-		--primary-foreground: hsl(222.2, 47.4%, 11.2%);
+		--primary: 210 40% 98%;
+		--primary-foreground: 222.2 47.4% 11.2%;
 
-		--secondary: hsl(217.2, 20%, 24%);
-		--secondary-foreground: hsl(210, 40%, 98%);
+		--secondary: 217.2 20% 24%;
+		--secondary-foreground: 210 40% 98%;
 
-		--accent: hsl(217.2, 32.6%, 10%);
-		--accent-foreground: hsl(210, 40%, 98%);
+		--accent: 217.2 32.6% 10%;
+		--accent-foreground: 210 40% 98%;
 
-		--destructive: hsl(0, 60%, 40%);
-		--destructive-foreground: hsl(0, 85.7%, 97.3%);
+		--destructive: 0 60% 40%;
+		--destructive-foreground: 0 85.7% 97.3%;
 
-		--ring: hsl(217.2, 32.6%, 60%);
+		--ring: 217.2 32.6% 60%;
 	}
 }
 

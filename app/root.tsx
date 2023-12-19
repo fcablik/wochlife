@@ -202,7 +202,7 @@ function Document({
 				<meta name="viewport" content="width=device-width,initial-scale=1" />
 				<Links />
 			</head>
-			<body className="max-4xl:text-body-base">
+			<body className="max-3xl:text-body-prebase 3xl:max-4xl:text-body-base">
 				{children}
 				<script
 					nonce={nonce}
@@ -239,7 +239,7 @@ function App() {
 					/>
 				)}
 				<div
-					className={cn('transition-opacity', isToggled ? 'opacity-10' : '')}
+					className={cn('transition-opacity duration-300', isToggled ? 'opacity-10' : '')}
 				>
 					<Outlet />
 					<div className="h-28 md:h-36" />
@@ -251,7 +251,7 @@ function App() {
 						size="xs"
 						onClick={handleToggle}
 						type="button"
-						className="text-xs opacity-50 hover:opacity-80"
+						className="opacity-50 hover:opacity-80"
 						variant="highlight"
 					>
 						see room

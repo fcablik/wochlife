@@ -2,79 +2,76 @@ import { type Config } from 'tailwindcss'
 
 export const extendedTheme = {
 	colors: {
-		border: 'var(--border)',
+		border: 'hsl(var(--border))',
 		input: {
-			DEFAULT: 'var(--input)',
-			invalid: 'var(--input-invalid)',
+			DEFAULT: 'hsl(var(--input))',
+			invalid: 'hsl(var(--input-invalid))',
 		},
 		ring: {
-			DEFAULT: 'var(--ring)',
-			invalid: 'var(--foreground-destructive)',
+			DEFAULT: 'hsl(var(--ring))',
+			invalid: 'hsl(var(--foreground-destructive))',
 		},
 
 		background: {
-			DEFAULT: 'var(--background)',
-			bases: 'var(--background-bases)',
+			DEFAULT: 'hsl(var(--background))',
+			bases: 'hsl(var(--background-bases))',
 			component: {
-				DEFAULT: 'var(--bg-component)',
-				light: 'var(--bg-component-light)',
+				DEFAULT: 'hsl(var(--bg-component))',
+				light: 'hsl(var(--bg-component-light))',
 			},
 			gradient: {
-				start: 'var(--bg-gradient-start)',
-				end: 'var(--bg-gradient-end)',
+				start: 'hsl(var(--bg-gradient-start))',
+				end: 'hsl(var(--bg-gradient-end))',
 			},
 		},
 		foreground: {
-			DEFAULT: 'var(--foreground)',
-			destructive: 'var(--foreground-destructive)',
-			component: 'var(--fg-component)',
+			DEFAULT: 'hsl(var(--foreground))',
+			destructive: 'hsl(var(--foreground-destructive))',
+			component: 'hsl(var(--fg-component))',
 		},
 
-		backgroundDashboard: 'var(--background-dashboard)',
+		backgroundDashboard: 'hsl(var(--background-dashboard))',
 		foregroundDashboard: {
-			DEFAULT: 'var(--foreground-dashboard)',
-			danger: 'var(--foreground-danger)',
+			DEFAULT: 'hsl(var(--foreground-dashboard))',
+			danger: 'hsl(var(--foreground-danger))',
 		},
 
 		primary: {
-			DEFAULT: 'var(--primary)',
-			foreground: 'var(--primary-foreground)',
+			DEFAULT: 'hsl(var(--primary))',
+			foreground: 'hsl(var(--primary-foreground))',
 		},
 		secondary: {
-			DEFAULT: 'var(--secondary)',
-			foreground: 'var(--secondary-foreground)',
+			DEFAULT: 'hsl(var(--secondary))',
+			foreground: 'hsl(var(--secondary-foreground))',
 		},
 		highlight: {
-			DEFAULT: 'var(--highlight)',
-			foreground: 'var(--highlight-foreground)',
-			dark: {
-				DEFAULT: 'var(--highlight-dark)',
-				foreground: 'var(--highlight-dark-foreground)',
-			},
+			DEFAULT: 'hsl(var(--highlight))',
+			foreground: 'hsl(var(--highlight-foreground))',
+			dark: 'hsl(var(--highlight-dark))',
 		},
 		highlightLight: {
-			DEFAULT: 'var(--highlight-light)',
-			foreground: 'var(--highlight-light-foreground)',
+			DEFAULT: 'hsl(var(--highlight-light))',
+			foreground: 'hsl(var(--highlight-light-foreground))',
 		},
 		destructive: {
-			DEFAULT: 'var(--destructive)',
-			foreground: 'var(--destructive-foreground)',
+			DEFAULT: 'hsl(var(--destructive))',
+			foreground: 'hsl(var(--destructive-foreground))',
 		},
 		muted: {
-			DEFAULT: 'var(--muted)',
-			foreground: 'var(--muted-foreground)',
+			DEFAULT: 'hsl(var(--muted))',
+			foreground: 'hsl(var(--muted-foreground))',
 		},
 		accent: {
-			DEFAULT: 'var(--accent)',
-			foreground: 'var(--accent-foreground)',
+			DEFAULT: 'hsl(var(--accent))',
+			foreground: 'hsl(var(--accent-foreground))',
 		},
 		popover: {
-			DEFAULT: 'var(--popover)',
-			foreground: 'var(--popover-foreground)',
+			DEFAULT: 'hsl(var(--popover))',
+			foreground: 'hsl(var(--popover-foreground))',
 		},
 		card: {
-			DEFAULT: 'var(--card)',
-			foreground: 'var(--card-foreground)',
+			DEFAULT: 'hsl(var(--card))',
+			foreground: 'hsl(var(--card-foreground))',
 		},
 	},
 	boxShadow: {
@@ -97,8 +94,12 @@ export const extendedTheme = {
 		'2/3': '66.66%',
 		'2/5': '40%',
 		'3/5': '60%',
+		'lg-to-xl':	'1124px',
+		'lg-to-xl-2': '1200px',
+		'lg-to-xl-3': '1300px',
 	},
 	borderRadius: {
+		'6xl': 'calc(var(--radius) * 5.5)',
 		'5xl': 'calc(var(--radius) * 5)',
 		'4xl': 'calc(var(--radius) * 4.5)',
 		'3xl': 'calc(var(--radius) * 4)',
@@ -113,7 +114,9 @@ export const extendedTheme = {
 		/** 80px size / 84px high / bold */
 		mega: ['5rem', { lineHeight: '5.25rem', fontWeight: '700' }],
 		/** 56px size / 62px high / bold */
-		h1: ['3.5rem', { lineHeight: '3.875rem', fontWeight: '700' }],
+		h1: ['3.25rem', { lineHeight: '3.55rem', fontWeight: '700' }],
+		'h1-sm': ['2.25rem', { lineHeight: '2.75rem', fontWeight: '700' }],
+		'h1-md': ['2.75rem', { lineHeight: '3rem', fontWeight: '700' }],
 		/** 40px size / 48px high / bold */
 		h2: ['2.5rem', { lineHeight: '3rem', fontWeight: '700' }],
 		/** 32px size / 36px high / bold */
@@ -143,11 +146,15 @@ export const extendedTheme = {
 		'body-2xs': ['0.75rem', { lineHeight: '1rem' }],
 
 		'body-base': ['.925rem', { lineHeight: '1.2rem' }],
+		'body-prebase': ['.875rem', { lineHeight: '1.2rem' }],
 
 		/** 18px size / 24px high / semibold */
 		caption: ['1.125rem', { lineHeight: '1.5rem', fontWeight: '600' }],
 		/** 12px size / 16px high / bold */
 		button: ['0.75rem', { lineHeight: '1rem', fontWeight: '700' }],
+
+		'md-to-lg': ['1.1rem', { lineHeight: '1.55rem', fontWeight: '400' }],
+		'xl-to-2xl': ['1.3rem', { lineHeight: '1.75rem', fontWeight: '400' }],
 	},
 	keyframes: {
 		'accordion-down': {
@@ -188,6 +195,7 @@ export const extendedTheme = {
 			'linear-gradient(to bottom right, rgba(24, 24, 24, .86) 0%, rgba(18, 18, 18, .86) 50%, rgba(16, 16, 16, .9) 100%)',
 		'purple-box-gradient':
 			'linear-gradient(to bottom right, rgba(106, 95, 243, .7) 0%, rgba(117, 99, 247, .7) 50%, rgba(130, 96, 245, .7) 100%)',
+		'light-green-radial-gradient': 'radial-gradient(circle, #85F1C5, #83D9CD)',
 	},
 	padding: {
 		'18': '4.5rem',
@@ -198,4 +206,7 @@ export const extendedTheme = {
 	backdropBlur: {
 		xs: '2px',
 	},
+	scale: {
+        'flip': '-1',
+	}
 } satisfies Config['theme']
