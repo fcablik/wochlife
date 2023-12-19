@@ -63,7 +63,7 @@ export function Menu() {
 							)}
 						</NavLink>
 
-						<NavLink to="contact">
+						<NavLink to="contact" className="max-md:hidden">
 							{({ isActive }) => (
 								<div className={menuItemClassList(isActive)}>
 									<Icon name="file-text" className="h-5 w-5 md:h-6 md:w-6" />

@@ -231,22 +231,24 @@ function App() {
 
 	return (
 		<Document nonce={nonce} theme={theme} env={data.ENV}>
-			<div className="flex flex-col justify-center custom-hp-bg-main min-h-screen bg-cover bg-center">
+			<div className="flex flex-col justify-center  min-h-screen bg-cover bg-center">
+				<div className='custom-hp-bg-main z-1' />
 				{isToggled && (
 					<div
 						className="z-9999 fixed left-0 top-0 h-full w-full"
 						onClick={handleToggle}
 					/>
 				)}
+				<div className='z-2'>
 				<div
-					className={cn('transition-opacity duration-300', isToggled ? 'opacity-10' : '')}
+					className={cn('custom-hp-spacing transition-opacity duration-300', isToggled ? 'opacity-10' : '')}
 				>
 					<Outlet />
 					<div className="h-28 md:h-36" />
 					<Menu />
 				</div>
 
-				<div className="max-lg-to-xl:hidden fixed bottom-2 right-2 text-right">
+				<div className="max-lg-to-xl:bottom-16 mb-2 fixed bottom-2 right-2 text-right">
 					<Button
 						size="xs"
 						onClick={handleToggle}
@@ -254,12 +256,13 @@ function App() {
 						className="opacity-50 hover:opacity-80"
 						variant="highlight"
 					>
-						see room
+						<span className='max-md:text-[.65rem]'>see room</span>
 					</Button>
 
-					<div className="mt-1 text-[.55rem] opacity-30">
+					<div className="max-lg-to-xl:hidden mt-1 text-[.55rem] opacity-30">
 						Welcome to my small cozy coding room:)
 					</div>
+				</div>
 				</div>
 			</div>
 

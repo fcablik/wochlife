@@ -3,42 +3,58 @@
 /* custom main BG  */
 .custom-hp-bg-main {
 	background-image: url(/img/main-bg/group-1900-2.webp);
-	background-attachment: fixed; /* doesn't work on phones */
+	position: fixed;
+	background-attachment: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-size: cover;
+	background-position: center center;
+	transform: translateZ(0);
+	will-change: transform;
 }
 
-@media (max-width: 1499px) {
-	@media (max-height: 749px){
-		.custom-hp-bg-main {
-			@apply pt-12 pb-8;
-		}
+@media (max-height: 749px){
+	.custom-hp-spacing {
+		@apply pt-8 pb-4;
 	}
-	@media (min-height: 750px){
-		.custom-hp-bg-main {
-			@apply pt-14 pb-10;
-		}
+}
+@media (min-height: 750px){
+	.custom-hp-spacing {
+		@apply pt-10 pb-6;
 	}
-	@media (min-height: 950px){
-		.custom-hp-bg-main {
-			@apply pt-24 pb-12;
-		}
+}
+@media (min-height: 950px){
+	.custom-hp-spacing {
+		@apply pt-16 pb-8;
 	}
 }
 
-@media (min-width: 1500px) {
-	@media (max-height: 749px){
-		.custom-hp-bg-main {
-			@apply py-10;
-		}
+
+@media (max-width: 1599px) {
+	.custom-box-in-box-in-box-sizes{
+		@apply w-[45px] h-[45px];
 	}
-	@media (min-height: 750px){
-		.custom-hp-bg-main {
-			@apply py-12;
-		}
+	.custom-box-in-box-sizes{
+		@apply xl:min-h-[55px];
 	}
-	@media (min-height: 950px){
-		.custom-hp-bg-main {
-			@apply py-36;
-		}
+}
+@media (min-width: 1600px) and (max-width: 1699px) {
+	.custom-box-in-box-in-box-sizes{
+		@apply w-[52px] h-[52px];
+	}
+	.custom-box-in-box-sizes{
+		@apply xl:min-h-[63px];
+	}
+}
+@media (min-width: 1700px) {
+	.custom-box-in-box-in-box-sizes{
+		@apply w-[60px] h-[60px];
+	}
+	.custom-box-in-box-sizes{
+		@apply xl:min-h-[70px];
 	}
 }
 
@@ -54,7 +70,14 @@
 			@apply bottom-10;
 		}
 	}
+
+	@media (max-height: 799px){
+		.custom-max-heights {
+			@apply max-h-[545px];
+		}
+	}
 }
+
 
 @media (max-width: 768px) {
 	.custom-bottom-alignment {
@@ -63,12 +86,7 @@
 }
 
 
-
 @media (max-height: 799px){
-	.custom-max-heights {
-		@apply max-h-[540px];
-	}
-
 	.custom-max-margin-welcome-box {
 		margin-top: 2.5rem;
 	}
@@ -78,10 +96,7 @@
 }
 @media (min-height: 800px){
 	.custom-max-heights {
-		@apply max-h-[564px];
-	}
-	.custom-max-margin-projects{
-		margin-top: 2.8rem;
+		@apply max-h-[555px];
 	}
 	.custom-max-margin-welcome-box {
 		@apply mt-20;

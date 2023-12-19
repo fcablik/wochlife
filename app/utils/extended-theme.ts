@@ -104,7 +104,9 @@ export const extendedTheme = {
 		'4xl': 'calc(var(--radius) * 4.5)',
 		'3xl': 'calc(var(--radius) * 4)',
 		'2xl': 'calc(var(--radius) * 3)',
+		'xl-to-2xl': 'calc(var(--radius) * 2.25)',
 		xl: 'calc(var(--radius) * 2)',
+		'lg-to-xl': 'calc(var(--radius) * 1.5)',
 		lg: 'var(--radius)',
 		md: 'calc(var(--radius) - 2px)',
 		sm: 'calc(var(--radius) - 4px)',
@@ -153,6 +155,7 @@ export const extendedTheme = {
 		/** 12px size / 16px high / bold */
 		button: ['0.75rem', { lineHeight: '1rem', fontWeight: '700' }],
 
+		'md': ['1rem', { lineHeight: '1.45rem', fontWeight: '400' }],
 		'md-to-lg': ['1.1rem', { lineHeight: '1.55rem', fontWeight: '400' }],
 		'xl-to-2xl': ['1.3rem', { lineHeight: '1.75rem', fontWeight: '400' }],
 	},

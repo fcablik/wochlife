@@ -117,7 +117,7 @@ export default function ContactForm() {
 						htmlFor: fields.email.id,
 						children: 'Email',
 					}}
-					inputProps={{ ...conform.input(fields.email), autoFocus: true }}
+					inputProps={{ ...conform.input(fields.email) }}
 					errors={fields.email.errors}
 				/>
 				<Field
