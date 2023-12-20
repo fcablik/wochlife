@@ -14,11 +14,11 @@ export async function loader({ request }: DataFunctionArgs) {
 //* global styling classes
 // 2. boxes
 const boxInnerContentBoxInnerBox =
-	'custom-box-in-box-in-box-sizes rounded-lg-to-xl bg-light-green-radial-gradient'
+	'custom-box-in-box-in-box-sizes rounded-lg-to-xl bg-cover bg-contain'
 const bigBoxTitle = 'capitalize text-center text-2xl font-semibold mb-6'
 
 const boxInnerContentBoxProps =
-	'custom-box-in-box-sizes flex items-center mb-3 2xl:mb-4 4xl:mb-5'
+	'custom-box-in-box-sizes flex items-center mb-3 4xl:mb-4'
 const purpleBoxInnerContentBox =
 	boxInnerContentBoxProps +
 	' bg-highlight-dark/30 hover:bg-highlight-dark transition-colors duration-500 p-2 cursor-pointer rounded-xl'
@@ -47,7 +47,10 @@ export default function Index() {
 	const welcomeTitle = 'Welcome <br /> to Wochlife'
 	const welcomeSubTitle = "the phil's little world"
 	const welcomeBoxText =
-		"<p class='mb-3 md:mb-5'>Hey, I'm Phil.</p><p class='mb-3 md:mb-5'>Web Developer with<br class='sm:hidden'/> passion for combining tech<br class='sm:hidden'/>&&nbsp;design.</p>I take advantage of my tech knowledge and implement creativity to get the ultimate art form of an application."
+		"<p class='mb-3 md:mb-5'>Hey, I'm Phil.</p><p class='mb-3 md:mb-5'>Web Developer with<br class='sm:hidden'/> passion for combining tech <br class='sm:hidden'/>&&nbsp;design.</p>Applications are not just a&nbsp;product to me, it's a&nbsp;form of an&nbsp;art, an expression. My apps show the world, who You are."
+
+		// "Applications are not just a product to me, it's a form of an art, an expression. My apps show the world who You are.
+		
 	const aboutText = 'about'
 
 	return (
@@ -66,7 +69,7 @@ export default function Index() {
 						'custom-max-margin-welcome-box relative p-6 lg:p-10',
 					)}
 				>
-					<div className="2xl:text-md max-w-[90%] opacity-90 max-lg:text-[.8rem] md:max-w-[80%] 3xl:text-md-to-lg">
+					<div className="max-w-[90%] opacity-90 max-lg:text-[.8rem] md:max-w-[80%] 2xl:text-md 3xl:text-md-to-lg">
 						<span dangerouslySetInnerHTML={{ __html: welcomeBoxText }} />
 					</div>
 
@@ -87,17 +90,75 @@ export default function Index() {
 			</div>
 
 			<div className="flex w-full gap-8 max-lg:flex-col lg-to-xl-3:w-3/5">
-				<div className={cn(darkBoxBgClassList, col2, 'max-lg:max-h-[298px]')}>
+				<div className={cn(darkBoxBgClassList, col2)}>
 					<h3 className={bigBoxTitle}>portfolio</h3>
 
-					<div className="no-scrollbar rounded-xl-to-2xl overflow-scroll">
-						<PortfolioContentBox name={'content'} description={'description'} />
-						<PortfolioContentBox name={'content'} description={'description'} />
-						<PortfolioContentBox name={'content'} description={'description'} />
-						<PortfolioContentBox name={'content'} description={'description'} />
-						<PortfolioContentBox name={'content'} description={'description'} />
-						<PortfolioContentBox name={'content'} description={'description'} />
-						<PortfolioContentBox name={'content'} description={'description'} />
+					<h5 className="mb-3 text-center text-lg capitalize">Freelance</h5>
+					<div className="no-scrollbar custom-portfolio-sections-height overflow-scroll rounded-xl-to-2xl">
+						<Link to="portfolio">
+							<PortfolioContentBox
+								name={'zdsenice.cz'}
+								description={'2020, Code'}
+								innerBoxClass="bg-light-green-radial-gradient"
+							/>
+						</Link>
+						<Link to="portfolio">
+							<PortfolioContentBox
+								name={'penzionvhluboke.cz'}
+								description={'2019, Design + Code'}
+								innerBoxClass="bg-light-green-radial-gradient"
+							/>
+						</Link>
+						<Link to="portfolio">
+							<PortfolioContentBox
+								name={'glampvhluboke.cz'}
+								description={'2019, Design + Code'}
+								innerBoxClass="bg-light-green-radial-gradient"
+							/>
+						</Link>
+						<Link to="portfolio">
+							<PortfolioContentBox
+								name={'adpsanco.cz'}
+								description={'2019, Code -1st web project'}
+								innerBoxClass="bg-light-green-radial-gradient mb-0"
+							/>
+						</Link>
+					</div>
+
+					<h5 className="mb-3 mt-6 text-center text-lg capitalize">
+						For Companies
+					</h5>
+					<div className="no-scrollbar custom-portfolio-sections-height overflow-scroll rounded-xl-to-2xl">
+						<Link
+							to="portfolio"
+						>
+							<PortfolioContentBox
+								innerBoxClass="bg-medi-radial-gradient"
+								imgSrc="/img/medi.webp"
+								name="medi.de/cz"
+								description="2020-2022"
+							/>
+						</Link>
+						<Link
+							to="portfolio"
+						>
+							<PortfolioContentBox
+								innerBoxClass="bg-t4s-radial-gradient"
+								imgSrc="/img/t4s.webp"
+								name="top4sport.com"
+								description="2022-present"
+							/>
+						</Link>
+						<Link
+							to="portfolio"
+						>
+							<PortfolioContentBox
+								innerBoxClass="bg-11ts-radial-gradient"
+								imgSrc="/img/11ts.webp"
+								name="11teamsports.com"
+								description="2022-present"
+							/>
+						</Link>
 					</div>
 				</div>
 
@@ -109,7 +170,7 @@ export default function Index() {
 							<LogoPhil className="max-md:max-h-[24px]" />
 
 							<Link to="about/phil" className="w-full">
-								<Button className="text-md w-full capitalize" variant="default">
+								<Button className="w-full text-md capitalize" variant="default">
 									discover
 								</Button>
 							</Link>
@@ -136,30 +197,21 @@ export default function Index() {
 					>
 						<h3 className={bigBoxTitle}>projects</h3>
 
-						<div className="no-scrollbar rounded-xl-to-2xl overflow-scroll">
+						<div className="no-scrollbar overflow-scroll rounded-xl-to-2xl">
 							<ProjectsContentBox
-								name={'content'}
-								description={'description'}
+								name={'Web Development'}
+								description={'2019-present'}
+								innerBoxClass="	bg-light-green-radial-gradient"
 							/>
 							<ProjectsContentBox
-								name={'content'}
-								description={'description'}
+								name={'Street-Wear Designs'}
+								description={'2022-present'}
+								innerBoxClass="	bg-light-green-radial-gradient"
 							/>
 							<ProjectsContentBox
-								name={'content'}
-								description={'description'}
-							/>
-							<ProjectsContentBox
-								name={'content'}
-								description={'description'}
-							/>
-							<ProjectsContentBox
-								name={'content'}
-								description={'description'}
-							/>
-							<ProjectsContentBox
-								name={'content'}
-								description={'description'}
+								name={'NFT Collection (unreleased)'}
+								description={'2022-present'}
+								innerBoxClass="	bg-light-green-radial-gradient"
 							/>
 						</div>
 					</div>
@@ -174,16 +226,32 @@ export const meta: MetaFunction = () => [{ title: 'Welcome To Wochlife' }]
 function PortfolioContentBox({
 	name,
 	description,
+	innerBoxClass,
+	imgSrc,
 }: {
 	name: string
 	description: string
+	innerBoxClass?: string
+	imgSrc?: string
 }) {
 	return (
 		<div className={darkBoxInnerContentBox}>
-			<div className={boxInnerContentBoxInnerBox} />
-			<div className="mx-6 flex flex-col">
-				<p>{name}</p>
-				<p>{description}</p>
+			<div
+				className={cn(
+					boxInnerContentBoxInnerBox,
+					innerBoxClass,
+					'flex items-center justify-center',
+				)}
+			>
+				{!!imgSrc && imgSrc.length && (
+					<img src={imgSrc} alt="" className="max-w-2/3 rounded-md" />
+				)}
+			</div>
+			<div className="mx-6 flex max-w-[67%] flex-col">
+				<p className="whitespace-nowrap">{name}</p>
+				<p className="no-scrollbar overflow-scroll whitespace-nowrap">
+					{description}
+				</p>
 			</div>
 		</div>
 	)
@@ -191,16 +259,22 @@ function PortfolioContentBox({
 function ProjectsContentBox({
 	name,
 	description,
+	innerBoxClass,
+	imgSrc,
 }: {
 	name: string
 	description: string
+	innerBoxClass?: string
+	imgSrc?: string
 }) {
 	return (
 		<div className={purpleBoxInnerContentBox}>
-			<div className={boxInnerContentBoxInnerBox} />
-			<div className="mx-6 flex flex-col">
-				<p>{name}</p>
-				<p>{description}</p>
+			<div className={cn(boxInnerContentBoxInnerBox, innerBoxClass)}>
+				{!!imgSrc && imgSrc.length && <img src={imgSrc} alt="" />}
+			</div>
+			<div className="mx-6 flex max-w-[67%] flex-col">
+				<p className="whitespace-nowrap">{name}</p>
+				<p className="whitespace-nowrap">{description}</p>
 			</div>
 		</div>
 	)

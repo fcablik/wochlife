@@ -21,6 +21,7 @@ export default {
 				sans: ['var(--font-source-code-pro)', ...defaultTheme.fontFamily.sans],
 			},
 			screens: {
+				'xs': '500px',
 				'lg-to-xl':		'1124px',
 				'lg-to-xl-2':	'1200px',
 				'lg-to-xl-3':	'1300px',

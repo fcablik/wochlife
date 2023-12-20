@@ -147,7 +147,7 @@ export const extendedTheme = {
 		/** 12px size / 16px high / normal */
 		'body-2xs': ['0.75rem', { lineHeight: '1rem' }],
 
-		'body-base': ['.925rem', { lineHeight: '1.2rem' }],
+		'body-base': ['.925rem', { lineHeight: '1.4rem' }],
 		'body-prebase': ['.875rem', { lineHeight: '1.2rem' }],
 
 		/** 18px size / 24px high / semibold */
@@ -199,6 +199,12 @@ export const extendedTheme = {
 		'purple-box-gradient':
 			'linear-gradient(to bottom right, rgba(106, 95, 243, .7) 0%, rgba(117, 99, 247, .7) 50%, rgba(130, 96, 245, .7) 100%)',
 		'light-green-radial-gradient': 'radial-gradient(circle, #85F1C5, #83D9CD)',
+		'medi-radial-gradient': 'radial-gradient(circle, #A40E68, #A40E68)',
+		'medi-logo': 'url("/img/medi.webp")',
+		'11ts-radial-gradient': 'radial-gradient(circle, #D82020, #A71C1C)',
+		'11ts-logo': 'url("/img/11ts.webp")',
+		't4s-radial-gradient': 'radial-gradient(circle, #D07009, #F98305)',
+		't4s-logo': 'url("/img/t4s.webp")',
 	},
 	padding: {
 		'18': '4.5rem',
