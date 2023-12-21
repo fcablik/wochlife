@@ -1,6 +1,6 @@
 import { NavLink } from '@remix-run/react'
 import { cn } from '#app/utils/misc.tsx'
-import ThemeSwitcher from './theme-switch.tsx'
+// import ThemeSwitcher from './theme-switch.tsx'
 import { Icon } from './ui/icon.tsx'
 
 export function Menu() {
@@ -18,9 +18,9 @@ export function Menu() {
 		'flex items-center justify-evenly md:gap-5 py-2 md:py-5 md:px-6'
 
 	return (
-		<div className="fixed custom-bottom-alignment w-full max-md:text-xs md:text-sm">
+		<div className="custom-bottom-alignment fixed w-full max-md:text-xs md:text-sm">
 			<div className="mx-2">
-				<div className="bg-menu-box-gradient mx-auto flex max-h-[95px] max-w-[900px] justify-center rounded-xl shadow-menu md:rounded-2xl">
+				<div className="mx-auto flex max-h-[95px] max-w-[900px] justify-center rounded-xl bg-menu-box-gradient shadow-menu md:rounded-2xl">
 					<nav
 						className={cn(
 							menuSidesClassList,
@@ -57,7 +57,10 @@ export function Menu() {
 						<NavLink to="about">
 							{({ isActive }) => (
 								<div className={menuItemClassList(isActive)}>
-									<Icon name="magnifying-glass" className="h-5 w-5 md:h-6 md:w-6" />
+									<Icon
+										name="magnifying-glass"
+										className="h-5 w-5 md:h-6 md:w-6"
+									/>
 									<p className={menuItemTextClassList}>about</p>
 								</div>
 							)}
@@ -66,7 +69,10 @@ export function Menu() {
 						<NavLink to="contact" className="max-md:hidden">
 							{({ isActive }) => (
 								<div className={menuItemClassList(isActive)}>
-									<Icon name="envelope-closed" className="h-5 w-5 md:h-6 md:w-6" />
+									<Icon
+										name="envelope-closed"
+										className="h-5 w-5 md:h-6 md:w-6"
+									/>
 									<p className={menuItemTextClassList}>contact</p>
 								</div>
 							)}
@@ -74,9 +80,19 @@ export function Menu() {
 					</nav>
 
 					<div className={cn(menuSidesClassList, 'max-md:hidden md:w-2/5')}>
-						<div>socials | links</div>
+						<div>
+							socials:{' '}
+							<a
+								href="https://instagram.com/wochlife"
+								target="_blank"
+								rel="noreferrer"
+								className='hover:text-highlight transition-colors'
+							>
+								@wochlife
+							</a>
+						</div>
 
-						<ThemeSwitcher />
+						{/* <ThemeSwitcher /> */}
 					</div>
 				</div>
 			</div>
