@@ -1,6 +1,6 @@
 # Wochlife
 
-## version control: 7.0.0
+## version control: 1.0.0
 
 ### About 
   Wochlife is a lightweight solid Fullstack Development Environment used to create high performance Web Applications.
