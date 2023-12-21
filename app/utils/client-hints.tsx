@@ -9,10 +9,12 @@ import { useRequestInfo } from './request-info.ts'
 const clientHints = {
 	theme: {
 		cookieName: 'CH-prefers-color-scheme',
-		getValueCode: `window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'`,
-		fallback: 'light',
+		// getValueCode: `window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'`, //* temporary untill both developed
+		getValueCode: `window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'dark'`,
+		fallback: 'dark',
 		transform(value: string) {
-			return value === 'dark' ? 'dark' : 'light'
+			// return value === 'dark' ? 'dark' : 'light' //* temporary untill both developed
+			return value === 'dark' ? 'dark' : 'dark'
 		},
 	},
 	timeZone: {
@@ -49,8 +51,8 @@ export function getHints(request?: Request) {
 		typeof document !== 'undefined'
 			? document.cookie
 			: typeof request !== 'undefined'
-			? request.headers.get('Cookie') ?? ''
-			: ''
+			  ? request.headers.get('Cookie') ?? ''
+			  : ''
 
 	return Object.entries(clientHints).reduce(
 		(acc, [name, hint]) => {
@@ -60,7 +62,7 @@ export function getHints(request?: Request) {
 					getCookieValue(cookieString, hintName) ?? hint.fallback,
 				)
 			} else {
-				// @ts-expect-error - this is fine (PRs welcome though)
+				//// @ts-expect-error - this is fine (PRs welcome though)
 				acc[hintName] = getCookieValue(cookieString, hintName) ?? hint.fallback
 			}
 			return acc
