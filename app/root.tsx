@@ -25,7 +25,7 @@ import { Menu } from './components/_menu.tsx'
 import { Confetti } from './components/confetti.tsx'
 import { GeneralErrorBoundary } from './components/error-boundary.tsx'
 import { EpicProgress } from './components/progress-bar.tsx'
-import { useTheme } from './components/theme-switch.tsx'
+// import { useTheme } from './components/theme-switch.tsx'
 import { WochToaster } from './components/toaster.tsx'
 import { Button } from './components/ui/button.tsx'
 import { href as iconsHref } from './components/ui/icon.tsx'
@@ -221,7 +221,7 @@ function Document({
 function App() {
 	const data = useLoaderData<typeof loader>()
 	const nonce = useNonce()
-	const theme = useTheme()
+	// const theme = useTheme()
 
 	const [isToggled, setToggled] = useState(false)
 
@@ -230,7 +230,7 @@ function App() {
 	}
 
 	return (
-		<Document nonce={nonce} theme={theme} env={data.ENV}>
+		<Document nonce={nonce} env={data.ENV}> {/* theme={theme} */}
 			<div className="flex flex-col justify-center  min-h-screen bg-cover bg-center">
 				<div className='custom-hp-bg-main z-1' />
 				{isToggled && (
