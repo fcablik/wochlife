@@ -93,35 +93,10 @@ export default function AdminRoute() {
 						<div>
 							<SidebarNavLink
 								first={true}
-								routeName="/"
-								title="homepage"
-								icon="home"
-								target="_blank"
-							/>
-
-							<SidebarNavLink
-								first={true}
 								routeName="/admin/"
 								title="dashboard"
 								icon="dashboard"
 							/>
-
-							<div className="border-b border-t border-highlight/20">
-								<SidebarNavLink routeName="brands" />
-								<SidebarNavLink routeName="models" />
-								<SidebarNavLink
-									routeName="models/gallery"
-									title="galleries"
-									icon="file-text"
-								/>
-								<SidebarNavLink
-									routeName="models/facility"
-									title="facilities"
-									icon="file-text"
-								/>
-							</div>
-
-							<SidebarNavLink routeName="dealers" />
 
 							<SidebarNavLink routeName="pages" icon="pencil-2" />
 							<SidebarNavLink

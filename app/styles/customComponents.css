@@ -93,7 +93,7 @@
 	}
 
 	@media (max-height: 875px) {
-		.custom-portfolio-sections-height { 
+		.custom-content-sections-height { 
 			@apply max-h-[183px];
 		}
 		.custom-projects-box-max-height {
@@ -104,7 +104,7 @@
 		.custom-max-heights {
 			@apply max-h-[595px];
 		}
-		.custom-portfolio-sections-height { 
+		.custom-content-sections-height { 
 			@apply max-h-[207px];
 		}
 		.custom-max-margin-welcome-box {
@@ -148,8 +148,6 @@
 			height: 700px
 		}
 	}
-
-
 
 /* custom global section */
 	img,

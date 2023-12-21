@@ -192,7 +192,7 @@ export const extendedTheme = {
 		'9999': '9999',
 	},
 	backgroundImage: {
-		'dark-box-gradient':
+		'dark-gradient':
 			'linear-gradient(to bottom right, rgba(27, 27, 27, 0.8) 0%, rgba(16, 16, 16, 0.8) 50%, rgba(16, 16, 16, .9) 100%)',
 		'menu-box-gradient':
 			'linear-gradient(to bottom right, rgba(24, 24, 24, .86) 0%, rgba(18, 18, 18, .86) 50%, rgba(16, 16, 16, .9) 100%)',

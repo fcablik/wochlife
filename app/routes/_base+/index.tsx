@@ -1,6 +1,15 @@
 import { type DataFunctionArgs, type MetaFunction } from '@remix-run/node'
-// import { LogoWochlife, LogoPhil } from '#app/components/logos.tsx'
 import { Link } from '@remix-run/react'
+import {
+	bigBoxTitle,
+	boxInnerContentBoxInnerBox,
+	boxProps,
+	darkBoxBgClassList,
+	darkBoxInnerContentBox,
+	innerContentBoxTexts,
+	purpleBoxBgClassList,
+	purpleBoxInnerContentBox,
+} from '#app/components/classlists.tsx'
 import { LogoPhil, LogoWochlife } from '#app/components/logos.tsx'
 import { Button } from '#app/components/ui/button.tsx'
 import { cn } from '#app/utils/misc.tsx'
@@ -11,21 +20,6 @@ export async function loader({ request }: DataFunctionArgs) {
 	return null
 }
 
-//* global styling classes
-// 2. boxes
-const boxInnerContentBoxInnerBox =
-	'custom-box-in-box-in-box-sizes rounded-lg-to-xl bg-cover bg-contain'
-const bigBoxTitle = 'capitalize text-center text-2xl font-semibold mb-6'
-
-const boxInnerContentBoxProps =
-	'custom-box-in-box-sizes flex items-center mb-3 4xl:mb-4'
-const purpleBoxInnerContentBox =
-	boxInnerContentBoxProps +
-	' bg-highlight-dark/30 hover:bg-highlight-dark transition-colors duration-500 p-2 cursor-pointer rounded-xl'
-const darkBoxInnerContentBox =
-	boxInnerContentBoxProps +
-	' bg-foreground/10 hover:bg-foreground hover:text-background cursor-pointer transition-colors duration-500 p-2 rounded-xl'
-
 export default function Index() {
 	//* styling classes
 	// 1. grid, responsivness
@@ -35,11 +29,6 @@ export default function Index() {
 	const col2_col2 =
 		'custom-max-heights w-full lg:w-1/2 lg-to-xl-3:w-[55.83%] flex flex-col justify-between'
 
-	// 2. boxes
-	const boxProps =
-		'flex flex-col rounded-3xl lg:rounded-6xl pt-4 px-4 md:px-5 md:pt-6'
-	const darkBoxBgClassList = boxProps + ' bg-dark-box-gradient'
-	const purpleBoxBgClassList = boxProps + ' bg-purple-box-gradient'
 	const purpleBoxBgClassListSm =
 		boxProps +
 		' bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] lg:h-[225px] lg-to-xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
@@ -53,6 +42,7 @@ export default function Index() {
 	// "Applications are not just a product to me, it's a form of an art, an expression. My apps show the world who You are.
 
 	const aboutText = 'about'
+	const discoverText = 'discover'
 
 	return (
 		<div className="custom-hp-spacing mx-auto flex gap-8 max-xl:px-4 max-lg-to-xl-3:flex-col md:max-xl:mx-8 xl:max-w-[1250px] 2xl:max-w-[1350px] 4xl:max-w-[1450px]">
@@ -102,33 +92,33 @@ export default function Index() {
 							freelance
 						</Link>
 					</h5>
-					<div className="no-scrollbar custom-portfolio-sections-height overflow-scroll rounded-xl-to-2xl">
+					<div className="no-scrollbar custom-content-sections-height overflow-y-scroll rounded-xl-to-2xl">
 						<Link to="portfolio/freelance">
 							<PortfolioContentBox
-								name='coming soon..'
-								description='2020, Code'
+								name="coming soon.."
+								description="2020, Code"
 								innerBoxClass="bg-light-green-radial-gradient"
 							/>
 						</Link>
 						<Link to="portfolio/freelance">
 							<PortfolioContentBox
-								name='coming soon..'
-								description='2019, Design + Code'
+								name="coming soon.."
+								description="2019, Design + Code"
 								innerBoxClass="bg-light-green-radial-gradient"
 							/>
 						</Link>
 						<Link to="portfolio/freelance">
 							<PortfolioContentBox
-								name='coming soon..'
-								description='2019, Design + Code'
+								name="coming soon.."
+								description="2019, Design + Code"
 								innerBoxClass="bg-light-green-radial-gradient"
 							/>
 						</Link>
 						<Link to="portfolio/freelance">
 							<PortfolioContentBox
 								boxClass="mb-0 4xl:mb-0"
-								name='coming soon..'
-								description='2019, Code -1st project'
+								name="coming soon.."
+								description="2019, Code -1st project"
 								innerBoxClass="bg-light-green-radial-gradient"
 							/>
 						</Link>
@@ -142,7 +132,7 @@ export default function Index() {
 							for companies
 						</Link>
 					</h5>
-					<div className="no-scrollbar custom-portfolio-sections-height overflow-scroll rounded-xl-to-2xl">
+					<div className="no-scrollbar custom-content-sections-height overflow-y-scroll rounded-xl-to-2xl">
 						<Link to="portfolio/forcompanies/medi">
 							<PortfolioContentBox
 								innerBoxClass="bg-medi-radial-gradient"
@@ -179,7 +169,7 @@ export default function Index() {
 
 							<Link to="about/phil" className="w-full">
 								<Button className="w-full text-md capitalize" variant="default">
-									discover
+									{discoverText}
 								</Button>
 							</Link>
 						</div>
@@ -191,7 +181,7 @@ export default function Index() {
 
 							<Link to="about/wochlife" className="w-full">
 								<Button className="w-full capitalize" variant="default">
-									discover
+									{discoverText}
 								</Button>
 							</Link>
 						</div>
@@ -203,9 +193,13 @@ export default function Index() {
 							'custom-projects-box-max-height h-full max-md:mt-6',
 						)}
 					>
-						<h3 className={bigBoxTitle}>projects</h3>
+						<h3 className={bigBoxTitle}>
+							<Link to="projects" className='hover:text-transparent hover:bg-dark-gradient hover:bg-clip-text  transition-colors'>
+								projects
+							</Link>
+						</h3>
 
-						<div className="no-scrollbar overflow-scroll rounded-xl-to-2xl">
+						<div className="no-scrollbar overflow-y-scroll rounded-xl-to-2xl">
 							<Link to="projects/web-dev">
 								<ProjectsContentBox
 									name={'Web Development'}
@@ -264,10 +258,8 @@ function PortfolioContentBox({
 				)}
 			</div>
 			<div className="ml-6 flex max-w-[67%] flex-col">
-				<p className="no-scrollbar overflow-scroll whitespace-nowrap">{name}</p>
-				<p className="no-scrollbar overflow-scroll whitespace-nowrap">
-					{description}
-				</p>
+				<p className={innerContentBoxTexts}>{name}</p>
+				<p className={innerContentBoxTexts}>{description}</p>
 			</div>
 		</div>
 	)
@@ -289,10 +281,8 @@ function ProjectsContentBox({
 				{!!imgSrc && imgSrc.length && <img src={imgSrc} alt="" />}
 			</div>
 			<div className="ml-6 flex max-w-[67%] flex-col">
-				<p className="no-scrollbar overflow-scroll whitespace-nowrap">{name}</p>
-				<p className="no-scrollbar overflow-scroll whitespace-nowrap">
-					{description}
-				</p>
+				<p className={innerContentBoxTexts}>{name}</p>
+				<p className={innerContentBoxTexts}>{description}</p>
 			</div>
 		</div>
 	)

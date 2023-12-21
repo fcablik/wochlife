@@ -1,9 +1,9 @@
 -- CreateTable
-CREATE TABLE "CarBrand" (
+CREATE TABLE "Page" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "url" TEXT NOT NULL,
     "title" TEXT NOT NULL,
-    "description" TEXT NOT NULL,
+    "content" TEXT NOT NULL,
     "seo" TEXT,
     "visibility" BOOLEAN NOT NULL DEFAULT false,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -11,19 +11,19 @@ CREATE TABLE "CarBrand" (
 );
 
 -- CreateTable
-CREATE TABLE "CarBrandImage" (
+CREATE TABLE "PageImage" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "altText" TEXT,
     "contentType" TEXT NOT NULL,
     "blob" BLOB NOT NULL,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATETIME NOT NULL,
-    "carBrandId" TEXT NOT NULL,
-    CONSTRAINT "CarBrandImage_carBrandId_fkey" FOREIGN KEY ("carBrandId") REFERENCES "CarBrand" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+    "pageId" TEXT NOT NULL,
+    CONSTRAINT "PageImage_pageId_fkey" FOREIGN KEY ("pageId") REFERENCES "Page" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "CarBrand_url_key" ON "CarBrand"("url");
+CREATE UNIQUE INDEX "Page_url_key" ON "Page"("url");
 
 -- CreateIndex
-CREATE INDEX "CarBrandImage_carBrandId_idx" ON "CarBrandImage"("carBrandId");
+CREATE INDEX "PageImage_pageId_idx" ON "PageImage"("pageId");

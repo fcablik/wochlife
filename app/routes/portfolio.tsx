@@ -1,5 +1,12 @@
 import { type DataFunctionArgs, type MetaFunction } from '@remix-run/node'
 import { NavLink, Outlet } from '@remix-run/react'
+import {
+	bigBoxTitle,
+	boxInnerContentBoxInnerBox,
+	darkBoxBgClassList,
+	darkBoxInnerContentBox,
+	innerContentBoxTexts,
+} from '#app/components/classlists.tsx'
 import { cn } from '#app/utils/misc.tsx'
 import { requireUserWithRole } from '#app/utils/permissions.ts'
 
@@ -8,18 +15,6 @@ export async function loader({ request }: DataFunctionArgs) {
 	return null
 }
 
-//* global styling classes
-// 2. boxes
-const boxInnerContentBoxInnerBox =
-	'custom-box-in-box-in-box-sizes rounded-lg-to-xl bg-cover bg-contain'
-const bigBoxTitle = 'capitalize text-center text-2xl font-semibold mb-6'
-
-const boxInnerContentBoxProps =
-	'custom-box-in-box-sizes flex items-center mb-3 4xl:mb-4'
-const darkBoxInnerContentBox =
-	boxInnerContentBoxProps +
-	' bg-foreground/10 hover:bg-foreground hover:text-background cursor-pointer transition-colors duration-500 p-2 rounded-xl'
-
 export default function PortfolioRoute() {
 	//* styling classes
 	// 1. grid, responsivness
@@ -27,16 +22,8 @@ export default function PortfolioRoute() {
 		'md-to-lg:w-[35%] lg:w-[32%] lg-to-xl:w-[29%] xl:w-[26.502%] max-w-[460px]'
 	const col2 =
 		'w-full md-to-lg:w-[65%] lg:w-[68%] lg-to-xl:w-[71%] xl:w-[73.498%] flex flex-col'
-
-	// 2. boxes
-	const boxProps =
-		'flex flex-col rounded-3xl lg:rounded-6xl pt-4 px-4 md:px-5 md:pt-6'
-	const darkBoxBgClassList = boxProps + ' bg-dark-box-gradient'
-
-	//* copy translations
-
 	return (
-		<div className="max-md-to-lg:flex-col mx-auto flex gap-8 max-xl:px-4 md:max-xl:mx-8 xl:max-w-[1250px] 2xl:max-w-[1350px] 4xl:max-w-[1450px]">
+		<div className="mx-auto flex gap-8 max-xl:px-4 max-md-to-lg:flex-col md:max-xl:mx-8 xl:max-w-[1250px] 2xl:max-w-[1350px] 4xl:max-w-[1450px]">
 			<div className={col1}>
 				<div className={darkBoxBgClassList}>
 					<h3 className={bigBoxTitle}>portfolio</h3>
@@ -53,7 +40,7 @@ export default function PortfolioRoute() {
 							freelance
 						</NavLink>
 					</h5>
-					<div className="no-scrollbar custom-portfolio-sections-height overflow-scroll rounded-xl-to-2xl">
+					<div className="no-scrollbar custom-content-sections-height overflow-y-scroll rounded-xl-to-2xl">
 						<NavLink to="freelance">
 							{({ isActive }) => (
 								<PortfolioContentBox
@@ -109,7 +96,7 @@ export default function PortfolioRoute() {
 							for companies
 						</NavLink>
 					</h5>
-					<div className="no-scrollbar custom-portfolio-sections-height overflow-scroll rounded-xl-to-2xl">
+					<div className="no-scrollbar custom-content-sections-height overflow-scroll rounded-xl-to-2xl">
 						<NavLink to="forcompanies/medi">
 							{({ isActive }) => (
 								<PortfolioContentBox
@@ -183,10 +170,8 @@ function PortfolioContentBox({
 				)}
 			</div>
 			<div className="ml-6 flex max-w-[67%] flex-col">
-				<p className="whitespace-nowrap">{name}</p>
-				<p className="no-scrollbar overflow-scroll whitespace-nowrap">
-					{description}
-				</p>
+				<p className={innerContentBoxTexts}>{name}</p>
+				<p className={innerContentBoxTexts}>{description}</p>
 			</div>
 		</div>
 	)
