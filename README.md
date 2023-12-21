@@ -205,9 +205,23 @@ just make sure to remove the move step from the `.github/workflows/deploy.yml`.
   https://www.youtube.com/watch?v=dWiSi4Ie53E
 
   - - fly.io: 
-  https://community.fly.io/t/configuring-domain-names/12964
-  https://fly.io/docs/app-guides/custom-domains-with-fly/
-  
+  <!-- https://community.fly.io/t/configuring-domain-names/12964 -->
+  <!-- https://fly.io/docs/app-guides/custom-domains-with-fly/ -->
+  - fly certs create fullstackplus.tech
+  - fl?y certs create www.fullstackplus.tech
+  - --> https://fly.io/apps/wochlife/certificates/www.wochlife.com
+    #### setting up base domain name, e.g.: "domain.com":
+    A @ ipv4
+    AAAA @ ipv6
+    + CNAME for authorizing domain owner
+
+    #### setting up www domain name, e.g.: "www.domain.com"
+    + the same as for "domain.com", but:
+    A www ipv4
+    AAAA www ipv6
+    + CNAME for authorizing domain owner
+
+
 - License: MIT
 
 <br/>

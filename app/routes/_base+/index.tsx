@@ -1,4 +1,7 @@
-import { type DataFunctionArgs, type MetaFunction } from '@remix-run/node'
+import {
+	type MetaFunction,
+	// type DataFunctionArgs
+} from '@remix-run/node'
 import { Link } from '@remix-run/react'
 import {
 	bigBoxTitle,
@@ -13,12 +16,12 @@ import {
 import { LogoPhil, LogoWochlife } from '#app/components/logos.tsx'
 import { Button } from '#app/components/ui/button.tsx'
 import { cn } from '#app/utils/misc.tsx'
-import { requireUserWithRole } from '#app/utils/permissions.ts'
+// import { requireUserWithRole } from '#app/utils/permissions.ts'
 
-export async function loader({ request }: DataFunctionArgs) {
-	await requireUserWithRole(request, 'admin') // Temporary DEVelopment Phase
-	return null
-}
+// export async function loader({ request }: DataFunctionArgs) {
+// 	await requireUserWithRole(request, 'admin') // Temporary DEVelopment Phase
+// 	return null
+// }
 
 export default function Index() {
 	//* styling classes
@@ -133,7 +136,28 @@ export default function Index() {
 						</Link>
 					</h5>
 					<div className="no-scrollbar custom-content-sections-height overflow-y-scroll rounded-xl-to-2xl">
-						<Link to="portfolio/forcompanies/medi">
+						<Link to="portfolio">
+							<PortfolioContentBox
+								innerBoxClass="bg-medi-radial-gradient"
+								name="coming soon.."
+								description="2020-2022"
+							/>
+						</Link>
+						<Link to="portfolio">
+							<PortfolioContentBox
+								innerBoxClass="bg-t4s-radial-gradient"
+								name="coming soon.."
+								description="2022-present"
+							/>
+						</Link>
+						<Link to="portfolio">
+							<PortfolioContentBox
+								innerBoxClass="bg-11ts-radial-gradient"
+								name="coming soon.."
+								description="2022-present"
+							/>
+						</Link>
+						{/* <Link to="portfolio/forcompanies/medi">
 							<PortfolioContentBox
 								innerBoxClass="bg-medi-radial-gradient"
 								imgSrc="/img/medi.webp"
@@ -156,7 +180,7 @@ export default function Index() {
 								name="11teamsports.com"
 								description="2022-present"
 							/>
-						</Link>
+						</Link> */}
 					</div>
 				</div>
 
@@ -194,29 +218,36 @@ export default function Index() {
 						)}
 					>
 						<h3 className={bigBoxTitle}>
-							<Link to="projects" className='hover:text-transparent hover:bg-dark-gradient hover:bg-clip-text  transition-colors'>
+							<Link
+								to="projects"
+								className="hover:bg-dark-gradient transition-colors hover:bg-clip-text  hover:text-transparent"
+							>
 								projects
 							</Link>
 						</h3>
 
 						<div className="no-scrollbar overflow-y-scroll rounded-xl-to-2xl">
-							<Link to="projects/web-dev">
+							<Link to="projects">
+								{/* projects/web-dev */}
 								<ProjectsContentBox
 									name={'Web Development'}
 									description={'2019-present'}
 									innerBoxClass="	bg-light-green-radial-gradient"
 								/>
 							</Link>
-							<Link to="projects/streetwear">
+							<Link to="projects">
+								{/* projects/streetwear */}
 								<ProjectsContentBox
 									name={'Street-Wear Designs'}
 									description={'2022-present'}
 									innerBoxClass="	bg-light-green-radial-gradient"
 								/>
 							</Link>
-							<Link to="projects/nft-collection">
+							<Link to="projects">
+								{/* projects/nft-collection */}
 								<ProjectsContentBox
-									name={'NFT Collection (unreleased)'}
+									name={'NFT Collection'}
+									// NFT Collection (unreleased)
 									description={'2022-present'}
 									innerBoxClass="	bg-light-green-radial-gradient"
 								/>

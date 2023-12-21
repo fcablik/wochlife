@@ -262,9 +262,9 @@ export default function LoginPage() {
 		<div className="flex min-h-full flex-col justify-center pb-32 pt-20">
 			<div className="mx-auto w-full max-w-md">
 				<div className="flex flex-col gap-3 text-center">
-					<h1 className="text-h1">Welcome back!</h1>
+					<h1 className="text-h1">Coming Soon!</h1>
 					<p className="text-body-md text-muted-foreground">
-						Please enter your details.
+						Admin access only, sorry. :)
 					</p>
 				</div>
 				<Spacer size="xs" />
@@ -340,7 +340,7 @@ export default function LoginPage() {
 								</li>
 							))}
 						</ul>
-						<div className="flex items-center justify-center gap-2 pt-6">
+						{/* <div className="flex items-center justify-center gap-2 pt-6">
 							<span className="text-muted-foreground">New here?</span>
 							<Link
 								to={
@@ -351,7 +351,7 @@ export default function LoginPage() {
 							>
 								Create an account
 							</Link>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
