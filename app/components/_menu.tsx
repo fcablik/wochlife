@@ -36,19 +36,10 @@ export function Menu() {
 							)}
 						</NavLink>
 
-						<NavLink to="about">
-							{({ isActive }) => (
-								<div className={menuItemClassList(isActive)}>
-									<Icon name="file-text" className="h-5 w-5 md:h-6 md:w-6" />
-									<p className={menuItemTextClassList}>about</p>
-								</div>
-							)}
-						</NavLink>
-
 						<NavLink to="projects">
 							{({ isActive }) => (
 								<div className={menuItemClassList(isActive)}>
-									<Icon name="file-text" className="h-5 w-5 md:h-6 md:w-6" />
+									<Icon name="dashboard" className="h-5 w-5 md:h-6 md:w-6" />
 									<p className={menuItemTextClassList}>projects</p>
 								</div>
 							)}
@@ -57,8 +48,17 @@ export function Menu() {
 						<NavLink to="portfolio">
 							{({ isActive }) => (
 								<div className={menuItemClassList(isActive)}>
-									<Icon name="file-text" className="h-5 w-5 md:h-6 md:w-6" />
+									<Icon name="laptop" className="h-5 w-5 md:h-6 md:w-6" />
 									<p className={menuItemTextClassList}>Portfolio</p>
+								</div>
+							)}
+						</NavLink>
+
+						<NavLink to="about">
+							{({ isActive }) => (
+								<div className={menuItemClassList(isActive)}>
+									<Icon name="magnifying-glass" className="h-5 w-5 md:h-6 md:w-6" />
+									<p className={menuItemTextClassList}>about</p>
 								</div>
 							)}
 						</NavLink>
@@ -66,7 +66,7 @@ export function Menu() {
 						<NavLink to="contact" className="max-md:hidden">
 							{({ isActive }) => (
 								<div className={menuItemClassList(isActive)}>
-									<Icon name="file-text" className="h-5 w-5 md:h-6 md:w-6" />
+									<Icon name="envelope-closed" className="h-5 w-5 md:h-6 md:w-6" />
 									<p className={menuItemTextClassList}>contact</p>
 								</div>
 							)}

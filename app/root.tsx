@@ -241,7 +241,7 @@ function App() {
 				)}
 				<div className='z-2'>
 				<div
-					className={cn('custom-hp-spacing transition-opacity duration-300', isToggled ? 'opacity-10' : '')}
+					className={cn('custom-base-responsive-spacing transition-opacity duration-300', isToggled ? 'opacity-5' : '')}
 				>
 					<Outlet />
 					<div className="h-28 md:h-36" />
