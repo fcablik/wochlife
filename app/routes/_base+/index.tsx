@@ -297,7 +297,7 @@ function PortfolioContentBox({
 					<img src={imgSrc} alt="" className="max-w-2/3 rounded-md" />
 				)}
 			</div>
-			<div className="max-md-to-lg:ml-4 md-to-lg:ml-6 flex max-w-[67%] flex-col">
+			<div className="max-md-to-lg:ml-4 md-to-lg:ml-5 flex max-w-[67%] flex-col">
 				<p className={innerContentBoxTexts}>{name}</p>
 				<p className={innerContentBoxTexts}>{description}</p>
 			</div>
@@ -320,7 +320,7 @@ function ProjectsContentBox({
 			<div className={cn(boxInnerContentBoxInnerBox, innerBoxClass)}>
 				{!!imgSrc && imgSrc.length && <img src={imgSrc} alt="" />}
 			</div>
-			<div className="max-md-to-lg:ml-4 md-to-lg:ml-6 flex max-w-[67%] flex-col">
+			<div className="max-md-to-lg:ml-4 md-to-lg:ml-5 flex max-w-[67%] flex-col">
 				<p className={innerContentBoxTexts}>{name}</p>
 				<p className={innerContentBoxTexts}>{description}</p>
 			</div>
