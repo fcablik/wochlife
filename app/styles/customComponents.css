@@ -50,10 +50,10 @@
 		}
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 1025px) {
 		@media (max-height: 749px){
 			.custom-bottom-alignment {
-				@apply bottom-8;
+				@apply bottom-6;
 			}
 		}
 		@media (min-height: 750px){
@@ -61,17 +61,18 @@
 				@apply bottom-10;
 			}
 		}
-
+	}
+	@media (max-width: 1024px) {
+		.custom-bottom-alignment {
+			@apply bottom-2;
+		}
+	}
+	
+	@media (min-width: 768px) {
 		@media (max-height: 799px){
 			.custom-max-heights {
 				@apply max-h-[545px];
 			}
-		}
-	}
-
-	@media (max-width: 768px) {
-		.custom-bottom-alignment {
-			@apply bottom-2;
 		}
 	}
 

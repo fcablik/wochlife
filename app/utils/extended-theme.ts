@@ -95,7 +95,8 @@ export const extendedTheme = {
 		'2/5': '40%',
 		'3/5': '60%',
 		'3/4': '75%',
-		'lg-to-xl':	'1124px',
+		'4/5': '80%',
+		'lg-to-xl': '1124px',
 		'lg-to-xl-2': '1200px',
 		'lg-to-xl-3': '1300px',
 	},
@@ -156,7 +157,7 @@ export const extendedTheme = {
 		/** 12px size / 16px high / bold */
 		button: ['0.75rem', { lineHeight: '1rem', fontWeight: '700' }],
 
-		'md': ['1rem', { lineHeight: '1.45rem', fontWeight: '400' }],
+		md: ['1rem', { lineHeight: '1.45rem', fontWeight: '400' }],
 		'md-to-lg': ['1.1rem', { lineHeight: '1.55rem', fontWeight: '400' }],
 		'xl-to-2xl': ['1.3rem', { lineHeight: '1.75rem', fontWeight: '400' }],
 	},
@@ -217,6 +218,6 @@ export const extendedTheme = {
 		xs: '2px',
 	},
 	scale: {
-        'flip': '-1',
-	}
+		flip: '-1',
+	},
 } satisfies Config['theme']

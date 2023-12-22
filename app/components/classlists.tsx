@@ -1,3 +1,4 @@
+//* base containers, spacings, etc.
 export const pagesContentContainerClassList =
 	'md:max-w-[93%] lg:max-w-[90%] 2xl:max-w-[88%] 7xl:max-w-[1600px] max-md:mx-3 md:mx-auto'
 
@@ -7,13 +8,15 @@ export const adminDetailBoxesClassList =
 export const frontendRoutesSpacingFromHeaderAndFooter =
 	'max-md:px-2 pt-16 md:pt-8 lg:pt-12 pb-24 md:pb-24 lg:pb-32'
 
-export const boxInnerContentBoxProps =
-	'custom-box-in-box-sizes flex items-center mb-3 4xl:mb-4'
-
+//* boxes styling
 export const boxProps =
 	'flex flex-col rounded-3xl lg:rounded-6xl pt-4 px-4 md:px-5 md:pt-6'
 export const darkBoxBgClassList = boxProps + ' bg-dark-gradient'
 export const purpleBoxBgClassList = boxProps + ' bg-purple-box-gradient'
+
+//* box items inside boxes
+export const boxInnerContentBoxProps =
+	'custom-box-in-box-sizes flex items-center mb-3 4xl:mb-4'
 
 export const darkBoxInnerContentBox =
 	boxInnerContentBoxProps +
@@ -23,6 +26,7 @@ export const purpleBoxInnerContentBox =
 	boxInnerContentBoxProps +
 	' bg-highlight-dark/30 hover:bg-highlight-dark transition-colors duration-500 p-2 cursor-pointer rounded-xl'
 
+//* box items content
 export const innerContentBoxTexts =
 	'no-scrollbar overflow-x-scroll whitespace-nowrap'
 
@@ -35,11 +39,13 @@ export const innerContentBoxWrapperOfBoxesInBox2 =
 
 export const boxInnerContentBoxInnerBox =
 	'custom-box-in-box-in-box-sizes rounded-lg-to-xl bg-cover bg-contain'
-
 export const bigBoxTitle = 'capitalize text-center text-2xl font-semibold mb-6'
 
+//* content routes (portfolio, projects, about)
 export const contentsRouteSelectorCol1 =
-	'md-to-lg:w-[35%] lg:w-[32%] lg-to-xl:w-[29%] xl:w-[26.502%] md-to-lg:max-w-[460px] max-md:w-3/4 md:max-md-to-lg:w-1/2'
+	'md-to-lg:w-[35%] lg:w-[32%] lg-to-xl:w-[29%] xl:w-[26.502%] md-to-lg:max-w-[460px] sm:max-md-to-lg:w-1/2'
+export const mobContentsRouteSelectorCol1 =
+	'max-sm:w-[90%] transition-opacity duration-500 fixed bottom-20 z-2000 max-sm:left-5 sm:right-16 ' + contentsRouteSelectorCol1
 export const contentsRouteContentCol2 =
 	'w-full md-to-lg:w-[65%] lg:w-[68%] lg-to-xl:w-[71%] xl:w-[73.498%] flex flex-col'
 export const contentsRouteWrapper =

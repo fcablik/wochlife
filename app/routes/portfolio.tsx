@@ -12,8 +12,10 @@ import {
 	darkBoxInnerContentBox,
 	innerContentBoxTexts,
 	innerContentBoxWrapperOfBoxesInBox,
+	mobContentsRouteSelectorCol1,
 } from '#app/components/classlists.tsx'
 import { MobileModalCaretOpener } from '#app/components/modal-helpers.tsx'
+import { Icon } from '#app/components/ui/icon.tsx'
 import { cn } from '#app/utils/misc.tsx'
 import { requireUserWithRole } from '#app/utils/permissions.ts'
 
@@ -38,15 +40,18 @@ export default function PortfolioRoute() {
 
 				<RouteSelector
 					classList={cn(
-						isMobExtraMenuToggled ? 'opacity-100' : 'opacity-0 pointer-events-none', // pointer-events-none to make this opacity-0 component non-interactive
-						contentsRouteSelectorCol1,
-						'transition-opacity duration-500 fixed bottom-20 z-1999 max-md:left-5 md:right-16',
+						isMobExtraMenuToggled
+							? 'opacity-100'
+							: 'opacity-0 pointer-events-none', // pointer-events-none to make this opacity-0 component non-interactive
+						mobContentsRouteSelectorCol1,
 					)}
 					handleToggle={handleToggle}
 				/>
 			</div>
 
-			<RouteSelector classList={cn(contentsRouteSelectorCol1, 'max-md-to-lg:hidden')} />
+			<RouteSelector
+				classList={cn(contentsRouteSelectorCol1, 'max-md-to-lg:hidden')}
+			/>
 
 			<div className={contentsRouteContentCol2}>
 				<div className={darkBoxBgClassList}>
@@ -71,6 +76,13 @@ function RouteSelector({
 	return (
 		<div className={classList}>
 			<div className={darkBoxBgClassList}>
+				<Icon
+					name="cross-1"
+					size="md"
+					className="absolute right-6 top-6 z-2000 text-white"
+					onClick={handleClick}
+				/>
+
 				<h3 className={bigBoxTitle}>portfolio</h3>
 
 				<h5 className="mb-3 text-center text-lg capitalize">
@@ -97,6 +109,7 @@ function RouteSelector({
 							/>
 						)}
 					</NavLink>
+
 					<NavLink to="freelance" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
@@ -107,6 +120,7 @@ function RouteSelector({
 							/>
 						)}
 					</NavLink>
+
 					<NavLink to="freelance" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
@@ -117,6 +131,7 @@ function RouteSelector({
 							/>
 						)}
 					</NavLink>
+
 					<NavLink to="freelance" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
@@ -143,7 +158,7 @@ function RouteSelector({
 						for companies
 					</NavLink>
 				</h5>
-				<div className="no-scrollbar custom-content-sections-height overflow-scroll rounded-xl-to-2xl">
+				<div className={innerContentBoxWrapperOfBoxesInBox}>
 					<NavLink to="forcompanies/medi" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
@@ -155,6 +170,7 @@ function RouteSelector({
 							/>
 						)}
 					</NavLink>
+
 					<NavLink to="forcompanies/t4s" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
@@ -166,6 +182,7 @@ function RouteSelector({
 							/>
 						)}
 					</NavLink>
+
 					<NavLink to="forcompanies/11ts" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox

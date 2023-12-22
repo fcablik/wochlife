@@ -230,42 +230,45 @@ function App() {
 	}
 
 	return (
-		<Document nonce={nonce} theme="dark" env={data.ENV}> {/* theme={theme} //* temporary untill both developed */}
-			<div className="flex flex-col md-to-lg:justify-center min-h-screen bg-cover bg-center">
-				<div className='custom-hp-bg-main z-1' />
+		<Document nonce={nonce} theme="dark" env={data.ENV}>
+			{/* theme={theme} //* temporary untill both developed */}
+			<div className="flex md:min-h-screen flex-col md-to-lg:justify-center">
+				<div className="custom-hp-bg-main z-1" />
 				{isToggled && (
 					<div
-						className="z-9999 fixed left-0 top-0 h-full w-full"
+						className="fixed left-0 top-0 z-9999 h-full w-full"
 						onClick={handleToggle}
 					/>
 				)}
-				<div className='z-2'>
-				<div
-					className={cn('custom-base-responsive-spacing transition-opacity duration-300', isToggled ? 'opacity-5' : '')}
-				>
-					<Outlet />
-					<div className="h-28 md:h-36" />
-					<Menu />
-				</div>
-
-				<div className="max-lg-to-xl:bottom-16 mb-2 fixed bottom-2 right-2 text-right">
-					<Button
-						size="xs"
-						onClick={handleToggle}
-						type="button"
-						className="opacity-50 hover:opacity-80"
-						variant="highlight"
+				<div className="z-2">
+					<div
+						className={cn(
+							'custom-base-responsive-spacing transition-opacity duration-300',
+							isToggled ? 'opacity-5' : '',
+						)}
 					>
-						<span className='max-md:text-[.65rem]'>see room</span>
-					</Button>
+						<Outlet />
+						<div className="h-28 md:h-36" />
+						<Menu />
+					</div>
 
-					<div className="max-lg-to-xl:hidden mt-1 text-[.55rem] opacity-30">
-						Welcome to my small cozy coding room:)
+					<div className="fixed bottom-2 right-2 mb-2 text-right max-lg-to-xl:bottom-16">
+						<Button
+							size="xs"
+							onClick={handleToggle}
+							type="button"
+							className="opacity-50 hover:opacity-80"
+							variant="highlight"
+						>
+							<span className="max-md:text-[.65rem]">see room</span>
+						</Button>
+
+						<div className="mt-1 text-[.55rem] opacity-30 max-lg-to-xl:hidden">
+							Welcome to my small cozy coding room:)
+						</div>
 					</div>
 				</div>
-				</div>
 			</div>
-
 			<Confetti id={data.confettiId} />
 			<WochToaster toast={data.toast} />
 			<EpicProgress />

@@ -37,12 +37,14 @@ export function MobileModalCaretOpener({
 			{isMobExtraMenuToggled && (
 				<div onClick={handleToggle} className={modalBackdropClassList} />
 			)}
-			<Icon
-				name={isMobExtraMenuToggled ? 'caret-down' : 'caret-up'}
-				size="xl"
-				className="fixed bottom-28 right-5 z-2000 rounded-lg bg-foreground text-background"
-				onClick={handleToggle}
-			/>
+			{!isMobExtraMenuToggled && (
+				<Icon
+					name={isMobExtraMenuToggled ? 'caret-down' : 'caret-up'}
+					size="xl"
+					className="fixed bottom-28 right-5 z-1999 rounded-lg bg-foreground text-background"
+					onClick={handleToggle}
+				/>
+			)}
 		</>
 	)
 }

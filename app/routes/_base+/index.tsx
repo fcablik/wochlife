@@ -1,7 +1,4 @@
-import {
-	type MetaFunction,
-	// type DataFunctionArgs
-} from '@remix-run/node'
+import { type MetaFunction } from '@remix-run/node'
 import { Link } from '@remix-run/react'
 import {
 	bigBoxTitle,
@@ -17,21 +14,15 @@ import {
 import { LogoPhil, LogoWochlife } from '#app/components/logos.tsx'
 import { Button } from '#app/components/ui/button.tsx'
 import { cn } from '#app/utils/misc.tsx'
-// import { requireUserWithRole } from '#app/utils/permissions.ts'
-
-// export async function loader({ request }: DataFunctionArgs) {
-// 	await requireUserWithRole(request, 'admin') // Temporary DEVelopment Phase
-// 	return null
-// }
 
 export default function Index() {
 	//* styling classes
 	// 1. grid, responsivness
 	const col1 = 'w-full lg:w-3/4 lg-to-xl-3:w-2/5 flex flex-col justify-end'
-	const col2 = 'flex w-full gap-8 max-lg:flex-col lg-to-xl-3:w-3/5'
-	const col2_col1 = 'custom-max-heights w-full lg:w-1/2 lg-to-xl-3:w-[44.17%]'
+	const col2 = 'flex w-full gap-8 max-sm:flex-col lg-to-xl-3:w-3/5'
+	const col2_col1 = 'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[44.17%]'
 	const col2_col2 =
-		'custom-max-heights w-full lg:w-1/2 lg-to-xl-3:w-[55.83%] flex flex-col justify-between'
+		'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[55.83%] flex flex-col justify-between'
 
 	const purpleBoxBgClassListSm =
 		boxProps +
@@ -47,6 +38,8 @@ export default function Index() {
 
 	const aboutText = 'about'
 	const discoverText = 'discover'
+
+	const lightGreenGradient = 'bg-light-green-radial-gradient'
 
 	return (
 		<div className="custom-hp-spacing mx-auto flex gap-8 max-xl:px-4 max-lg-to-xl-3:flex-col md:max-xl:mx-8 xl:max-w-[1250px] 2xl:max-w-[1350px] 4xl:max-w-[1450px]">
@@ -101,21 +94,21 @@ export default function Index() {
 							<PortfolioContentBox
 								name="coming soon.."
 								description="2020, Code"
-								innerBoxClass="bg-light-green-radial-gradient"
+								innerBoxClass={lightGreenGradient}
 							/>
 						</Link>
 						<Link to="portfolio/freelance">
 							<PortfolioContentBox
 								name="coming soon.."
 								description="2019, Design + Code"
-								innerBoxClass="bg-light-green-radial-gradient"
+								innerBoxClass={lightGreenGradient}
 							/>
 						</Link>
 						<Link to="portfolio/freelance">
 							<PortfolioContentBox
 								name="coming soon.."
 								description="2019, Design + Code"
-								innerBoxClass="bg-light-green-radial-gradient"
+								innerBoxClass={lightGreenGradient}
 							/>
 						</Link>
 						<Link to="portfolio/freelance">
@@ -123,7 +116,7 @@ export default function Index() {
 								boxClass="mb-0 4xl:mb-0"
 								name="coming soon.."
 								description="2019, Code -1st project"
-								innerBoxClass="bg-light-green-radial-gradient"
+								innerBoxClass={lightGreenGradient}
 							/>
 						</Link>
 					</div>
@@ -215,13 +208,13 @@ export default function Index() {
 					<div
 						className={cn(
 							purpleBoxBgClassList,
-							'custom-projects-box-max-height h-full max-md:mt-6',
+							'custom-projects-box-max-height h-full max-sm:mt-6',
 						)}
 					>
 						<h3 className={bigBoxTitle}>
 							<Link
 								to="projects"
-								className="hover:bg-dark-gradient transition-colors hover:bg-clip-text  hover:text-transparent"
+								className="transition-colors hover:bg-dark-gradient hover:bg-clip-text hover:text-transparent"
 							>
 								projects
 							</Link>
@@ -233,32 +226,35 @@ export default function Index() {
 								<ProjectsContentBox
 									name={'Web Development'}
 									description={'2019-present'}
-									innerBoxClass="	bg-light-green-radial-gradient"
+									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
+
 							<Link to="projects">
 								{/* projects/streetwear */}
 								<ProjectsContentBox
 									name={'Street-Wear Designs'}
 									description={'2022-present'}
-									innerBoxClass="	bg-light-green-radial-gradient"
+									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
+
 							<Link to="projects">
 								{/* projects/nft-collection */}
 								<ProjectsContentBox
 									name={'NFT Collection'}
 									// NFT Collection (unreleased)
 									description={'2022-present'}
-									innerBoxClass="	bg-light-green-radial-gradient"
+									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
+
 							<Link to="projects">
 								{/* projects/nft-game */}
 								<ProjectsContentBox
 									name={'Web3 NFT Online Game'}
 									description={'2023-present'}
-									innerBoxClass="	bg-light-green-radial-gradient"
+									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
 						</div>
@@ -268,8 +264,6 @@ export default function Index() {
 		</div>
 	)
 }
-
-export const meta: MetaFunction = () => [{ title: 'Welcome To Wochlife' }]
 
 function PortfolioContentBox({
 	name,
@@ -297,13 +291,14 @@ function PortfolioContentBox({
 					<img src={imgSrc} alt="" className="max-w-2/3 rounded-md" />
 				)}
 			</div>
-			<div className="max-md-to-lg:ml-4 md-to-lg:ml-5 flex max-w-[67%] flex-col">
+			<div className="flex max-w-[67%] flex-col max-md-to-lg:ml-4 md-to-lg:ml-5">
 				<p className={innerContentBoxTexts}>{name}</p>
 				<p className={innerContentBoxTexts}>{description}</p>
 			</div>
 		</div>
 	)
 }
+
 function ProjectsContentBox({
 	name,
 	description,
@@ -320,10 +315,12 @@ function ProjectsContentBox({
 			<div className={cn(boxInnerContentBoxInnerBox, innerBoxClass)}>
 				{!!imgSrc && imgSrc.length && <img src={imgSrc} alt="" />}
 			</div>
-			<div className="max-md-to-lg:ml-4 md-to-lg:ml-5 flex max-w-[67%] flex-col">
+			<div className="flex max-w-[67%] flex-col max-md-to-lg:ml-4 md-to-lg:ml-5">
 				<p className={innerContentBoxTexts}>{name}</p>
 				<p className={innerContentBoxTexts}>{description}</p>
 			</div>
 		</div>
 	)
 }
+
+export const meta: MetaFunction = () => [{ title: 'Welcome To wochlife' }]
