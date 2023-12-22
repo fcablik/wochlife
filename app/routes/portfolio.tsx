@@ -4,6 +4,7 @@ import { useState } from 'react'
 import {
 	bigBoxTitle,
 	boxInnerContentBoxInnerBox,
+	contentRouteSelectorContentBoxes,
 	contentsRouteContentCol2,
 	contentsRouteSelectorCol1,
 	contentsRouteWrapper,
@@ -37,10 +38,9 @@ export default function PortfolioRoute() {
 
 				<RouteSelector
 					classList={cn(
-						'transition-opacity duration-500',
 						isMobExtraMenuToggled ? 'opacity-100' : 'opacity-0 pointer-events-none', // pointer-events-none to make this opacity-0 component non-interactive
 						contentsRouteSelectorCol1,
-						'fixed bottom-20 z-1999 max-md:left-5 md:right-16',
+						'transition-opacity duration-500 fixed bottom-20 z-1999 max-md:left-5 md:right-16',
 					)}
 					handleToggle={handleToggle}
 				/>
@@ -209,7 +209,7 @@ function PortfolioContentBox({
 					<img src={imgSrc} alt="" className="max-w-2/3 rounded-md" />
 				)}
 			</div>
-			<div className="max-md-to-lg:ml-3 md-to-lg:ml-6 flex max-w-[67%] flex-col">
+			<div className={contentRouteSelectorContentBoxes}>
 				<p className={innerContentBoxTexts}>{name}</p>
 				<p className={innerContentBoxTexts}>{description}</p>
 			</div>

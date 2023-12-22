@@ -44,3 +44,5 @@ export const contentsRouteContentCol2 =
 	'w-full md-to-lg:w-[65%] lg:w-[68%] lg-to-xl:w-[71%] xl:w-[73.498%] flex flex-col'
 export const contentsRouteWrapper =
 	'mx-auto flex gap-8 max-xl:px-4 max-md-to-lg:flex-col md:max-xl:mx-8 xl:max-w-[1250px] 2xl:max-w-[1350px] 4xl:max-w-[1450px]'
+export const contentRouteSelectorContentBoxes =
+	'max-md-to-lg:ml-3 md-to-lg:ml-6 flex max-w-[67%] flex-col'
