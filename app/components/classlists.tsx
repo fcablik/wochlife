@@ -24,9 +24,23 @@ export const purpleBoxInnerContentBox =
 	' bg-highlight-dark/30 hover:bg-highlight-dark transition-colors duration-500 p-2 cursor-pointer rounded-xl'
 
 export const innerContentBoxTexts =
-	'no-scrollbar overflow-scroll whitespace-nowrap'
+	'no-scrollbar overflow-x-scroll whitespace-nowrap'
+
+export const innerContentBoxWrapperCommonStyles =
+	'no-scrollbar overflow-y-scroll rounded-xl-to-2xl'
+export const innerContentBoxWrapperOfBoxesInBox =
+	innerContentBoxWrapperCommonStyles + ' custom-content-sections-height '
+export const innerContentBoxWrapperOfBoxesInBox2 =
+	innerContentBoxWrapperCommonStyles + ' pb-4'
 
 export const boxInnerContentBoxInnerBox =
 	'custom-box-in-box-in-box-sizes rounded-lg-to-xl bg-cover bg-contain'
 
 export const bigBoxTitle = 'capitalize text-center text-2xl font-semibold mb-6'
+
+export const contentsRouteSelectorCol1 =
+	'md-to-lg:w-[35%] lg:w-[32%] lg-to-xl:w-[29%] xl:w-[26.502%] md-to-lg:max-w-[460px] max-md:w-3/4 md:max-md-to-lg:w-1/2'
+export const contentsRouteContentCol2 =
+	'w-full md-to-lg:w-[65%] lg:w-[68%] lg-to-xl:w-[71%] xl:w-[73.498%] flex flex-col'
+export const contentsRouteWrapper =
+	'mx-auto flex gap-8 max-xl:px-4 max-md-to-lg:flex-col md:max-xl:mx-8 xl:max-w-[1250px] 2xl:max-w-[1350px] 4xl:max-w-[1450px]'

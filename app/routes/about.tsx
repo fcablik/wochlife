@@ -8,10 +8,9 @@ import {
 	contentsRouteSelectorCol1,
 	contentsRouteWrapper,
 	darkBoxBgClassList,
+	darkBoxInnerContentBox,
 	innerContentBoxTexts,
 	innerContentBoxWrapperOfBoxesInBox2,
-	purpleBoxBgClassList,
-	purpleBoxInnerContentBox,
 } from '#app/components/classlists.tsx'
 import { MobileModalCaretOpener } from '#app/components/modal-helpers.tsx'
 import { cn } from '#app/utils/misc.tsx'
@@ -22,7 +21,7 @@ export async function loader({ request }: DataFunctionArgs) {
 	return null
 }
 
-export default function ProjectsRoute() {
+export default function AboutRoute() {
 	const [isMobExtraMenuToggled, setMobExtraMenuToggled] = useState(false)
 	const handleToggle = () => {
 		setMobExtraMenuToggled(prev => !prev)
@@ -30,7 +29,7 @@ export default function ProjectsRoute() {
 
 	return (
 		<div className={contentsRouteWrapper}>
-			<div className="md-to-lg:hidden">
+			<div className="duration-300 md-to-lg:hidden">
 				<MobileModalCaretOpener
 					isMobExtraMenuToggled={isMobExtraMenuToggled}
 					handleToggle={handleToggle}
@@ -39,7 +38,9 @@ export default function ProjectsRoute() {
 				<RouteSelector
 					classList={cn(
 						'transition-opacity duration-500',
-						isMobExtraMenuToggled ? 'opacity-100' : 'opacity-0 pointer-events-none', // pointer-events-none to make this opacity-0 component non-interactive
+						isMobExtraMenuToggled
+							? 'opacity-100'
+							: 'opacity-0 pointer-events-none', // pointer-events-none to make this opacity-0 component non-interactive
 						contentsRouteSelectorCol1,
 						'fixed bottom-20 z-1999 max-md:left-5 md:right-16',
 					)}
@@ -47,7 +48,9 @@ export default function ProjectsRoute() {
 				/>
 			</div>
 
-			<RouteSelector classList={cn(contentsRouteSelectorCol1, 'max-md-to-lg:hidden')} />
+			<RouteSelector
+				classList={cn(contentsRouteSelectorCol1, 'max-md-to-lg:hidden')}
+			/>
 
 			<div className={contentsRouteContentCol2}>
 				<div className={darkBoxBgClassList}>
@@ -71,36 +74,26 @@ function RouteSelector({
 
 	return (
 		<div className={classList}>
-			<div className={purpleBoxBgClassList}>
-				<h3 className={bigBoxTitle}>projects</h3>
+			<div className={darkBoxBgClassList}>
+				<h3 className={bigBoxTitle}>about</h3>
 
 				<div className={innerContentBoxWrapperOfBoxesInBox2}>
-					<NavLink to="web-dev" onClick={handleClick}>
+					<NavLink to="phil" onClick={handleClick}>
 						{({ isActive }) => (
-							<ProjectsContentBox
-								// boxClass={isActive ? 'bg-foreground text-background' : ''}
-								name={'Web Development'}
+							<AboutContentBox
+								boxClass={isActive ? 'bg-foreground text-background' : ''}
+								name={'Phil'}
 								description={'2019-present'}
 								innerBoxClass="	bg-light-green-radial-gradient"
 							/>
 						)}
 					</NavLink>
-					<NavLink to="streetwear" onClick={handleClick}>
+					<NavLink to="wochlife" onClick={handleClick}>
 						{({ isActive }) => (
-							<ProjectsContentBox
-								// boxClass={isActive ? 'bg-foreground text-background' : ''}
-								name={'Street-Wear Designs'}
-								description={'2022-present'}
-								innerBoxClass="	bg-light-green-radial-gradient"
-							/>
-						)}
-					</NavLink>
-					<NavLink to="nfts" onClick={handleClick}>
-						{({ isActive }) => (
-							<ProjectsContentBox
-								// boxClass={isActive ? 'bg-foreground text-background' : ''}
-								name={'NFT Collection (unreleased)'}
-								description={'2022-present'}
+							<AboutContentBox
+								boxClass={isActive ? 'bg-foreground text-background' : ''}
+								name={'wochlife'}
+								description={'2023'}
 								innerBoxClass="	bg-light-green-radial-gradient"
 							/>
 						)}
@@ -111,7 +104,7 @@ function RouteSelector({
 	)
 }
 
-function ProjectsContentBox({
+function AboutContentBox({
 	name,
 	description,
 	boxClass,
@@ -125,7 +118,7 @@ function ProjectsContentBox({
 	imgSrc?: string
 }) {
 	return (
-		<div className={cn(purpleBoxInnerContentBox, boxClass)}>
+		<div className={cn(darkBoxInnerContentBox, boxClass)}>
 			<div
 				className={cn(
 					boxInnerContentBoxInnerBox,
@@ -137,7 +130,7 @@ function ProjectsContentBox({
 					<img src={imgSrc} alt="" className="max-w-2/3 rounded-md" />
 				)}
 			</div>
-			<div className="max-md-to-lg:ml-3 md-to-lg:ml-6 flex max-w-[67%] flex-col">
+			<div className="flex max-w-[67%] flex-col max-md-to-lg:ml-3 md-to-lg:ml-6">
 				<p className={innerContentBoxTexts}>{name}</p>
 				<p className={innerContentBoxTexts}>{description}</p>
 			</div>
@@ -145,4 +138,4 @@ function ProjectsContentBox({
 	)
 }
 
-export const meta: MetaFunction = () => [{ title: 'Wochlife - Projects' }]
+export const meta: MetaFunction = () => [{ title: 'Wochlife - About' }]

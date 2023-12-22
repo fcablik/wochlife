@@ -121,7 +121,7 @@
 			max-height: 525px;
 		}
 	}
-	@media (min-width: 992px) {
+	@media (min-width: 991px) {
 		@media (max-height: 849px){
 			.custom-content-box-height {
 				height: 525px;

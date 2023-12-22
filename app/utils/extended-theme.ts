@@ -94,6 +94,7 @@ export const extendedTheme = {
 		'2/3': '66.66%',
 		'2/5': '40%',
 		'3/5': '60%',
+		'3/4': '75%',
 		'lg-to-xl':	'1124px',
 		'lg-to-xl-2': '1200px',
 		'lg-to-xl-3': '1300px',

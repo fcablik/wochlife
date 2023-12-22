@@ -231,7 +231,7 @@ function App() {
 
 	return (
 		<Document nonce={nonce} theme="dark" env={data.ENV}> {/* theme={theme} //* temporary untill both developed */}
-			<div className="flex flex-col justify-center  min-h-screen bg-cover bg-center">
+			<div className="flex flex-col md-to-lg:justify-center min-h-screen bg-cover bg-center">
 				<div className='custom-hp-bg-main z-1' />
 				{isToggled && (
 					<div
