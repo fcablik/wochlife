@@ -252,6 +252,14 @@ export default function Index() {
 									innerBoxClass="	bg-light-green-radial-gradient"
 								/>
 							</Link>
+							<Link to="projects">
+								{/* projects/nft-game */}
+								<ProjectsContentBox
+									name={'Web3 NFT Online Game'}
+									description={'2023-present'}
+									innerBoxClass="	bg-light-green-radial-gradient"
+								/>
+							</Link>
 						</div>
 					</div>
 				</div>
