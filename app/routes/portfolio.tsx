@@ -10,12 +10,15 @@ import {
 	contentsRouteWrapper,
 	darkBoxBgClassList,
 	darkBoxInnerContentBox,
+	darkContentBoxBgClassList,
 	innerContentBoxTexts,
 	innerContentBoxWrapperOfBoxesInBox,
 	mobContentsRouteSelectorCol1,
 } from '#app/components/classlists.tsx'
-import { MobileModalCaretOpener } from '#app/components/modal-helpers.tsx'
-import { Icon } from '#app/components/ui/icon.tsx'
+import {
+	MobileModalCaretOpener,
+	ModalCloserIcon,
+} from '#app/components/modal-helpers.tsx'
 import { cn } from '#app/utils/misc.tsx'
 import { requireUserWithRole } from '#app/utils/permissions.ts'
 
@@ -54,7 +57,7 @@ export default function PortfolioRoute() {
 			/>
 
 			<div className={contentsRouteContentCol2}>
-				<div className={darkBoxBgClassList}>
+				<div className={darkContentBoxBgClassList}>
 					<Outlet />
 				</div>
 			</div>
@@ -76,13 +79,7 @@ function RouteSelector({
 	return (
 		<div className={classList}>
 			<div className={darkBoxBgClassList}>
-				<Icon
-					name="cross-1"
-					size="md"
-					className="absolute right-6 top-6 z-2000 text-white"
-					onClick={handleClick}
-				/>
-
+				{handleToggle && <ModalCloserIcon handleToggle={handleClick} />}
 				<h3 className={bigBoxTitle}>portfolio</h3>
 
 				<h5 className="mb-3 text-center text-lg capitalize">

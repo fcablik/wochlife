@@ -13,6 +13,10 @@ export const boxProps =
 	'flex flex-col rounded-3xl lg:rounded-6xl pt-4 px-4 md:px-5 md:pt-6'
 export const darkBoxBgClassList = boxProps + ' bg-dark-gradient'
 export const purpleBoxBgClassList = boxProps + ' bg-purple-box-gradient'
+export const purpleBoxBg40ClassList = boxProps + ' bg-purple-box-gradient-40'
+
+export const darkContentBoxBgClassList =
+	'flex flex-col rounded-3xl lg:rounded-6xl p-4 md:p-5 xl:p-8 bg-dark-gradient'
 
 //* box items inside boxes
 export const boxInnerContentBoxProps =
@@ -25,6 +29,9 @@ export const darkBoxInnerContentBox =
 export const purpleBoxInnerContentBox =
 	boxInnerContentBoxProps +
 	' bg-highlight-dark/30 hover:bg-highlight-dark transition-colors duration-500 p-2 cursor-pointer rounded-xl'
+export const purpleBoxInnerContentBox40 =
+	boxInnerContentBoxProps +
+	' md:hover:bg-highlight-dark transition-colors duration-500 p-2 cursor-pointer rounded-xl'
 
 //* box items content
 export const innerContentBoxTexts =
@@ -43,9 +50,10 @@ export const bigBoxTitle = 'capitalize text-center text-2xl font-semibold mb-6'
 
 //* content routes (portfolio, projects, about)
 export const contentsRouteSelectorCol1 =
-	'md-to-lg:w-[35%] lg:w-[32%] lg-to-xl:w-[29%] xl:w-[26.502%] md-to-lg:max-w-[460px] sm:max-md-to-lg:w-1/2'
+	'md-to-lg:max-w-[300px] xl:max-w-[320px] sm:max-md-to-lg:w-1/2 md-to-lg:w-[35%] lg:w-[32%] lg-to-xl:w-[29%] xl:w-[26.502%]'
 export const mobContentsRouteSelectorCol1 =
-	'max-sm:w-[90%] transition-opacity duration-500 fixed bottom-20 z-2000 max-sm:left-5 sm:right-16 ' + contentsRouteSelectorCol1
+	'max-sm:w-[90%] transition-opacity duration-500 fixed bottom-20 z-2000 max-sm:left-5 sm:right-16 ' +
+	contentsRouteSelectorCol1
 export const contentsRouteContentCol2 =
 	'w-full md-to-lg:w-[65%] lg:w-[68%] lg-to-xl:w-[71%] xl:w-[73.498%] flex flex-col'
 export const contentsRouteWrapper =

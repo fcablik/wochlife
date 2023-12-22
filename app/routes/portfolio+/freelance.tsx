@@ -3,7 +3,7 @@ import { Outlet } from '@remix-run/react'
 export default function PortfolioFreelance() {
 	return (
 		<div>
-			<h3 className="mb-6 text-center text-2xl font-semibold capitalize">
+			<h3 className="mb-6 text-xl md:text-2xl font-semibold capitalize">
 				freelance
 			</h3>
 

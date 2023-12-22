@@ -6,10 +6,10 @@ import { Icon } from './ui/icon.tsx'
 export function Menu() {
 	function menuItemClassList(isActive: boolean): string {
 		return (
-			'transition-opacity ' +
+			'transition-all duration-300 flex flex-col items-center ' +
 			(isActive
-				? 'flex flex-col items-center text-highlight lg:after:absolute lg:after:bottom-0 lg:after:w-12 lg:after:rounded-3xl lg:after:border-2 lg:after:border-highlight'
-				: 'flex flex-col items-center opacity-50 hover:text-highlight')
+				? 'text-highlight lg:after:absolute lg:after:bottom-0 lg:after:w-12 lg:after:rounded-3xl lg:after:border-2 lg:after:border-highlight'
+				: 'opacity-50 hover:text-highlight')
 		)
 	}
 	const menuItemTextClassList = 'capitalize mt-1 lg:mt-2 font-light'
@@ -48,7 +48,7 @@ export function Menu() {
 						<NavLink to="portfolio">
 							{({ isActive }) => (
 								<div className={menuItemClassList(isActive)}>
-									<Icon name="laptop" className="h-5 w-5 lg:h-6 lg:w-6" />
+									<Icon name="desktop" className="h-5 w-5 lg:h-6 lg:w-6" />
 									<p className={menuItemTextClassList}>Portfolio</p>
 								</div>
 							)}
@@ -58,7 +58,7 @@ export function Menu() {
 							{({ isActive }) => (
 								<div className={menuItemClassList(isActive)}>
 									<Icon
-										name="magnifying-glass"
+										name="question-mark-circled"
 										className="h-5 w-5 lg:h-6 lg:w-6"
 									/>
 									<p className={menuItemTextClassList}>about</p>
@@ -86,7 +86,7 @@ export function Menu() {
 								href="https://instagram.com/wochlife"
 								target="_blank"
 								rel="noreferrer"
-								className='hover:text-highlight transition-colors'
+								className="transition-colors hover:text-highlight"
 							>
 								@wochlife
 							</a>

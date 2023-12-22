@@ -13,6 +13,7 @@ import {
 } from '#app/components/classlists.tsx'
 import { LogoPhil, LogoWochlife } from '#app/components/logos.tsx'
 import { Button } from '#app/components/ui/button.tsx'
+import { Icon, type IconName } from '#app/components/ui/icon.tsx'
 import { cn } from '#app/utils/misc.tsx'
 
 export default function Index() {
@@ -26,7 +27,7 @@ export default function Index() {
 
 	const purpleBoxBgClassListSm =
 		boxProps +
-		' bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] lg:h-[225px] lg-to-xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
+		' bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[225px] lg:h-[195px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
 
 	//* copy translations
 	const welcomeTitle = 'Welcome <br /> to Wochlife'
@@ -130,7 +131,7 @@ export default function Index() {
 						</Link>
 					</h5>
 					<div className={innerContentBoxWrapperOfBoxesInBox}>
-						<Link to="portfolio">
+						{/* <Link to="portfolio">
 							<PortfolioContentBox
 								innerBoxClass="bg-medi-radial-gradient"
 								name="coming soon.."
@@ -150,8 +151,8 @@ export default function Index() {
 								name="coming soon.."
 								description="2022-present"
 							/>
-						</Link>
-						{/* <Link to="portfolio/forcompanies/medi">
+						</Link> */}
+						<Link to="portfolio/forcompanies/medi">
 							<PortfolioContentBox
 								innerBoxClass="bg-medi-radial-gradient"
 								imgSrc="/img/medi.webp"
@@ -174,7 +175,7 @@ export default function Index() {
 								name="11teamsports.com"
 								description="2022-present"
 							/>
-						</Link> */}
+						</Link>
 					</div>
 				</div>
 
@@ -221,39 +222,38 @@ export default function Index() {
 						</h3>
 
 						<div className="no-scrollbar overflow-y-scroll rounded-xl-to-2xl">
-							<Link to="projects">
-								{/* projects/web-dev */}
+							<Link to="projects/web-dev">
 								<ProjectsContentBox
 									name={'Web Development'}
 									description={'2019-present'}
+									iconName="desktop"
 									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
 
-							<Link to="projects">
-								{/* projects/streetwear */}
+							<Link to="projects/streetwear">
 								<ProjectsContentBox
 									name={'Street-Wear Designs'}
 									description={'2022-present'}
+									iconName="accessibility"
 									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
 
-							<Link to="projects">
-								{/* projects/nft-collection */}
+							<Link to="projects/nft-collection">
 								<ProjectsContentBox
 									name={'NFT Collection'}
-									// NFT Collection (unreleased)
 									description={'2022-present'}
+									iconName="rocket"
 									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
 
-							<Link to="projects">
-								{/* projects/nft-game */}
+							<Link to="projects/web3-nft-game">
 								<ProjectsContentBox
 									name={'Web3 NFT Online Game'}
 									description={'2023-present'}
+									iconName="mix"
 									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
@@ -304,16 +304,26 @@ function ProjectsContentBox({
 	description,
 	innerBoxClass,
 	imgSrc,
+	iconName,
 }: {
 	name: string
 	description: string
 	innerBoxClass?: string
 	imgSrc?: string
+	iconName?: IconName
 }) {
 	return (
-		<div className={purpleBoxInnerContentBox}>
-			<div className={cn(boxInnerContentBoxInnerBox, innerBoxClass)}>
-				{!!imgSrc && imgSrc.length && <img src={imgSrc} alt="" />}
+		<div className={cn(purpleBoxInnerContentBox, 'group')}>
+			<div className={cn(boxInnerContentBoxInnerBox, innerBoxClass,
+			'text-highlight group-hover:text-foreground',
+				'flex items-center justify-center transition-colors md:group-hover:bg-light-blue-radial-gradient',
+				)}>
+				{!iconName && !!imgSrc && imgSrc.length && (
+					<img src={imgSrc} alt="" />
+				)}
+				{!!iconName && iconName.length && (
+					<Icon name={iconName} size="xl" className='duration-200' />
+				)}
 			</div>
 			<div className="flex max-w-[67%] flex-col max-md-to-lg:ml-4 md-to-lg:ml-5">
 				<p className={innerContentBoxTexts}>{name}</p>

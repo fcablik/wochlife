@@ -71,7 +71,7 @@
 	@media (min-width: 768px) {
 		@media (max-height: 799px){
 			.custom-max-heights {
-				@apply max-h-[545px];
+				@apply max-h-[565px];
 			}
 		}
 	}
@@ -86,7 +86,7 @@
 	}
 	@media (min-height: 800px){
 		.custom-max-heights {
-			@apply max-h-[555px];
+			@apply max-h-[575px];
 		}
 		.custom-max-margin-welcome-box {
 			@apply mt-20;
@@ -98,12 +98,12 @@
 			@apply max-h-[183px];
 		}
 		.custom-projects-box-max-height {
-			max-height: 298px;
+			max-height: 318px;
 		}
 	}
 	@media (min-height: 870px){
 		.custom-max-heights {
-			@apply max-h-[595px];
+			@apply max-h-[635px];
 		}
 		.custom-content-sections-height { 
 			@apply max-h-[207px];
@@ -112,7 +112,7 @@
 			@apply mt-20;
 		}
 		.custom-projects-box-max-height {
-			max-height: 340px;
+			max-height: 360px;
 		}
 	}
 

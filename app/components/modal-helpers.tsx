@@ -39,12 +39,29 @@ export function MobileModalCaretOpener({
 			)}
 			{!isMobExtraMenuToggled && (
 				<Icon
-					name={isMobExtraMenuToggled ? 'caret-down' : 'caret-up'}
+					name="caret-up"
 					size="xl"
-					className="fixed bottom-28 right-5 z-1999 rounded-lg bg-foreground text-background"
+					className="fixed bottom-28 right-5 z-1999 cursor-pointer rounded-lg bg-foreground text-background transition-colors hover:bg-highlight hover:text-foreground"
 					onClick={handleToggle}
 				/>
 			)}
 		</>
+	)
+}
+
+export function ModalCloserIcon({
+	handleToggle,
+	iconName = "cross-1",
+}: {
+	handleToggle: () => void
+	iconName?: string
+}) {
+	return (
+		<Icon
+			name={iconName}
+			size="md"
+			className="absolute right-6 top-6 z-2000 cursor-pointer text-white transition-opacity hover:opacity-70"
+			onClick={handleToggle}
+		/>
 	)
 }

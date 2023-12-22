@@ -8,15 +8,18 @@ import {
 	contentsRouteContentCol2,
 	contentsRouteSelectorCol1,
 	contentsRouteWrapper,
-	darkBoxBgClassList,
+	darkContentBoxBgClassList,
 	innerContentBoxTexts,
 	innerContentBoxWrapperOfBoxesInBox2,
 	mobContentsRouteSelectorCol1,
-	purpleBoxBgClassList,
-	purpleBoxInnerContentBox,
+	purpleBoxBg40ClassList,
+	purpleBoxInnerContentBox40,
 } from '#app/components/classlists.tsx'
-import { MobileModalCaretOpener } from '#app/components/modal-helpers.tsx'
-import { Icon } from '#app/components/ui/icon.tsx'
+import {
+	MobileModalCaretOpener,
+	ModalCloserIcon,
+} from '#app/components/modal-helpers.tsx'
+import { Icon, type IconName } from '#app/components/ui/icon.tsx'
 import { cn } from '#app/utils/misc.tsx'
 import { requireUserWithRole } from '#app/utils/permissions.ts'
 
@@ -55,7 +58,7 @@ export default function ProjectsRoute() {
 			/>
 
 			<div className={contentsRouteContentCol2}>
-				<div className={darkBoxBgClassList}>
+				<div className={darkContentBoxBgClassList}>
 					<Outlet />
 				</div>
 			</div>
@@ -77,13 +80,8 @@ function RouteSelector({
 
 	return (
 		<div className={classList}>
-			<div className={purpleBoxBgClassList}>
-				<Icon
-					name="cross-1"
-					size="md"
-					className="absolute right-6 top-6 z-2000 text-white"
-					onClick={handleClick}
-				/>
+			<div className={purpleBoxBg40ClassList}>
+				{handleToggle && <ModalCloserIcon handleToggle={handleClick} />}
 
 				<h3 className={bigBoxTitle}>projects</h3>
 
@@ -91,10 +89,14 @@ function RouteSelector({
 					<NavLink to="web-dev" onClick={handleClick}>
 						{({ isActive }) => (
 							<ProjectsContentBox
-								// boxClass={isActive ? 'bg-foreground text-background' : ''}
+								boxClass={isActive ? 'bg-highlight-dark' : ''}
 								name={'Web Development'}
 								description={'2019-present'}
-								innerBoxClass={lightGreenGradient}
+								iconName="desktop"
+								innerBoxClass={cn(
+									lightGreenGradient,
+									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+								)}
 							/>
 						)}
 					</NavLink>
@@ -102,21 +104,29 @@ function RouteSelector({
 					<NavLink to="streetwear" onClick={handleClick}>
 						{({ isActive }) => (
 							<ProjectsContentBox
-								// boxClass={isActive ? 'bg-foreground text-background' : ''}
+								boxClass={isActive ? 'bg-highlight-dark' : ''}
 								name={'Street-Wear Designs'}
 								description={'2022-present'}
-								innerBoxClass={lightGreenGradient}
+								iconName="accessibility"
+								innerBoxClass={cn(
+									lightGreenGradient,
+									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+								)}
 							/>
 						)}
 					</NavLink>
 
-					<NavLink to="nfts" onClick={handleClick}>
+					<NavLink to="nft-collection" onClick={handleClick}>
 						{({ isActive }) => (
 							<ProjectsContentBox
-								// boxClass={isActive ? 'bg-foreground text-background' : ''}
+								boxClass={isActive ? 'bg-highlight-dark' : ''}
 								name={'NFT Collection (unreleased)'}
 								description={'2022-present'}
-								innerBoxClass={lightGreenGradient}
+								iconName="rocket"
+								innerBoxClass={cn(
+									lightGreenGradient,
+									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+								)}
 							/>
 						)}
 					</NavLink>
@@ -124,10 +134,14 @@ function RouteSelector({
 					<NavLink to="web3-nft-game" onClick={handleClick}>
 						{({ isActive }) => (
 							<ProjectsContentBox
-								// boxClass={isActive ? 'bg-foreground text-background' : ''}
+								boxClass={isActive ? 'bg-highlight-dark' : ''}
 								name={'Web3 NFT Online Game'}
 								description={'2023-present'}
-								innerBoxClass={lightGreenGradient}
+								iconName="mix"
+								innerBoxClass={cn(
+									lightGreenGradient,
+									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+								)}
 							/>
 						)}
 					</NavLink>
@@ -143,24 +157,29 @@ function ProjectsContentBox({
 	boxClass,
 	innerBoxClass,
 	imgSrc,
+	iconName,
 }: {
 	name: string
 	description: string
 	boxClass?: string
 	innerBoxClass?: string
 	imgSrc?: string
+	iconName?: IconName
 }) {
 	return (
-		<div className={cn(purpleBoxInnerContentBox, boxClass)}>
+		<div className={cn(purpleBoxInnerContentBox40, boxClass, 'group')}>
 			<div
 				className={cn(
 					boxInnerContentBoxInnerBox,
 					innerBoxClass,
-					'flex items-center justify-center',
+					'flex items-center justify-center transition-colors md:group-hover:bg-light-blue-radial-gradient',
 				)}
 			>
-				{!!imgSrc && imgSrc.length && (
+				{!iconName && !!imgSrc && imgSrc.length && (
 					<img src={imgSrc} alt="" className="max-w-2/3 rounded-md" />
+				)}
+				{!!iconName && iconName.length && (
+					<Icon name={iconName} size="xl" className='duration-200' />
 				)}
 			</div>
 			<div className={contentRouteSelectorContentBoxes}>

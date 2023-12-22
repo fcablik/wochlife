@@ -200,6 +200,8 @@ export const extendedTheme = {
 			'linear-gradient(to bottom right, rgba(24, 24, 24, .86) 0%, rgba(18, 18, 18, .86) 50%, rgba(16, 16, 16, .9) 100%)',
 		'purple-box-gradient':
 			'linear-gradient(to bottom right, rgba(106, 95, 243, .7) 0%, rgba(117, 99, 247, .7) 50%, rgba(130, 96, 245, .7) 100%)',
+		'purple-box-gradient-40':
+			'linear-gradient(to bottom right, rgba(106, 95, 243, .3) 0%, rgba(117, 99, 247, .3) 50%, rgba(130, 96, 245, .3) 100%)',
 		'light-green-radial-gradient': 'radial-gradient(circle, #85F1C5, #83D9CD)',
 		'medi-radial-gradient': 'radial-gradient(circle, #A40E68, #A40E68)',
 		'medi-logo': 'url("/img/medi.webp")',
@@ -207,6 +209,7 @@ export const extendedTheme = {
 		'11ts-logo': 'url("/img/11ts.webp")',
 		't4s-radial-gradient': 'radial-gradient(circle, #D07009, #F98305)',
 		't4s-logo': 'url("/img/t4s.webp")',
+		'light-blue-radial-gradient': 'radial-gradient(circle, #85BDF1, #83A5D9)',
 	},
 	padding: {
 		'18': '4.5rem',
