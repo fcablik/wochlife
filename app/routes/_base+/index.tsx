@@ -187,7 +187,7 @@ export default function Index() {
 							<LogoPhil className="max-md:max-h-[24px]" />
 
 							<Link to="about/phil" className="w-full">
-								<Button className="w-full text-md capitalize" variant="default">
+								<Button className="w-full p-2 text-md capitalize" variant="default">
 									{discoverText}
 								</Button>
 							</Link>
@@ -199,7 +199,7 @@ export default function Index() {
 							<LogoWochlife className="max-md:max-h-[20px]" />
 
 							<Link to="about/wochlife" className="w-full">
-								<Button className="w-full capitalize" variant="default">
+								<Button className="w-full p-2 capitalize" variant="default">
 									{discoverText}
 								</Button>
 							</Link>
@@ -316,7 +316,7 @@ function ProjectsContentBox({
 		<div className={cn(purpleBoxInnerContentBox, 'group')}>
 			<div className={cn(boxInnerContentBoxInnerBox, innerBoxClass,
 			'text-highlight group-hover:text-foreground',
-				'flex items-center justify-center transition-colors md:group-hover:bg-light-blue-radial-gradient',
+				'flex items-center justify-center transition-colors group-hover:bg-light-blue-radial-gradient',
 				)}>
 				{!iconName && !!imgSrc && imgSrc.length && (
 					<img src={imgSrc} alt="" />
