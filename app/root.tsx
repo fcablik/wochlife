@@ -199,7 +199,7 @@ function Document({
 				<ClientHintCheck nonce={nonce} />
 				<Meta />
 				<meta charSet="utf-8" />
-				<meta name="viewport" content="width=device-width,initial-scale=1" />
+				<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 				<Links />
 			</head>
 			<body className="max-3xl:text-body-prebase 3xl:max-4xl:text-body-base">

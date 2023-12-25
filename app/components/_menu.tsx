@@ -54,7 +54,7 @@ export function Menu() {
 							)}
 						</NavLink>
 
-						<NavLink to="about">
+						<NavLink to="about" className="max-lg:hidden">
 							{({ isActive }) => (
 								<div className={menuItemClassList(isActive)}>
 									<Icon
@@ -66,7 +66,7 @@ export function Menu() {
 							)}
 						</NavLink>
 
-						<NavLink to="contact" className="max-lg:hidden">
+						<NavLink to="contact">
 							{({ isActive }) => (
 								<div className={menuItemClassList(isActive)}>
 									<Icon

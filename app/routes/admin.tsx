@@ -41,20 +41,20 @@ function SidebarNavLink({
 									? 'dashboardSidebar'
 									: 'dashboardSidebar'
 								: isActive
-								? 'activedashboardSidebar'
-								: 'dashboardSidebar'
+								  ? 'activedashboardSidebar'
+								  : 'dashboardSidebar'
 						}
 						className={cn(
 							'capitalize before:absolute before:left-0 before:h-12 before:rounded-lg before:border-2 before:border-transparent',
-								title === 'dashboard' ||
+							title === 'dashboard' ||
 								title === 'facilities' ||
 								title === 'galleries'
 								? isActive
 									? 'font-bold text-highlight before:border-highlight'
 									: 'hover:before:border-highlight'
 								: isActive
-								? 'before:border-highlight'
-								: 'hover:before:border-highlight',
+								  ? 'before:border-highlight'
+								  : 'hover:before:border-highlight',
 						)}
 					>
 						<Icon
@@ -74,18 +74,18 @@ export default function AdminRoute() {
 	const user = useUser()
 
 	const sidebarBoxBaseClasslist =
-		'flex flex-col items-center rounded-2xl bg-backgroundDashboard'
+		'flex flex-col items-center rounded-2xl bg-backgroundDashboard/80'
 	const sidebarMenuBoxClasslist = sidebarBoxBaseClasslist + ' p-6 2xl:p-8 pr-6'
 	const sidebarBoxClasslist = sidebarBoxBaseClasslist + ' px-6 2xl:px-8 py-4'
 	const sidebarWidthClassList =
 		'w-full max-w-[260px] 2xl:max-w-[280px] pt-4 pb-24 2xl:pb-28'
 
 	return (
-		<div className="flex items-start justify-center">
+		<div className="mx-auto flex max-w-[1400px] items-start justify-center">
 			<div className="h-full overflow-hidden">
 				<div
 					className={cn(
-						'fixed h-full overflow-y-auto bg-background pb-[5.5em] max-lg:hidden lg:pr-4 2xl:pr-9',
+						'fixed h-full overflow-y-auto pb-[5.5em] max-lg:hidden lg:pr-4 2xl:pr-9',
 						sidebarWidthClassList,
 					)}
 				>
@@ -98,6 +98,11 @@ export default function AdminRoute() {
 								icon="dashboard"
 							/>
 
+							<SidebarNavLink
+								routeName="contact-messages"
+								title="messages"
+								icon="pencil-2"
+							/>
 							<SidebarNavLink routeName="pages" icon="pencil-2" />
 							<SidebarNavLink
 								routeName="docs"
@@ -119,7 +124,7 @@ export default function AdminRoute() {
 			<div className={cn('h-full max-lg:hidden', sidebarWidthClassList)} />
 
 			<div className="w-full py-6 2xl:py-10">
-				<div className="rounded-3xl bg-backgroundDashboard px-2 py-12 sm:px-4 xl:px-6 2xl:px-16 2xl:py-16">
+				<div className="rounded-3xl bg-backgroundDashboard/80 px-2 py-12 sm:px-4 xl:px-6 2xl:px-16 2xl:py-16">
 					<Outlet />
 				</div>
 			</div>

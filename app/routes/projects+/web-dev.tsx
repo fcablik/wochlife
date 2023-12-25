@@ -1,14 +1,22 @@
-import { Outlet } from '@remix-run/react'
+import { NavLink, Outlet } from '@remix-run/react'
 
 export default function PortfolioFreelance() {
 	return (
-		<div>
-			<h3 className="mb-6 text-xl md:text-2xl font-semibold capitalize">
-				web-dev
-			</h3>
-
-			<div className="custom-content-box-height no-scrollbar overflow-scroll">
-				<Outlet />
+		<div className="relative">
+			<Outlet />
+			<div className="absolute right-0 top-0">
+				<NavLink
+					to="custom-apps"
+					className={({ isActive }) => (isActive ? 'text-highlight' : '')}
+				>
+					custom apps
+				</NavLink>
+				<NavLink
+					to="booking-systems"
+					className={({ isActive }) => (isActive ? 'text-highlight' : '')}
+				>
+					custom apps
+				</NavLink>
 			</div>
 		</div>
 	)
