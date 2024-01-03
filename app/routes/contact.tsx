@@ -66,7 +66,7 @@ export async function action({ request }: DataFunctionArgs) {
 }
 
 export const meta: MetaFunction = () => {
-	return [{ title: 'Contact Us | Wochlife' }]
+	return [{ title: 'Contacts | Wochlife' }]
 }
 
 export default function ContactForm() {
@@ -78,11 +78,11 @@ export default function ContactForm() {
 
 				<div className='mt-4'>
 				<a
-					href="https://instagram.com/wochlife"
+					href="https://instagram.com/filipcablik"
 					target="_blank"
 					rel="noreferrer"
 				>
-					<Button variant="highlight">@wochlife</Button>
+					<Button variant="highlight">@filipcablik</Button>
 				</a>
 				</div>
 			</div>

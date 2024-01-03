@@ -237,7 +237,7 @@ export function ContactFormOperator() {
 						type="submit"
 						status={isSubmitting ? 'pending' : actionData?.status ?? 'idle'}
 						disabled={isSubmitting}
-						className="w-2/3 py-6 capitalize"
+						className="w-2/3 py-3 capitalize rounded-2xl hover:text-foreground"
 					>
 						send message
 					</StatusButton>

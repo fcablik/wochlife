@@ -152,12 +152,12 @@ export default function Index() {
 								description="2022-present"
 							/>
 						</Link> */}
-						<Link to="portfolio/forcompanies/medi">
+						<Link to="portfolio/forcompanies/11ts">
 							<PortfolioContentBox
-								innerBoxClass="bg-medi-radial-gradient"
-								imgSrc="/img/medi.webp"
-								name="medi.de/cz"
-								description="2020-2022"
+								innerBoxClass="bg-11ts-radial-gradient"
+								imgSrc="/img/11ts.webp"
+								name="11teamsports.com"
+								description="2022-present"
 							/>
 						</Link>
 						<Link to="portfolio/forcompanies/t4s">
@@ -168,12 +168,12 @@ export default function Index() {
 								description="2022-present"
 							/>
 						</Link>
-						<Link to="portfolio/forcompanies/11ts">
+						<Link to="portfolio/forcompanies/medi">
 							<PortfolioContentBox
-								innerBoxClass="bg-11ts-radial-gradient"
-								imgSrc="/img/11ts.webp"
-								name="11teamsports.com"
-								description="2022-present"
+								innerBoxClass="bg-medi-radial-gradient"
+								imgSrc="/img/medi.webp"
+								name="medi.de/cz"
+								description="2020-2022"
 							/>
 						</Link>
 					</div>
@@ -199,7 +199,7 @@ export default function Index() {
 							<LogoWochlife className="max-md:max-h-[20px]" />
 
 							<Link to="about/wochlife" className="w-full">
-								<Button className="w-full p-2 capitalize" variant="default">
+								<Button className="w-full p-2 text-md capitalize" variant="default">
 									{discoverText}
 								</Button>
 							</Link>

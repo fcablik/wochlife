@@ -83,12 +83,12 @@ export function Menu() {
 						<div>
 							socials:{' '}
 							<a
-								href="https://instagram.com/wochlife"
+								href="https://instagram.com/filipcablik"
 								target="_blank"
 								rel="noreferrer"
 								className="transition-colors hover:text-highlight"
 							>
-								@wochlife
+								@filipcablik
 							</a>
 						</div>
 
