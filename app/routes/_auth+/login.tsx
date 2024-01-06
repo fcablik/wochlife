@@ -262,9 +262,9 @@ export default function LoginPage() {
 		<div className="flex min-h-full flex-col justify-center pb-32 pt-20">
 			<div className="mx-auto w-full max-w-md">
 				<div className="flex flex-col gap-3 text-center">
-					<h1 className="text-h1">Coming Soon!</h1>
-					<p className="text-body-md text-muted-foreground">
-						Admin access only, sorry. :)
+					<h1 className="text-3xl">Coming Soon!</h1>
+					<p className="text-body-sm text-muted-foreground">
+						Admin access only, sorry..
 					</p>
 				</div>
 				<Spacer size="xs" />

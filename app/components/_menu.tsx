@@ -1,6 +1,7 @@
-import { NavLink } from '@remix-run/react'
+import { Link, NavLink } from '@remix-run/react'
 import { cn } from '#app/utils/misc.tsx'
 // import ThemeSwitcher from './theme-switch.tsx'
+import { Button } from './ui/button.tsx'
 import { Icon } from './ui/icon.tsx'
 
 export function Menu() {
@@ -81,7 +82,7 @@ export function Menu() {
 
 					<div className={cn(menuSidesClassList, 'max-lg:hidden lg:w-2/5')}>
 						<div>
-							socials:{' '}
+							{/* socials:{' '}
 							<a
 								href="https://instagram.com/filipcablik"
 								target="_blank"
@@ -89,7 +90,20 @@ export function Menu() {
 								className="transition-colors hover:text-highlight"
 							>
 								@filipcablik
-							</a>
+							</a> */}
+
+							<Link
+								to="contact"
+								className="transition-colors hover:text-highlight"
+							>
+								<Button
+									variant="highlight-secondary"
+									size="xs"
+									className="py-4"
+								>
+									Schedule Free Call
+								</Button>
+							</Link>
 						</div>
 
 						{/* <ThemeSwitcher /> */}

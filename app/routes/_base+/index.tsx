@@ -11,7 +11,9 @@ import {
 	purpleBoxBgClassList,
 	purpleBoxInnerContentBox,
 } from '#app/components/classlists.tsx'
-import { LogoPhil, LogoWochlife } from '#app/components/logos.tsx'
+import { LogoPhil, 
+	// LogoWochlife
+} from '#app/components/logos.tsx'
 import { Button } from '#app/components/ui/button.tsx'
 import { Icon, type IconName } from '#app/components/ui/icon.tsx'
 import { cn } from '#app/utils/misc.tsx'
@@ -28,6 +30,8 @@ export default function Index() {
 	const purpleBoxBgClassListSm =
 		boxProps +
 		' bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[225px] lg:h-[195px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
+	const purpleBoxBgClassListSm2 =
+		'text-center flex flex-col rounded-3xl lg:rounded-6xl pt-4 px-0 md:pt-6 bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[225px] lg:h-[195px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
 
 	//* copy translations
 	const welcomeTitle = 'Welcome <br /> to Wochlife'
@@ -198,17 +202,19 @@ export default function Index() {
 							</Link>
 						</div>
 
-						<div className={purpleBoxBgClassListSm}>
-							<h3 className="text-xl font-semibold capitalize">{aboutText}</h3>
+						<div className={purpleBoxBgClassListSm2}>
+							<h3 className="text-md md:text-xl font-semibold capitalize pt-6 md:pt-8">
+								schedule <br/>free call
+							</h3>
 
-							<LogoWochlife className="max-md:max-h-[20px]" />
+							{/* <LogoWochlife className="max-md:max-h-[20px]" /> */}
 
-							<Link to="about/wochlife" className="w-full">
+							<Link to="contact" className="w-full px-4 md:px-5">
 								<Button
 									className="w-full p-2 text-sm 2xl:text-md capitalize"
 									variant="default"
 								>
-									{discoverText}
+									Contacts
 								</Button>
 							</Link>
 						</div>
@@ -225,7 +231,7 @@ export default function Index() {
 								to="projects"
 								className="transition-colors hover:bg-dark-gradient hover:bg-clip-text hover:text-transparent"
 							>
-								Workload
+								my fields & projects
 							</Link>
 						</h3>
 
