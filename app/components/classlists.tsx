@@ -60,3 +60,9 @@ export const contentsRouteWrapper =
 	'mx-auto flex gap-8 max-xl:px-4 max-md-to-lg:flex-col md:max-xl:mx-8 xl:max-w-[1250px] 2xl:max-w-[1350px] 4xl:max-w-[1450px]'
 export const contentRouteSelectorContentBoxes =
 	'max-md-to-lg:ml-3 md-to-lg:ml-6 flex max-w-[67%] flex-col'
+
+
+
+
+export const destructiveModalWrapperClassList =
+'absolute left-1/2 top-20 z-3001 w-full max-w-1/3 -translate-x-1/2 rounded-xl border-4 border-destructive bg-white p-4'

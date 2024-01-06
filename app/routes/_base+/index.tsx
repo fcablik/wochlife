@@ -31,9 +31,9 @@ export default function Index() {
 
 	//* copy translations
 	const welcomeTitle = 'Welcome <br /> to Wochlife'
-	const welcomeSubTitle = "the phil's little world"
+	const welcomeSubTitle = "Fil's world of creations"
 	const welcomeBoxText =
-		"<p class='mb-3 md:mb-5'>Hey, I'm Phil.</p><p class='mb-3 md:mb-5'>Web Developer with<br class='sm:hidden'/> passion for combining tech <br class='sm:hidden'/>&&nbsp;design.</p>Applications are not just a&nbsp;product to me, it's a&nbsp;form of an&nbsp;art, an expression. My apps show the world, who You are."
+		"<p class='mb-3 md:mb-5'>Hey, I'm Filip.</p><p class='mb-3 md:mb-5'>Web Developer with<br class='sm:hidden'/> passion for combining tech <br class='sm:hidden'/>&&nbsp;design.</p>Applications are not just a&nbsp;product to me, it's a&nbsp;form of an&nbsp;art, an expression. My apps show the world, who You are."
 
 	// "Applications are not just a product to me, it's a form of an art, an expression. My apps show the world who You are.
 
@@ -44,7 +44,7 @@ export default function Index() {
 
 	return (
 		<div className="custom-hp-spacing mx-auto flex gap-8 max-xl:px-4 max-lg-to-xl-3:flex-col md:max-xl:mx-8 xl:max-w-[1250px] 2xl:max-w-[1350px] 4xl:max-w-[1450px]">
-			<div className={cn(col1, 'delayed-fade-in-box-1')}>
+			<div className={cn(col1, 'delayed-fade-in-200')}>
 				<h1 className="mt-24 text-h1-sm opacity-90 max-lg:ml-2 max-lg:text-h3 lg:mt-8 lg:text-h1-md 3xl:text-h1">
 					<div dangerouslySetInnerHTML={{ __html: welcomeTitle }} />
 				</h1>
@@ -72,7 +72,7 @@ export default function Index() {
 						<img
 							src="/img/woch_testing_4.png"
 							alt=""
-							className="delayed-fade-in-900 max-lg:max-w-[10rem]"
+							className="delayed-fade-in-500 max-lg:max-w-[10rem]"
 						/>
 					</div>
 				</div>
@@ -80,7 +80,7 @@ export default function Index() {
 
 			<div className={col2}>
 				<div
-					className={cn(darkBoxBgClassList, col2_col1, 'delayed-fade-in-box-2')}
+					className={cn(darkBoxBgClassList, col2_col1, 'delayed-fade-in-200')}
 				>
 					<h3 className={bigBoxTitle}>portfolio</h3>
 
@@ -182,7 +182,7 @@ export default function Index() {
 				</div>
 
 				<div className={col2_col2}>
-					<div className="delayed-fade-in-box-3 flex w-full gap-5">
+					<div className="delayed-fade-in-300 flex w-full gap-5">
 						<div className={purpleBoxBgClassListSm}>
 							<h3 className="text-xl font-semibold capitalize">{aboutText}</h3>
 
@@ -190,7 +190,7 @@ export default function Index() {
 
 							<Link to="about/phil" className="w-full">
 								<Button
-									className="w-full p-2 text-md capitalize"
+									className="w-full p-2 text-sm 2xl:text-md capitalize"
 									variant="default"
 								>
 									{discoverText}
@@ -205,7 +205,7 @@ export default function Index() {
 
 							<Link to="about/wochlife" className="w-full">
 								<Button
-									className="w-full p-2 text-md capitalize"
+									className="w-full p-2 text-sm 2xl:text-md capitalize"
 									variant="default"
 								>
 									{discoverText}
@@ -217,7 +217,7 @@ export default function Index() {
 					<div
 						className={cn(
 							purpleBoxBgClassList,
-							'custom-projects-box-max-height delayed-fade-in-box-4 h-full max-sm:mt-6',
+							'custom-projects-box-max-height delayed-fade-in-400 h-full max-sm:mt-6',
 						)}
 					>
 						<h3 className={bigBoxTitle}>
@@ -225,15 +225,31 @@ export default function Index() {
 								to="projects"
 								className="transition-colors hover:bg-dark-gradient hover:bg-clip-text hover:text-transparent"
 							>
-								projects
+								Workload
 							</Link>
 						</h3>
 
 						<div className="no-scrollbar overflow-y-scroll rounded-xl-to-2xl">
-							<Link to="projects/web-dev">
+							<Link to="projects/custom-apps">
 								<ProjectsContentBox
-									name={'Web Development'}
-									description={'2019-present'}
+									name={'Custom Web Applications'}
+									description={'since 2019'}
+									iconName="desktop"
+									innerBoxClass={lightGreenGradient}
+								/>
+							</Link>
+							<Link to="projects/booking-systems">
+								<ProjectsContentBox
+									name={'Webs /w Booking Systems'}
+									description={'since 2022'}
+									iconName="desktop"
+									innerBoxClass={lightGreenGradient}
+								/>
+							</Link>
+							<Link to="projects/online-stores">
+								<ProjectsContentBox
+									name={'Webs /w Online Stores'}
+									description={'since 2020'}
 									iconName="desktop"
 									innerBoxClass={lightGreenGradient}
 								/>

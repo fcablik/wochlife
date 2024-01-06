@@ -56,7 +56,7 @@ export default function PortfolioRoute() {
 				classList={cn(contentsRouteSelectorCol1, 'max-md-to-lg:hidden')}
 			/>
 
-			<div className={contentsRouteContentCol2}>
+			<div className={cn("delayed-fade-in-200", contentsRouteContentCol2)}>
 				<div className={darkContentBoxBgClassList}>
 					<Outlet />
 				</div>
@@ -78,7 +78,7 @@ function RouteSelector({
 
 	return (
 		<div className={classList}>
-			<div className={darkBoxBgClassList}>
+			<div className={cn("delayed-fade-in-100", darkBoxBgClassList)}>
 				{handleToggle && <ModalCloserIcon handleToggle={handleClick} />}
 				<h3 className={bigBoxTitle}>portfolio</h3>
 
@@ -156,14 +156,14 @@ function RouteSelector({
 					</NavLink>
 				</h5>
 				<div className={innerContentBoxWrapperOfBoxesInBox}>
-					<NavLink to="forcompanies/medi" onClick={handleClick}>
+					<NavLink to="forcompanies/11ts" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
-								innerBoxClass="bg-medi-radial-gradient"
-								imgSrc="/img/medi.webp"
-								name="medi.de/cz"
-								description="2020-2022"
+								innerBoxClass="bg-11ts-radial-gradient"
+								imgSrc="/img/11ts.webp"
+								name="11teamsports.com"
+								description="2022-present"
 							/>
 						)}
 					</NavLink>
@@ -180,14 +180,14 @@ function RouteSelector({
 						)}
 					</NavLink>
 
-					<NavLink to="forcompanies/11ts" onClick={handleClick}>
+					<NavLink to="forcompanies/medi" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
-								innerBoxClass="bg-11ts-radial-gradient"
-								imgSrc="/img/11ts.webp"
-								name="11teamsports.com"
-								description="2022-present"
+								innerBoxClass="bg-medi-radial-gradient"
+								imgSrc="/img/medi.webp"
+								name="medi.de/cz"
+								description="2020-2022"
 							/>
 						)}
 					</NavLink>

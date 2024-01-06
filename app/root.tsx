@@ -90,6 +90,14 @@ export async function loader({ request }: DataFunctionArgs) {
 		desc: 'getUserId in root',
 	})
 
+	const translations = await prisma.translation.findMany({
+		select: {
+			name: true,
+			en: true,
+			cs: true,
+		}
+	})
+
 	const user = userId
 		? await time(
 				() =>
@@ -126,6 +134,7 @@ export async function loader({ request }: DataFunctionArgs) {
 
 	return json(
 		{
+			translations,
 			user,
 			requestInfo: {
 				hints: getHints(request),

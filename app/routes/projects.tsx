@@ -57,7 +57,7 @@ export default function ProjectsRoute() {
 				classList={cn(contentsRouteSelectorCol1, 'max-md-to-lg:hidden')}
 			/>
 
-			<div className={contentsRouteContentCol2}>
+			<div className={cn("delayed-fade-in-200", contentsRouteContentCol2)}>
 				<div className={darkContentBoxBgClassList}>
 					<Outlet />
 				</div>
@@ -80,18 +80,46 @@ function RouteSelector({
 
 	return (
 		<div className={classList}>
-			<div className={purpleBoxBg40ClassList}>
+			<div className={cn("delayed-fade-in-100", purpleBoxBg40ClassList)}>
 				{handleToggle && <ModalCloserIcon handleToggle={handleClick} />}
 
 				<h3 className={bigBoxTitle}>projects</h3>
 
 				<div className={innerContentBoxWrapperOfBoxesInBox2}>
-					<NavLink to="web-dev" onClick={handleClick}>
+					<NavLink to="custom-apps" onClick={handleClick}>
 						{({ isActive }) => (
 							<ProjectsContentBox
 								boxClass={isActive ? 'bg-highlight-dark' : ''}
-								name={'Web Development'}
-								description={'2019-present'}
+								name={'Custom Web Apps'}
+								description={'since 2019'}
+								iconName="desktop"
+								innerBoxClass={cn(
+									lightGreenGradient,
+									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+								)}
+							/>
+						)}
+					</NavLink>
+					<NavLink to="booking-systems" onClick={handleClick}>
+						{({ isActive }) => (
+							<ProjectsContentBox
+								boxClass={isActive ? 'bg-highlight-dark' : ''}
+								name={'Booking Systems'}
+								description={'since 2022'}
+								iconName="desktop"
+								innerBoxClass={cn(
+									lightGreenGradient,
+									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+								)}
+							/>
+						)}
+					</NavLink>
+					<NavLink to="online-stores" onClick={handleClick}>
+						{({ isActive }) => (
+							<ProjectsContentBox
+								boxClass={isActive ? 'bg-highlight-dark' : ''}
+								name={'Online Stores'}
+								description={'since 2020'}
 								iconName="desktop"
 								innerBoxClass={cn(
 									lightGreenGradient,

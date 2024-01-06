@@ -53,7 +53,7 @@ export default function AboutRoute() {
 				classList={cn(contentsRouteSelectorCol1, 'max-md-to-lg:hidden')}
 			/>
 
-			<div className={contentsRouteContentCol2}>
+			<div className={cn("delayed-fade-in-200", contentsRouteContentCol2)}>
 				<div className={darkContentBoxBgClassList}>
 					<Outlet />
 				</div>
@@ -75,7 +75,7 @@ function RouteSelector({
 
 	return (
 		<div className={classList}>
-			<div className={darkBoxBgClassList}>
+			<div className={cn("delayed-fade-in-100", darkBoxBgClassList)}>
 				{handleToggle && <ModalCloserIcon handleToggle={handleClick} />}
 
 				<h3 className={bigBoxTitle}>about</h3>

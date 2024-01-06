@@ -103,6 +103,8 @@ export default function AdminRoute() {
 								title="messages"
 								icon="pencil-2"
 							/>
+
+							<SidebarNavLink routeName="translations" icon="pencil-1" />
 							<SidebarNavLink routeName="pages" icon="pencil-2" />
 							<SidebarNavLink
 								routeName="docs"

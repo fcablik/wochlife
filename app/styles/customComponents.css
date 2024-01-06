@@ -247,31 +247,45 @@
 	}
 
 	  /* custom fade-ins (opacity-0->100) */
-	.delayed-fade-in-900 {
+	.delayed-fade-in-100 {
 		@apply opacity-0 transition-opacity duration-300;
 		animation: fadeIn .5s ease-out forwards;
-		animation-delay: 900ms;
+		animation-delay: 100ms;
 	}
-
-	.delayed-fade-in-box-1 {
+	.delayed-fade-in-200 {
+		@apply opacity-0 transition-opacity duration-300;
+		animation: fadeIn .5s ease-out forwards;
+		animation-delay: 200ms;
+	}
+	.delayed-fade-in-300 {
+		@apply opacity-0 transition-opacity duration-300;
+		animation: fadeIn .5s ease-out forwards;
+		animation-delay: 300ms;
+	}
+	.delayed-fade-in-400 {
 		@apply opacity-0 transition-opacity duration-300;
 		animation: fadeIn .5s ease-out forwards;
 		animation-delay: 400ms;
 	}
-	.delayed-fade-in-box-2 {
+	.delayed-fade-in-500 {
 		@apply opacity-0 transition-opacity duration-300;
 		animation: fadeIn .5s ease-out forwards;
 		animation-delay: 500ms;
 	}
-	.delayed-fade-in-box-3 {
+	.delayed-fade-in-600 {
 		@apply opacity-0 transition-opacity duration-300;
 		animation: fadeIn .5s ease-out forwards;
 		animation-delay: 600ms;
 	}
-	.delayed-fade-in-box-4 {
+	.delayed-fade-in-700 {
 		@apply opacity-0 transition-opacity duration-300;
 		animation: fadeIn .5s ease-out forwards;
 		animation-delay: 700ms;
+	}
+	.delayed-fade-in-900 {
+		@apply opacity-0 transition-opacity duration-300;
+		animation: fadeIn .5s ease-out forwards;
+		animation-delay: 900ms;
 	}
 
 
