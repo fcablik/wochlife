@@ -61,8 +61,5 @@ export const contentsRouteWrapper =
 export const contentRouteSelectorContentBoxes =
 	'max-md-to-lg:ml-3 md-to-lg:ml-6 flex max-w-[67%] flex-col'
 
-
-
-
 export const destructiveModalWrapperClassList =
-'absolute left-1/2 top-20 z-3001 w-full max-w-1/3 -translate-x-1/2 rounded-xl border-4 border-destructive bg-white p-4'
+	'absolute left-1/2 top-20 z-3001 w-full max-w-1/3 -translate-x-1/2 rounded-xl border-4 border-destructive bg-white p-4'

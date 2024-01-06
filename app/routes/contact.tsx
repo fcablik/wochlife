@@ -71,26 +71,28 @@ export const meta: MetaFunction = () => {
 
 export default function ContactForm() {
 	return (
-		<div className="delayed-fade-in-100 container mx-auto flex flex-col justify-center pb-32 pt-20">
-			<div className="text-center">
-				<h1 className="text-h3">Contact</h1>
-				<p className="mt-6">Get in touch with me through socials </p>
+		<div className="container mx-auto flex flex-col justify-center pb-32 pt-20">
+			<div className='delayed-fade-in-100'>
+				<div className="text-center">
+					<h1 className="text-h3">Contact</h1>
+					<p className="mt-6">Get in touch with me through socials </p>
 
-				<div className='mt-4'>
-				<a
-					href="https://instagram.com/filipcablik"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<Button variant="highlight">@filipcablik</Button>
-				</a>
+					<div className='mt-4'>
+					<a
+						href="https://instagram.com/filipcablik"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Button variant="highlight">@filipcablik</Button>
+					</a>
+					</div>
 				</div>
-			</div>
 
-			<div className="mt-4 text-center">
-				<Link to="form">
-					<Button>Or Send a Message</Button>
-				</Link>
+				<div className="mt-4 text-center">
+					<Link to="form">
+						<Button>Or Send a Message</Button>
+					</Link>
+				</div>
 			</div>
 
 			<Outlet />

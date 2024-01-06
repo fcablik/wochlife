@@ -229,7 +229,7 @@ export default function Index() {
 						<h3 className={bigBoxTitle}>
 							<Link
 								to="projects"
-								className="max-lg:text-xl transition-colors hover:bg-dark-gradient hover:bg-clip-text hover:text-transparent"
+								className="text-xl transition-colors hover:bg-dark-gradient hover:bg-clip-text hover:text-transparent"
 							>
 								my fields & projects
 							</Link>

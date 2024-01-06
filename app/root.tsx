@@ -261,7 +261,7 @@ function App() {
 						<Menu />
 					</div>
 
-					<div className="fixed bottom-2 right-2 mb-2 text-right max-lg-to-xl:bottom-16 delayed-fade-in-900">
+					<div className="fixed bottom-2 right-2 mb-2 text-right max-lg-to-xl:bottom-16 delayed-fade-in-500">
 						<Button
 							size="xs"
 							onClick={handleToggle}
