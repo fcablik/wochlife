@@ -11,7 +11,8 @@ import {
 	purpleBoxBgClassList,
 	purpleBoxInnerContentBox,
 } from '#app/components/classlists.tsx'
-import { LogoPhil, 
+import {
+	LogoPhil,
 	// LogoWochlife
 } from '#app/components/logos.tsx'
 import { Button } from '#app/components/ui/button.tsx'
@@ -23,9 +24,10 @@ export default function Index() {
 	// 1. grid, responsivness
 	const col1 = 'w-full lg:w-3/4 lg-to-xl-3:w-2/5 flex flex-col justify-end'
 	const col2 = 'flex w-full gap-8 max-sm:flex-col lg-to-xl-3:w-3/5'
-	const col2_col1 = 'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[44.17%]'
+	const col2_col1 =
+		'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[44.17%] max-sm:order-2'
 	const col2_col2 =
-		'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[55.83%] flex flex-col justify-between'
+		'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[55.83%] flex flex-col justify-between max-sm:order-1'
 
 	const purpleBoxBgClassListSm =
 		boxProps +
@@ -194,7 +196,7 @@ export default function Index() {
 
 							<Link to="about/phil" className="w-full">
 								<Button
-									className="w-full p-2 text-sm 2xl:text-md capitalize"
+									className="w-full p-2 text-sm capitalize 2xl:text-md"
 									variant="default"
 								>
 									{discoverText}
@@ -203,15 +205,16 @@ export default function Index() {
 						</div>
 
 						<div className={purpleBoxBgClassListSm2}>
-							<h3 className="text-md lg:text-xl font-semibold capitalize pt-6 md:pt-4 lg:pt-6 2xl:pt-6 4xl:pt-8">
-								schedule <br/>free call
+							<h3 className="pt-6 text-md font-semibold capitalize md:pt-4 lg:pt-6 lg:text-xl 2xl:pt-6 4xl:pt-8">
+								schedule <br />
+								free call
 							</h3>
 
 							{/* <LogoWochlife className="max-md:max-h-[20px]" /> */}
 
 							<Link to="contact" className="w-full px-4 md:px-5">
 								<Button
-									className="w-full p-2 text-sm 2xl:text-md capitalize"
+									className="w-full p-2 text-sm capitalize 2xl:text-md"
 									variant="default"
 								>
 									Contacts
@@ -223,7 +226,7 @@ export default function Index() {
 					<div
 						className={cn(
 							purpleBoxBgClassList,
-							'custom-projects-box-max-height delayed-fade-in-400 h-full max-sm:mt-6 pt-6', //pt-6 => "md:pt-6" is already in purpleBoxClassList
+							'custom-projects-box-max-height delayed-fade-in-400 h-full pt-6 max-sm:mt-6', //pt-6 => "md:pt-6" is already in purpleBoxClassList
 						)}
 					>
 						<h3 className={bigBoxTitle}>
@@ -254,12 +257,14 @@ export default function Index() {
 							</Link>
 							<Link to="projects/online-stores">
 								<ProjectsContentBox
-									name={'Webs /w Online Stores'}
+									name={'Webs /w E-commerce'}
 									description={'since 2020'}
 									iconName="desktop"
 									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
+
+							<div className="mx-4 mb-3 border-b-2 border-highlight-dark/30 4xl:mb-4" />
 
 							<Link to="projects/streetwear">
 								<ProjectsContentBox
