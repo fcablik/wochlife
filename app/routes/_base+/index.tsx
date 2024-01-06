@@ -72,7 +72,7 @@ export default function Index() {
 						<img
 							src="/img/woch_testing_4.png"
 							alt=""
-							className="delayed-fade-in max-lg:max-w-[10rem]"
+							className="delayed-fade-in-900 max-lg:max-w-[10rem]"
 						/>
 					</div>
 				</div>

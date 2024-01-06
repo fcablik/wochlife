@@ -247,34 +247,28 @@
 	}
 
 	  /* custom fade-ins (opacity-0->100) */
-	.delayed-fade-in {
+	.delayed-fade-in-900 {
 		@apply opacity-0 transition-opacity duration-300;
 		animation: fadeIn .5s ease-out forwards;
-		animation-delay: 700ms;
+		animation-delay: 900ms;
 	}
 
 	.delayed-fade-in-box-1 {
 		@apply opacity-0 transition-opacity duration-300;
 		animation: fadeIn .5s ease-out forwards;
-		animation-delay: 200ms;
+		animation-delay: 400ms;
 	}
 	.delayed-fade-in-box-2 {
 		@apply opacity-0 transition-opacity duration-300;
 		animation: fadeIn .5s ease-out forwards;
-		animation-delay: 300ms;
+		animation-delay: 500ms;
 	}
 	.delayed-fade-in-box-3 {
 		@apply opacity-0 transition-opacity duration-300;
 		animation: fadeIn .5s ease-out forwards;
-		animation-delay: 400ms;
+		animation-delay: 600ms;
 	}
 	.delayed-fade-in-box-4 {
-		@apply opacity-0 transition-opacity duration-300;
-		animation: fadeIn .5s ease-out forwards;
-		animation-delay: 500ms;
-	}
-
-	.delayed-fade-in-box-menu {
 		@apply opacity-0 transition-opacity duration-300;
 		animation: fadeIn .5s ease-out forwards;
 		animation-delay: 700ms;

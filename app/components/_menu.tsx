@@ -18,7 +18,7 @@ export function Menu() {
 		'flex items-center justify-evenly lg:gap-5 py-2 lg:py-5 lg:px-6'
 
 	return (
-		<div className="delayed-fade-in-box-menu custom-bottom-alignment fixed w-full max-lg:text-xs lg:text-sm">
+		<div className="delayed-fade-in-900 custom-bottom-alignment fixed w-full max-lg:text-xs lg:text-sm">
 			<div className="mx-2">
 				<div className="mx-auto flex max-h-[95px] max-w-[900px] justify-center rounded-xl bg-menu-box-gradient shadow-menu lg:rounded-2xl">
 					<nav
