@@ -44,7 +44,7 @@ export default function Index() {
 
 	return (
 		<div className="custom-hp-spacing mx-auto flex gap-8 max-xl:px-4 max-lg-to-xl-3:flex-col md:max-xl:mx-8 xl:max-w-[1250px] 2xl:max-w-[1350px] 4xl:max-w-[1450px]">
-			<div className={col1}>
+			<div className={cn(col1, 'delayed-fade-in-box-1')}>
 				<h1 className="mt-24 text-h1-sm opacity-90 max-lg:ml-2 max-lg:text-h3 lg:mt-8 lg:text-h1-md 3xl:text-h1">
 					<div dangerouslySetInnerHTML={{ __html: welcomeTitle }} />
 				</h1>
@@ -72,14 +72,16 @@ export default function Index() {
 						<img
 							src="/img/woch_testing_4.png"
 							alt=""
-							className="max-lg:max-w-[10rem]"
+							className="delayed-fade-in max-lg:max-w-[10rem]"
 						/>
 					</div>
 				</div>
 			</div>
 
 			<div className={col2}>
-				<div className={cn(darkBoxBgClassList, col2_col1)}>
+				<div
+					className={cn(darkBoxBgClassList, col2_col1, 'delayed-fade-in-box-2')}
+				>
 					<h3 className={bigBoxTitle}>portfolio</h3>
 
 					<h5 className="mb-3 text-center text-lg capitalize">
@@ -180,14 +182,17 @@ export default function Index() {
 				</div>
 
 				<div className={col2_col2}>
-					<div className="flex w-full gap-5">
+					<div className="delayed-fade-in-box-3 flex w-full gap-5">
 						<div className={purpleBoxBgClassListSm}>
 							<h3 className="text-xl font-semibold capitalize">{aboutText}</h3>
 
 							<LogoPhil className="max-md:max-h-[24px]" />
 
 							<Link to="about/phil" className="w-full">
-								<Button className="w-full p-2 text-md capitalize" variant="default">
+								<Button
+									className="w-full p-2 text-md capitalize"
+									variant="default"
+								>
 									{discoverText}
 								</Button>
 							</Link>
@@ -199,7 +204,10 @@ export default function Index() {
 							<LogoWochlife className="max-md:max-h-[20px]" />
 
 							<Link to="about/wochlife" className="w-full">
-								<Button className="w-full p-2 text-md capitalize" variant="default">
+								<Button
+									className="w-full p-2 text-md capitalize"
+									variant="default"
+								>
 									{discoverText}
 								</Button>
 							</Link>
@@ -209,7 +217,7 @@ export default function Index() {
 					<div
 						className={cn(
 							purpleBoxBgClassList,
-							'custom-projects-box-max-height h-full max-sm:mt-6',
+							'custom-projects-box-max-height delayed-fade-in-box-4 h-full max-sm:mt-6',
 						)}
 					>
 						<h3 className={bigBoxTitle}>
@@ -314,15 +322,17 @@ function ProjectsContentBox({
 }) {
 	return (
 		<div className={cn(purpleBoxInnerContentBox, 'group')}>
-			<div className={cn(boxInnerContentBoxInnerBox, innerBoxClass,
-			'text-highlight group-hover:text-foreground',
-				'flex items-center justify-center transition-colors group-hover:bg-light-blue-radial-gradient',
-				)}>
-				{!iconName && !!imgSrc && imgSrc.length && (
-					<img src={imgSrc} alt="" />
+			<div
+				className={cn(
+					boxInnerContentBoxInnerBox,
+					innerBoxClass,
+					'text-highlight group-hover:text-foreground',
+					'flex items-center justify-center transition-colors group-hover:bg-light-blue-radial-gradient',
 				)}
+			>
+				{!iconName && !!imgSrc && imgSrc.length && <img src={imgSrc} alt="" />}
 				{!!iconName && iconName.length && (
-					<Icon name={iconName} size="xl" className='duration-200' />
+					<Icon name={iconName} size="xl" className="duration-200" />
 				)}
 			</div>
 			<div className="flex max-w-[67%] flex-col max-md-to-lg:ml-4 md-to-lg:ml-5">

@@ -246,6 +246,40 @@
 		}
 	}
 
+	  /* custom fade-ins (opacity-0->100) */
+	.delayed-fade-in {
+		@apply opacity-0 transition-opacity duration-300;
+		animation: fadeIn .5s ease-out forwards;
+		animation-delay: 700ms;
+	}
+
+	.delayed-fade-in-box-1 {
+		@apply opacity-0 transition-opacity duration-300;
+		animation: fadeIn .5s ease-out forwards;
+		animation-delay: 200ms;
+	}
+	.delayed-fade-in-box-2 {
+		@apply opacity-0 transition-opacity duration-300;
+		animation: fadeIn .5s ease-out forwards;
+		animation-delay: 300ms;
+	}
+	.delayed-fade-in-box-3 {
+		@apply opacity-0 transition-opacity duration-300;
+		animation: fadeIn .5s ease-out forwards;
+		animation-delay: 400ms;
+	}
+	.delayed-fade-in-box-4 {
+		@apply opacity-0 transition-opacity duration-300;
+		animation: fadeIn .5s ease-out forwards;
+		animation-delay: 500ms;
+	}
+
+	.delayed-fade-in-box-menu {
+		@apply opacity-0 transition-opacity duration-300;
+		animation: fadeIn .5s ease-out forwards;
+		animation-delay: 700ms;
+	}
+
 
 /* page detail's "dangerouslySetInnerHTML Styles */
 .page-detail-contents h2 {
