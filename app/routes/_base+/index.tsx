@@ -29,9 +29,9 @@ export default function Index() {
 
 	const purpleBoxBgClassListSm =
 		boxProps +
-		' bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[225px] lg:h-[195px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
+		' bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[210px] lg:h-[195px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
 	const purpleBoxBgClassListSm2 =
-		'text-center flex flex-col rounded-3xl lg:rounded-6xl pt-4 px-0 md:pt-6 bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[225px] lg:h-[195px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
+		'text-center flex flex-col rounded-3xl lg:rounded-6xl pt-4 px-0 md:pt-6 bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[210px] lg:h-[195px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
 
 	//* copy translations
 	const welcomeTitle = 'Welcome <br /> to Wochlife'
@@ -190,7 +190,7 @@ export default function Index() {
 						<div className={purpleBoxBgClassListSm}>
 							<h3 className="text-xl font-semibold capitalize">{aboutText}</h3>
 
-							<LogoPhil className="max-md:max-h-[24px]" />
+							<LogoPhil className="max-lg:max-h-[24px]" />
 
 							<Link to="about/phil" className="w-full">
 								<Button
@@ -203,7 +203,7 @@ export default function Index() {
 						</div>
 
 						<div className={purpleBoxBgClassListSm2}>
-							<h3 className="text-md md:text-xl font-semibold capitalize pt-6 md:pt-8">
+							<h3 className="text-md lg:text-xl font-semibold capitalize pt-6 md:pt-4 lg:pt-6 2xl:pt-6 4xl:pt-8">
 								schedule <br/>free call
 							</h3>
 
@@ -223,13 +223,13 @@ export default function Index() {
 					<div
 						className={cn(
 							purpleBoxBgClassList,
-							'custom-projects-box-max-height delayed-fade-in-400 h-full max-sm:mt-6',
+							'custom-projects-box-max-height delayed-fade-in-400 h-full max-sm:mt-6 pt-6', //pt-6 => "md:pt-6" is already in purpleBoxClassList
 						)}
 					>
 						<h3 className={bigBoxTitle}>
 							<Link
 								to="projects"
-								className="transition-colors hover:bg-dark-gradient hover:bg-clip-text hover:text-transparent"
+								className="max-lg:text-xl transition-colors hover:bg-dark-gradient hover:bg-clip-text hover:text-transparent"
 							>
 								my fields & projects
 							</Link>
