@@ -5,7 +5,7 @@ export default function PortfolioFreelance() {
 				booking systems
 			</h3>
 
-			<div className="custom-content-box-height no-scrollbar overflow-scroll">
+			<div className="custom-content-box-height overflow-y-scroll">
 				booking systems content
 			</div>
 		</div>

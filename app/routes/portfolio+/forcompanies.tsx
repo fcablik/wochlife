@@ -7,7 +7,7 @@ export default function PortfolioForCompanies() {
 				for companies
 			</h3>
 
-			<div className="custom-content-box-height no-scrollbar overflow-scroll">
+			<div className="custom-content-box-height overflow-y-scroll">
 				<Outlet />
 			</div>
 		</div>

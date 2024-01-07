@@ -229,13 +229,8 @@ export default function Index() {
 							'custom-projects-box-max-height delayed-fade-in-400 h-full pt-6 max-sm:mt-6', //pt-6 => "md:pt-6" is already in purpleBoxClassList
 						)}
 					>
-						<h3 className={bigBoxTitle}>
-							<Link
-								to="projects"
-								className="text-xl transition-colors hover:bg-dark-gradient hover:bg-clip-text hover:text-transparent"
-							>
-								my fields & projects
-							</Link>
+						<h3 className={cn(bigBoxTitle, "text-xl transition-colors")}>
+							my fields & projects
 						</h3>
 
 						<div className="no-scrollbar overflow-y-scroll rounded-xl-to-2xl">
@@ -266,32 +261,38 @@ export default function Index() {
 
 							<div className="mx-4 mb-3 border-b-2 border-highlight-dark/30 4xl:mb-4" />
 
-							<Link to="projects/streetwear">
+							{/* <Link to="projects/streetwear"> */}
 								<ProjectsContentBox
+									boxClass="opacity-30 cursor-auto"
 									name={'Street-Wear Designs'}
-									description={'2022-present'}
+									// description={'2022-present'}
+									description={'preview coming soon'}
 									iconName="accessibility"
 									innerBoxClass={lightGreenGradient}
 								/>
-							</Link>
+							{/* </Link> */}
 
-							<Link to="projects/nft-collection">
+							{/* <Link to="projects/nft-collection"> */}
 								<ProjectsContentBox
+									boxClass="opacity-30 cursor-auto"
 									name={'NFT Collection'}
-									description={'2022-present'}
+									// description={'2022-present'}
+									description={'preview coming soon'}
 									iconName="rocket"
 									innerBoxClass={lightGreenGradient}
 								/>
-							</Link>
+							{/* </Link> */}
 
-							<Link to="projects/web3-nft-game">
+							{/* <Link to="projects/web3-nft-game"> */}
 								<ProjectsContentBox
+									boxClass="opacity-30 cursor-auto"
 									name={'Web3 NFT Online Game'}
-									description={'2023-present'}
+									// description={'2023-present'}
+									description={'preview coming soon'}
 									iconName="mix"
 									innerBoxClass={lightGreenGradient}
 								/>
-							</Link>
+							{/* </Link> */}
 						</div>
 					</div>
 				</div>
@@ -337,18 +338,20 @@ function PortfolioContentBox({
 function ProjectsContentBox({
 	name,
 	description,
+	boxClass,
 	innerBoxClass,
 	imgSrc,
 	iconName,
 }: {
 	name: string
 	description: string
+	boxClass?: string
 	innerBoxClass?: string
 	imgSrc?: string
 	iconName?: IconName
 }) {
 	return (
-		<div className={cn(purpleBoxInnerContentBox, 'group')}>
+		<div className={cn(purpleBoxInnerContentBox, boxClass, 'group')}>
 			<div
 				className={cn(
 					boxInnerContentBoxInnerBox,

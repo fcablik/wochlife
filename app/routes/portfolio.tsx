@@ -78,7 +78,7 @@ function RouteSelector({
 
 	return (
 		<div className={classList}>
-			<div className={cn("delayed-fade-in-100", darkBoxBgClassList)}>
+			<div className={cn("delayed-fade-in-100 custom-content-route-selector-height", darkBoxBgClassList)}>
 				{handleToggle && <ModalCloserIcon handleToggle={handleClick} />}
 				<h3 className={bigBoxTitle}>portfolio</h3>
 

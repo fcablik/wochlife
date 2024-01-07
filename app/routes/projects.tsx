@@ -80,7 +80,7 @@ function RouteSelector({
 
 	return (
 		<div className={classList}>
-			<div className={cn("delayed-fade-in-100", purpleBoxBg40ClassList)}>
+			<div className={cn("delayed-fade-in-100 custom-content-route-selector-height", purpleBoxBg40ClassList)}>
 				{handleToggle && <ModalCloserIcon handleToggle={handleClick} />}
 
 				<h3 className={bigBoxTitle}>projects</h3>
@@ -118,7 +118,7 @@ function RouteSelector({
 						{({ isActive }) => (
 							<ProjectsContentBox
 								boxClass={isActive ? 'bg-highlight-dark' : ''}
-								name={'Online Stores'}
+								name={'E-commerce'}
 								description={'since 2020'}
 								iconName="desktop"
 								innerBoxClass={cn(
@@ -129,50 +129,61 @@ function RouteSelector({
 						)}
 					</NavLink>
 
-					<NavLink to="streetwear" onClick={handleClick}>
-						{({ isActive }) => (
+					<div className="mx-4 mb-3 border-b-2 border-highlight-dark 4xl:mb-4" />
+
+					{/* <NavLink to="streetwear" onClick={handleClick} className="opacity-30"> */}
+						{/* {({ isActive }) => ( */}
 							<ProjectsContentBox
-								boxClass={isActive ? 'bg-highlight-dark' : ''}
+								// boxClass={isActive ? 'bg-highlight-dark' : ''}
+								boxClass="opacity-30 cursor-auto"
 								name={'Street-Wear Designs'}
-								description={'2022-present'}
+								// description={'2022-present'}
+								description={'preview coming soon'}
 								iconName="accessibility"
 								innerBoxClass={cn(
 									lightGreenGradient,
-									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+									// isActive ? 'bg-light-blue-radial-gradient' : 
+									'text-highlight group-hover:text-foreground',
 								)}
 							/>
-						)}
-					</NavLink>
+						{/* )} */}
+					{/* </NavLink> */}
 
-					<NavLink to="nft-collection" onClick={handleClick}>
-						{({ isActive }) => (
+					{/* <NavLink to="nft-collection" onClick={handleClick} className="opacity-30">
+						{({ isActive }) => ( */}
 							<ProjectsContentBox
-								boxClass={isActive ? 'bg-highlight-dark' : ''}
+								// boxClass={isActive ? 'bg-highlight-dark' : ''}
+								boxClass="opacity-30 cursor-auto"
 								name={'NFT Collection (unreleased)'}
-								description={'2022-present'}
+								// description={'2022-present'}
+								description={'preview coming soon'}
 								iconName="rocket"
 								innerBoxClass={cn(
 									lightGreenGradient,
-									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+									// isActive ? 'bg-light-blue-radial-gradient' : 
+									'text-highlight group-hover:text-foreground',
 								)}
 							/>
-						)}
-					</NavLink>
+						{/* )} */}
+					{/* </NavLink> */}
 
-					<NavLink to="web3-nft-game" onClick={handleClick}>
-						{({ isActive }) => (
+					{/* <NavLink to="web3-nft-game" onClick={handleClick} className="opacity-30">
+						{({ isActive }) => ( */}
 							<ProjectsContentBox
-								boxClass={isActive ? 'bg-highlight-dark' : ''}
+								// boxClass={isActive ? 'bg-highlight-dark' : ''}
+								boxClass="opacity-30 cursor-auto"
 								name={'Web3 NFT Online Game'}
-								description={'2023-present'}
+								// description={'2023-present'}
+								description={'preview coming soon'}
 								iconName="mix"
 								innerBoxClass={cn(
 									lightGreenGradient,
-									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+									// isActive ? 'bg-light-blue-radial-gradient' : 
+									'text-highlight group-hover:text-foreground',
 								)}
 							/>
-						)}
-					</NavLink>
+					{/*	)}
+					</NavLink> */}
 				</div>
 			</div>
 		</div>

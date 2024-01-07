@@ -52,7 +52,7 @@ export const bigBoxTitle = 'capitalize text-center text-2xl font-semibold mb-6'
 export const contentsRouteSelectorCol1 =
 	'md-to-lg:max-w-[300px] xl:max-w-[320px] sm:max-md-to-lg:w-1/2 md-to-lg:w-[35%] lg:w-[32%] lg-to-xl:w-[29%] xl:w-[26.502%]'
 export const mobContentsRouteSelectorCol1 =
-	'max-sm:w-[90%] transition-opacity duration-500 fixed bottom-20 z-2000 max-sm:left-5 sm:right-16 ' +
+	'max-sm:w-[90%] transition-opacity duration-500 fixed custom-mob-route-selector-spacings z-2000 max-sm:left-5 sm:right-16 ' +
 	contentsRouteSelectorCol1
 export const contentsRouteContentCol2 =
 	'w-full md-to-lg:w-[65%] lg:w-[68%] lg-to-xl:w-[71%] xl:w-[73.498%] flex flex-col'

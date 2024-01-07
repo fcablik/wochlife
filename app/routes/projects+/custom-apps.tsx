@@ -5,7 +5,7 @@ export default function PortfolioFreelance() {
 				custom apps
 			</h3>
 
-			<div className="custom-content-box-height no-scrollbar overflow-scroll">
+			<div className="custom-content-box-height overflow-y-scroll">
 				custom apps content
 			</div>
 		</div>
