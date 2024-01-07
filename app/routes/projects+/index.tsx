@@ -36,6 +36,7 @@ export default function PortfolioFreelance() {
 					<div>streetwear art content</div>
 					<div>streetwear art content</div>
 					<div>streetwear art content</div>
+					<div>test</div>
 				</div>
 			</div>
 		</div>

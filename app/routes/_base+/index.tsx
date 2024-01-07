@@ -31,9 +31,9 @@ export default function Index() {
 
 	const purpleBoxBgClassListSm =
 		boxProps +
-		' bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[210px] lg:h-[195px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
+		' bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[210px] lg:h-[180px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
 	const purpleBoxBgClassListSm2 =
-		'text-center flex flex-col rounded-3xl lg:rounded-6xl pt-4 px-0 md:pt-6 bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[210px] lg:h-[195px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
+		'text-center flex flex-col rounded-3xl lg:rounded-6xl pt-4 px-0 md:pt-6 bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[210px] lg:h-[180px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
 
 	//* copy translations
 	const welcomeTitle = 'Welcome <br /> to Wochlife'
@@ -205,7 +205,7 @@ export default function Index() {
 						</div>
 
 						<div className={purpleBoxBgClassListSm2}>
-							<h3 className="pt-6 text-md font-semibold capitalize md:pt-4 lg:pt-6 lg:text-xl 2xl:pt-6 4xl:pt-8">
+							<h3 className="pt-6 text-md font-semibold capitalize md:pt-4 lg:pt-6 lg:text-lg 2xl:pt-6 4xl:pt-8">
 								schedule <br />
 								free call
 							</h3>

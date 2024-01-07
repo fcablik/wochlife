@@ -16,7 +16,7 @@ export const purpleBoxBgClassList = boxProps + ' bg-purple-box-gradient'
 export const purpleBoxBg40ClassList = boxProps + ' bg-purple-box-gradient-40'
 
 export const darkContentBoxBgClassList =
-	'flex flex-col rounded-3xl lg:rounded-6xl p-4 md:p-5 xl:p-8 bg-dark-gradient'
+	'flex flex-col rounded-3xl lg:rounded-6xl p-4 md:p-5 lg:p-8 bg-dark-gradient'
 
 //* box items inside boxes
 export const boxInnerContentBoxProps =

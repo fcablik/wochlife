@@ -54,6 +54,7 @@ export default function PortfolioRoute() {
 
 			<RouteSelector
 				classList={cn(contentsRouteSelectorCol1, 'max-md-to-lg:hidden')}
+				innerClassList='custom-route-selector-content-sections-height'
 			/>
 
 			<div className={cn("delayed-fade-in-200", contentsRouteContentCol2)}>
@@ -67,9 +68,11 @@ export default function PortfolioRoute() {
 
 function RouteSelector({
 	classList,
+	innerClassList,
 	handleToggle,
 }: {
 	classList: string
+	innerClassList?: string
 	handleToggle?: () => void
 }) {
 	const handleClick = () => {
@@ -95,7 +98,7 @@ function RouteSelector({
 						freelance
 					</NavLink>
 				</h5>
-				<div className={innerContentBoxWrapperOfBoxesInBox}>
+				<div className={cn(innerContentBoxWrapperOfBoxesInBox, innerClassList)}>
 					<NavLink to="freelance" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
@@ -155,7 +158,7 @@ function RouteSelector({
 						for companies
 					</NavLink>
 				</h5>
-				<div className={innerContentBoxWrapperOfBoxesInBox}>
+				<div className={cn(innerContentBoxWrapperOfBoxesInBox, innerClassList)}>
 					<NavLink to="forcompanies/11ts" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
