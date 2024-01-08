@@ -243,12 +243,12 @@
 			max-height: 310px;
 		}
 	}
-	@media (min-height: 750px) and (max-height: 870px) {
+	@media (min-height: 750px) and (max-height: 874px) {
 		.custom-projects-box-max-height {
 			max-height: 318px;
 		}
 	}
-	@media (min-height: 871px) {
+	@media (min-height: 875px) {
 		.custom-projects-box-max-height {
 			max-height: 360px;
 		}

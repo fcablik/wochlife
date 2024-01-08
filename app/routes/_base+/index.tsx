@@ -205,7 +205,7 @@ export default function Index() {
 						</div>
 
 						<div className={purpleBoxBgClassListSm2}>
-							<h3 className="pt-6 text-md font-semibold capitalize md:pt-4 lg:pt-6 lg:text-lg 2xl:pt-6 4xl:pt-8">
+							<h3 className="pt-6 text-md font-semibold capitalize md:pt-4 xg:pt-6 lg:text-lg 2xl:pt-6 4xl:pt-8">
 								schedule <br />
 								free call
 							</h3>
