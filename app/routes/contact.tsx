@@ -41,7 +41,7 @@ export async function action({ request }: DataFunctionArgs) {
 	const { email, name, message, redirectTo } = submission.value
 
 	const response = await sendEmail({
-		from: 'Contact Form from Wochlife <noreply@Wochlife.com>',
+		from: 'Contact Form from Wochlife <noreply@wochlife.com>',
 		to: 'filip.cablik@icloud.com', // mail of preference where the message should be delivered to (owner of web, admin, etc.)
 		reply_to: email,
 		subject: `Web Form message from ` + email,
@@ -79,11 +79,11 @@ export default function ContactForm() {
 
 					<div className='mt-4'>
 					<a
-						href="https://instagram.com/filipcablik"
+						href="https://instagram.com/wochlife"
 						target="_blank"
 						rel="noreferrer"
 					>
-						<Button variant="highlight">@filipcablik</Button>
+						<Button variant="highlight">@wochlife</Button>
 					</a>
 					</div>
 				</div>
