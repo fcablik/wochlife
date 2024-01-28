@@ -23,7 +23,7 @@ import { cn } from '#app/utils/misc.tsx'
 import { requireUserWithRole } from '#app/utils/permissions.ts'
 
 export async function loader({ request }: DataFunctionArgs) {
-	await requireUserWithRole(request, 'user') // Temporary DEVelopment Phase
+	await requireUserWithRole(request, 'admin') // Temporary DEVelopment Phase
 	return null
 }
 
@@ -39,6 +39,7 @@ export default function PortfolioRoute() {
 				<MobileModalCaretOpener
 					isMobExtraMenuToggled={isMobExtraMenuToggled}
 					handleToggle={handleToggle}
+					triggerTitle="menu"
 				/>
 
 				<RouteSelector
@@ -54,10 +55,10 @@ export default function PortfolioRoute() {
 
 			<RouteSelector
 				classList={cn(contentsRouteSelectorCol1, 'max-md-to-lg:hidden')}
-				innerClassList='custom-route-selector-content-sections-height'
+				innerClassList="custom-route-selector-content-sections-height"
 			/>
 
-			<div className={cn("delayed-fade-in-200", contentsRouteContentCol2)}>
+			<div className={cn('delayed-fade-in-200', contentsRouteContentCol2)}>
 				<div className={darkContentBoxBgClassList}>
 					<Outlet />
 				</div>
@@ -81,64 +82,57 @@ function RouteSelector({
 
 	return (
 		<div className={classList}>
-			<div className={cn("delayed-fade-in-100 custom-content-route-selector-height", darkBoxBgClassList)}>
+			<div
+				className={cn(
+					'delayed-fade-in-100 custom-content-route-selector-height',
+					darkBoxBgClassList,
+				)}
+			>
 				{handleToggle && <ModalCloserIcon handleToggle={handleClick} />}
-				<h3 className={bigBoxTitle}>portfolio</h3>
+				<h3 className={bigBoxTitle}>dev portfolio</h3>
 
 				<h5 className="mb-3 text-center text-lg capitalize">
-					<NavLink
-						to="freelance"
-						className={({ isActive }: { isActive: boolean }) =>
-							isActive
-								? 'text-highlight'
-								: 'transition-colors hover:text-highlight'
-						}
-						onClick={handleClick}
+					<div
+					// to="freelance"
+					// className={({ isActive }: { isActive: boolean }) =>
+					// 	isActive
+					// 		? 'text-highlight'
+					// 		: 'transition-colors hover:text-highlight'
+					// }
+					// onClick={handleClick}
 					>
 						freelance
-					</NavLink>
+					</div>
 				</h5>
 				<div className={cn(innerContentBoxWrapperOfBoxesInBox, innerClassList)}>
-					<NavLink to="freelance" onClick={handleClick}>
+					<NavLink to="freelance/remix-ts" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
-								// boxClass={isActive ? 'bg-foreground text-background' : ''}
-								name={'coming soon..'}
-								description={'2020, Code'}
+								boxClass={isActive ? 'bg-foreground text-background' : ''}
+								name={'Remix.run / Typescript / TailwindCSS'}
+								description={'since 2022'}
 								innerBoxClass="bg-light-green-radial-gradient"
 							/>
 						)}
 					</NavLink>
 
-					<NavLink to="freelance" onClick={handleClick}>
+					<NavLink to="freelance/reactjs" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
-								// boxClass={isActive ? 'bg-foreground text-background' : ''}
-								name={'coming soon..'}
-								description={'2019, Design + Code'}
+								boxClass={isActive ? 'bg-foreground text-background' : ''}
+								name={'React JS / Sass'}
+								description={'since 2021'}
 								innerBoxClass="bg-light-green-radial-gradient"
 							/>
 						)}
 					</NavLink>
 
-					<NavLink to="freelance" onClick={handleClick}>
+					<NavLink to="freelance/wp-php-js" onClick={handleClick}>
 						{({ isActive }) => (
 							<PortfolioContentBox
-								// boxClass={isActive ? 'bg-foreground text-background' : ''}
-								name={'coming soon..'}
-								description={'2019, Design + Code'}
-								innerBoxClass="bg-light-green-radial-gradient"
-							/>
-						)}
-					</NavLink>
-
-					<NavLink to="freelance" onClick={handleClick}>
-						{({ isActive }) => (
-							<PortfolioContentBox
-								// boxClass={isActive ? 'bg-foreground text-background' : ''}
-								boxClass="mb-0"
-								name={'coming soon..'}
-								description={'2019, Code -1st project'}
+								boxClass={isActive ? 'bg-foreground text-background' : ''}
+								name={'WordPress / PHP / JS'}
+								description={'since 2019'}
 								innerBoxClass="bg-light-green-radial-gradient"
 							/>
 						)}
@@ -146,17 +140,17 @@ function RouteSelector({
 				</div>
 
 				<h5 className="mb-3 mt-6 text-center text-lg capitalize">
-					<NavLink
-						to="forcompanies"
-						className={({ isActive }: { isActive: boolean }) =>
-							isActive
-								? 'text-highlight'
-								: 'transition-colors hover:text-highlight'
-						}
+					<div
+						// to="forcompanies"
+						// className={({ isActive }: { isActive: boolean }) =>
+						// 	isActive
+						// 		? 'text-highlight'
+						// 		: 'transition-colors hover:text-highlight'
+						// }
 						onClick={handleClick}
 					>
 						for companies
-					</NavLink>
+					</div>
 				</h5>
 				<div className={cn(innerContentBoxWrapperOfBoxesInBox, innerClassList)}>
 					<NavLink to="forcompanies/11ts" onClick={handleClick}>
@@ -166,7 +160,7 @@ function RouteSelector({
 								innerBoxClass="bg-11ts-radial-gradient"
 								imgSrc="/img/11ts.webp"
 								name="11teamsports.com"
-								description="2022-present"
+								description="2023-present"
 							/>
 						)}
 					</NavLink>
@@ -223,7 +217,13 @@ function PortfolioContentBox({
 				)}
 			>
 				{!!imgSrc && imgSrc.length && (
-					<img src={imgSrc} alt="" className="max-w-2/3 rounded-md" />
+					<img
+						src={imgSrc}
+						alt=""
+						className="rounded-md"
+						width="75%"
+						height="75%"
+					/>
 				)}
 			</div>
 			<div className={contentRouteSelectorContentBoxes}>

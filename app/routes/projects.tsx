@@ -24,7 +24,7 @@ import { cn } from '#app/utils/misc.tsx'
 import { requireUserWithRole } from '#app/utils/permissions.ts'
 
 export async function loader({ request }: DataFunctionArgs) {
-	await requireUserWithRole(request, 'user') // Temporary DEVelopment Phase
+	await requireUserWithRole(request, 'admin') // Temporary DEVelopment Phase
 	return null
 }
 
@@ -57,7 +57,7 @@ export default function ProjectsRoute() {
 				classList={cn(contentsRouteSelectorCol1, 'max-md-to-lg:hidden')}
 			/>
 
-			<div className={cn("delayed-fade-in-200", contentsRouteContentCol2)}>
+			<div className={cn('delayed-fade-in-200', contentsRouteContentCol2)}>
 				<div className={darkContentBoxBgClassList}>
 					<Outlet />
 				</div>
@@ -80,7 +80,12 @@ function RouteSelector({
 
 	return (
 		<div className={classList}>
-			<div className={cn("delayed-fade-in-100 custom-content-route-selector-height", purpleBoxBg40ClassList)}>
+			<div
+				className={cn(
+					'delayed-fade-in-100 custom-content-route-selector-height',
+					purpleBoxBg40ClassList,
+				)}
+			>
 				{handleToggle && <ModalCloserIcon handleToggle={handleClick} />}
 
 				<h3 className={bigBoxTitle}>projects</h3>
@@ -95,7 +100,9 @@ function RouteSelector({
 								iconName="desktop"
 								innerBoxClass={cn(
 									lightGreenGradient,
-									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+									isActive
+										? 'bg-light-blue-radial-gradient'
+										: 'text-highlight group-hover:text-foreground',
 								)}
 							/>
 						)}
@@ -109,7 +116,9 @@ function RouteSelector({
 								iconName="desktop"
 								innerBoxClass={cn(
 									lightGreenGradient,
-									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+									isActive
+										? 'bg-light-blue-radial-gradient'
+										: 'text-highlight group-hover:text-foreground',
 								)}
 							/>
 						)}
@@ -123,7 +132,9 @@ function RouteSelector({
 								iconName="desktop"
 								innerBoxClass={cn(
 									lightGreenGradient,
-									isActive ? 'bg-light-blue-radial-gradient' : 'text-highlight group-hover:text-foreground',
+									isActive
+										? 'bg-light-blue-radial-gradient'
+										: 'text-highlight group-hover:text-foreground',
 								)}
 							/>
 						)}
@@ -132,56 +143,56 @@ function RouteSelector({
 					<div className="mx-4 mb-3 border-b-2 border-highlight-dark 4xl:mb-4" />
 
 					{/* <NavLink to="streetwear" onClick={handleClick} className="opacity-30"> */}
-						{/* {({ isActive }) => ( */}
-							<ProjectsContentBox
-								// boxClass={isActive ? 'bg-highlight-dark' : ''}
-								boxClass="opacity-30 cursor-auto"
-								name={'Street-Wear Designs'}
-								// description={'2022-present'}
-								description={'preview coming soon'}
-								iconName="accessibility"
-								innerBoxClass={cn(
-									lightGreenGradient,
-									// isActive ? 'bg-light-blue-radial-gradient' : 
-									'text-highlight group-hover:text-foreground',
-								)}
-							/>
-						{/* )} */}
+					{/* {({ isActive }) => ( */}
+					<ProjectsContentBox
+						// boxClass={isActive ? 'bg-highlight-dark' : ''}
+						boxClass="opacity-30 cursor-auto"
+						name={'Street-Wear Designs'}
+						// description={'2022-present'}
+						description={'preview coming soon'}
+						iconName="accessibility"
+						innerBoxClass={cn(
+							lightGreenGradient,
+							// isActive ? 'bg-light-blue-radial-gradient' :
+							'text-highlight group-hover:text-foreground',
+						)}
+					/>
+					{/* )} */}
 					{/* </NavLink> */}
 
 					{/* <NavLink to="nft-collection" onClick={handleClick} className="opacity-30">
 						{({ isActive }) => ( */}
-							<ProjectsContentBox
-								// boxClass={isActive ? 'bg-highlight-dark' : ''}
-								boxClass="opacity-30 cursor-auto"
-								name={'NFT Collection (unreleased)'}
-								// description={'2022-present'}
-								description={'preview coming soon'}
-								iconName="rocket"
-								innerBoxClass={cn(
-									lightGreenGradient,
-									// isActive ? 'bg-light-blue-radial-gradient' : 
-									'text-highlight group-hover:text-foreground',
-								)}
-							/>
-						{/* )} */}
+					<ProjectsContentBox
+						// boxClass={isActive ? 'bg-highlight-dark' : ''}
+						boxClass="opacity-30 cursor-auto"
+						name={'NFT Collection (unreleased)'}
+						// description={'2022-present'}
+						description={'preview coming soon'}
+						iconName="rocket"
+						innerBoxClass={cn(
+							lightGreenGradient,
+							// isActive ? 'bg-light-blue-radial-gradient' :
+							'text-highlight group-hover:text-foreground',
+						)}
+					/>
+					{/* )} */}
 					{/* </NavLink> */}
 
 					{/* <NavLink to="web3-nft-game" onClick={handleClick} className="opacity-30">
 						{({ isActive }) => ( */}
-							<ProjectsContentBox
-								// boxClass={isActive ? 'bg-highlight-dark' : ''}
-								boxClass="opacity-30 cursor-auto"
-								name={'Web3 NFT Online Game'}
-								// description={'2023-present'}
-								description={'preview coming soon'}
-								iconName="mix"
-								innerBoxClass={cn(
-									lightGreenGradient,
-									// isActive ? 'bg-light-blue-radial-gradient' : 
-									'text-highlight group-hover:text-foreground',
-								)}
-							/>
+					<ProjectsContentBox
+						// boxClass={isActive ? 'bg-highlight-dark' : ''}
+						boxClass="opacity-30 cursor-auto"
+						name={'Web3 NFT Online Game'}
+						// description={'2023-present'}
+						description={'preview coming soon'}
+						iconName="mix"
+						innerBoxClass={cn(
+							lightGreenGradient,
+							// isActive ? 'bg-light-blue-radial-gradient' :
+							'text-highlight group-hover:text-foreground',
+						)}
+					/>
 					{/*	)}
 					</NavLink> */}
 				</div>
@@ -218,7 +229,7 @@ function ProjectsContentBox({
 					<img src={imgSrc} alt="" className="max-w-2/3 rounded-md" />
 				)}
 				{!!iconName && iconName.length && (
-					<Icon name={iconName} size="xl" className='duration-200' />
+					<Icon name={iconName} size="xl" className="duration-200" />
 				)}
 			</div>
 			<div className={contentRouteSelectorContentBoxes}>

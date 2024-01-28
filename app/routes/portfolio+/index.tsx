@@ -1,41 +1,21 @@
+import { Link } from '@remix-run/react'
+import { Button } from '#app/components/ui/button.tsx'
+
 export default function PortfolioFreelance() {
 	return (
 		<div>
-			<h3 className="mb-6 text-xl md:text-2xl font-semibold capitalize">
+			<h3 className="mb-6 text-xl font-semibold capitalize md:text-2xl">
 				portfolio
 			</h3>
 
-			<div className="custom-content-box-height overflow-y-scroll pt-6">
-				<div>
-					<h5 className="mb-2 text-lg md:text-xl font-semibold capitalize">freelance</h5>
+			<div className="custom-content-box-height flex flex-col gap-3 overflow-y-scroll">
+				<Link to="freelance">
+					<Button variant="default">freelance</Button>
+				</Link>
 
-					<div>freelance content</div>
-				</div>
-
-				<div className="mt-8">
-					<h5 className="mb-2 text-lg md:text-xl font-semibold capitalize">
-						for companies
-					</h5>
-
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-					<div>for companies content</div>
-				</div>
+				<Link to="forcompanies">
+					<Button variant="default">for companies</Button>
+				</Link>
 			</div>
 		</div>
 	)

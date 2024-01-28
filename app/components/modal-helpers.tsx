@@ -1,4 +1,5 @@
 import { cn } from '#app/utils/misc.tsx'
+import { Button } from './ui/button.tsx'
 import { Icon } from './ui/icon.tsx'
 
 const backdropClassList =
@@ -27,23 +28,44 @@ export const modalBackDropOnBackdropClassList = cn(
 
 export function MobileModalCaretOpener({
 	isMobExtraMenuToggled,
+	triggerTitle,
 	handleToggle,
+	classList,
 }: {
 	isMobExtraMenuToggled: boolean
+	triggerTitle?: string
 	handleToggle: () => void
+	classList?: string
 }) {
 	return (
 		<>
-			{isMobExtraMenuToggled && (
+			{!isMobExtraMenuToggled ? (
+				!triggerTitle ? (
+					<Icon
+						name="plus"
+						className={cn(
+							classList,
+							'fixed bottom-28 right-3 z-1999 h-8 w-8 cursor-pointer gap-3 rounded-lg bg-foreground p-[.15rem] text-background transition-colors hover:bg-highlight hover:text-foreground',
+						)}
+						onClick={handleToggle}
+					/>
+				) : (
+					<>
+						<Button
+							onClick={handleToggle}
+							size="sm"
+							variant="highlight-secondary"
+							className={cn(
+								classList,
+								'fixed bottom-28 right-3 z-1999 cursor-pointer capitalize',
+							)}
+						>
+							{triggerTitle}
+						</Button>
+					</>
+				)
+			) : (
 				<div onClick={handleToggle} className={modalBackdropClassList} />
-			)}
-			{!isMobExtraMenuToggled && (
-				<Icon
-					name="caret-up"
-					size="xl"
-					className="fixed bottom-28 right-5 z-1999 cursor-pointer rounded-lg bg-foreground text-background transition-colors hover:bg-highlight hover:text-foreground"
-					onClick={handleToggle}
-				/>
 			)}
 		</>
 	)
@@ -51,7 +73,7 @@ export function MobileModalCaretOpener({
 
 export function ModalCloserIcon({
 	handleToggle,
-	iconName = "cross-1",
+	iconName = 'cross-1',
 }: {
 	handleToggle: () => void
 	iconName?: string

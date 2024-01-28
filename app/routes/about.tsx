@@ -15,12 +15,15 @@ import {
 	innerContentBoxWrapperOfBoxesInBox2,
 	mobContentsRouteSelectorCol1,
 } from '#app/components/classlists.tsx'
-import { MobileModalCaretOpener, ModalCloserIcon } from '#app/components/modal-helpers.tsx'
+import {
+	MobileModalCaretOpener,
+	ModalCloserIcon,
+} from '#app/components/modal-helpers.tsx'
 import { cn } from '#app/utils/misc.tsx'
 import { requireUserWithRole } from '#app/utils/permissions.ts'
 
 export async function loader({ request }: DataFunctionArgs) {
-	await requireUserWithRole(request, 'user') // Temporary DEVelopment Phase - this route is for visitors, so "user", not "admin"
+	await requireUserWithRole(request, 'admin') // Temporary DEVelopment Phase
 	return null
 }
 
@@ -36,6 +39,7 @@ export default function AboutRoute() {
 				<MobileModalCaretOpener
 					isMobExtraMenuToggled={isMobExtraMenuToggled}
 					handleToggle={handleToggle}
+					triggerTitle="menu"
 				/>
 
 				<RouteSelector
@@ -53,7 +57,7 @@ export default function AboutRoute() {
 				classList={cn(contentsRouteSelectorCol1, 'max-md-to-lg:hidden')}
 			/>
 
-			<div className={cn("delayed-fade-in-200", contentsRouteContentCol2)}>
+			<div className={cn('delayed-fade-in-200', contentsRouteContentCol2)}>
 				<div className={darkContentBoxBgClassList}>
 					<Outlet />
 				</div>
@@ -75,17 +79,17 @@ function RouteSelector({
 
 	return (
 		<div className={classList}>
-			<div className={cn("delayed-fade-in-100", darkBoxBgClassList)}>
+			<div className={cn('delayed-fade-in-100', darkBoxBgClassList)}>
 				{handleToggle && <ModalCloserIcon handleToggle={handleClick} />}
 
 				<h3 className={bigBoxTitle}>about</h3>
 
 				<div className={innerContentBoxWrapperOfBoxesInBox2}>
-					<NavLink to="phil" onClick={handleClick}>
+					<NavLink to="filip" onClick={handleClick}>
 						{({ isActive }) => (
 							<AboutContentBox
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
-								name={'Phil'}
+								name={'Filip'}
 								description={'2019-present'}
 								innerBoxClass="bg-light-green-radial-gradient"
 							/>
