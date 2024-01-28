@@ -24,7 +24,7 @@ import { cn } from '#app/utils/misc.tsx'
 import { requireUserWithRole } from '#app/utils/permissions.ts'
 
 export async function loader({ request }: DataFunctionArgs) {
-	await requireUserWithRole(request, 'admin') // Temporary DEVelopment Phase
+	await requireUserWithRole(request, 'user') // Temporary DEVelopment Phase
 	return null
 }
 
