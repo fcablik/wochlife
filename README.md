@@ -1,9 +1,9 @@
-# Wochlife
+# Filapps Hospitality System
 
-## version control: 1.0.0
+## version control: 7.0.0
 
 ### About 
-  Wochlife is a lightweight solid Fullstack Development Environment used to create high performance Web Applications.
+  Filapps is a lightweight solid Fullstack Development Environment used to create high performance Web Applications.
 
 ### Base Version's Stack & Decisions
   To get a break from 'analysis paralysis' right from the start, I had decided to start with the already throughout tested starting stack - The Epic Stack, developed by Kent C Dodds. The Epic Stack is an opinionated project starter, open-source - under the MIT license. It was used as a starter stack to get solid selection of technologies and tools, and to also ship faster. Even further on, The Epic Stack is a great project reference to look up to. - Filip Cablik
@@ -205,28 +205,14 @@ just make sure to remove the move step from the `.github/workflows/deploy.yml`.
   https://www.youtube.com/watch?v=dWiSi4Ie53E
 
   - - fly.io: 
-  <!-- https://community.fly.io/t/configuring-domain-names/12964 -->
-  <!-- https://fly.io/docs/app-guides/custom-domains-with-fly/ -->
-  - fly certs create fullstackplus.tech
-  - fl?y certs create www.fullstackplus.tech
-  - --> https://fly.io/apps/wochlife/certificates/www.wochlife.com
-    #### setting up base domain name, e.g.: "domain.com":
-    A @ ipv4
-    AAAA @ ipv6
-    + CNAME for authorizing domain owner
-
-    #### setting up www domain name, e.g.: "www.domain.com"
-    + the same as for "domain.com", but:
-    A www ipv4
-    AAAA www ipv6
-    + CNAME for authorizing domain owner
-
-
+  https://community.fly.io/t/configuring-domain-names/12964
+  https://fly.io/docs/app-guides/custom-domains-with-fly/
+  
 - License: MIT
 
 <br/>
 
-### Tech Used In Wochlife's Version of The Epic Stack:
+### Tech Used In Filapps's Version of The Epic Stack:
 ...
 
 <br/>
@@ -280,7 +266,7 @@ just make sure to remove the move step from the `.github/workflows/deploy.yml`.
 
 ## slogans
 - 'This is where your nfts live' / 'This is where your nfts come to life'
-- 'Escape the chaos at Wochlife' / 'Find a new form life, escape the chaos. Wochlife'
+- 'Escape the chaos at Filapps' / 'Find a new form life, escape the chaos. Filapps'
 - 
 
 
@@ -294,3 +280,38 @@ just make sure to remove the move step from the `.github/workflows/deploy.yml`.
 
 ## git syntaxes
   - "git log -2" <!-- shows not yet pushed commits and their info -->
+
+
+
+## seeding production DB (from Kent)
+--------------------------------- Manual Seeding --------------------------
+-- Hey there, Kent here! This is how you can reliably seed your database with
+-- some data. You edit the migration.sql file and that will handle it for you.
+-- I determined this by running a minimal seed via
+-- `MINIMAL_SEED=true npx prisma db seed` and then creating a sql dump via
+-- `sqlite3 prisma/data.db .dump > seed.sql`. Then I grabbed the relevant bits
+-- for the initial seed and put them here.
+
+#### custom notes for better development
+  1. expressions
+    - "&&" vs "? : null" -> && is not the best practice to use for other than boolean values, we can also convert e.g. "contacts.length" into "!!values.length", which negates twice and gets boolean value to evaluate the same as "values.length > 0 ?" would, but be careful, it's better not to use it with absolute non-boolean values and rather use "values.length ? "xyz" : null"
+
+  2. prefetching routes on Links
+    - 
+    ```
+    <>
+      <Link /> {/* defaults to "none" */}
+      <Link prefetch="none" />
+      <Link prefetch="intent" />
+      <Link prefetch="render" />
+      <Link prefetch="viewport" />
+    </>
+    ```
+
+  3. preventScrollReset
+    - If you are using ```<ScrollRestoration>```, this lets you prevent the scroll position from being reset to the top of the window when the link is clicked.
+    ```<Link to="?tab=one" preventScrollReset />```
+
+  4. reloadDocument
+    - Will use document navigation instead of client side routing when the link is clicked, the browser will handle the transition normally (as if it were an ```<a href>```).
+    ```<Link to="/logout" reloadDocument />```
