@@ -91,52 +91,45 @@ export default function Index() {
 					<h3 className={bigBoxTitle}>portfolio</h3>
 
 					<h5 className="mb-3 text-center text-lg capitalize">
-						<Link
-							to="portfolio/freelance"
-							className="transition-colors hover:text-highlight"
+						<div
+							// to="portfolio/freelance"
+							// className="transition-colors hover:text-highlight"
 						>
 							freelance
-						</Link>
+						</div>
 					</h5>
 					<div className={innerContentBoxWrapperOfBoxesInBox}>
-						<Link to="portfolio/freelance">
+						<Link to="portfolio/freelance/remix-ts" prefetch='intent'>
 							<PortfolioContentBox
-								name="coming soon.."
-								description="2020, Code"
+								name="Remix.run / Typescript / TailwindCSS"
+								description="since 2022"
 								innerBoxClass={lightGreenGradient}
 							/>
 						</Link>
-						<Link to="portfolio/freelance">
+						<Link to="portfolio/freelance/reactjs" prefetch='intent'>
 							<PortfolioContentBox
-								name="coming soon.."
-								description="2019, Design + Code"
+								name="React JS / Sass"
+								description="since 2021"
 								innerBoxClass={lightGreenGradient}
 							/>
 						</Link>
-						<Link to="portfolio/freelance">
-							<PortfolioContentBox
-								name="coming soon.."
-								description="2019, Design + Code"
-								innerBoxClass={lightGreenGradient}
-							/>
-						</Link>
-						<Link to="portfolio/freelance">
+						<Link to="portfolio/freelance/wp-php-js" prefetch='intent'>
 							<PortfolioContentBox
 								boxClass="mb-0 4xl:mb-0"
-								name="coming soon.."
-								description="2019, Code -1st project"
+								name="WordPress / PHP / JS"
+								description="since 2019"
 								innerBoxClass={lightGreenGradient}
 							/>
 						</Link>
 					</div>
 
 					<h5 className="mb-3 mt-6 text-center text-lg capitalize">
-						<Link
-							to="portfolio/forcompanies"
-							className="transition-colors hover:text-highlight"
+						<div
+							// to="portfolio/forcompanies"
+							// className="transition-colors hover:text-highlight"
 						>
 							for companies
-						</Link>
+						</div>
 					</h5>
 					<div className={innerContentBoxWrapperOfBoxesInBox}>
 						{/* <Link to="portfolio">

@@ -19,6 +19,7 @@ import {
 	MobileModalCaretOpener,
 	ModalCloserIcon,
 } from '#app/components/modal-helpers.tsx'
+import { Button } from '#app/components/ui/button.tsx'
 import { cn } from '#app/utils/misc.tsx'
 import { requireUserWithRole } from '#app/utils/permissions.ts'
 
@@ -58,7 +59,29 @@ export default function AboutRoute() {
 			/>
 
 			<div className={cn('delayed-fade-in-200', contentsRouteContentCol2)}>
-				<div className={darkContentBoxBgClassList}>
+				<div className={cn(darkContentBoxBgClassList, "custom-content-box-height flex flex-wrap gap-3 overflow-y-scroll")}>
+					<h3 className="mb-6 text-xl font-semibold capitalize md:text-2xl">
+						about
+					</h3>
+
+					<div className="mb-6 flex gap-3 max-xl:flex-wrap md-to-lg:hidden">
+						<NavLink to="filip">
+							{({ isActive }) => (
+								<Button variant={isActive ? 'highlight' : 'default'}>
+									about Filip
+								</Button>
+							)}
+						</NavLink>
+
+						<NavLink to="wochlife">
+							{({ isActive }) => (
+								<Button variant={isActive ? 'highlight' : 'default'}>
+									about Wochlife
+								</Button>
+							)}
+						</NavLink>
+					</div>
+
 					<Outlet />
 				</div>
 			</div>

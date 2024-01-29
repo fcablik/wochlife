@@ -8,13 +8,17 @@ export default function PortfolioFreelance() {
 				portfolio
 			</h3>
 
-			<div className="custom-content-box-height flex flex-col gap-3 overflow-y-scroll">
-				<Link to="freelance">
-					<Button variant="default">freelance</Button>
+			<div className="custom-content-box-height flex flex-wrap gap-3 overflow-y-scroll">
+				<Link to="freelance" prefetch="intent">
+					<Button className="capitalize" variant="default">
+						freelance
+					</Button>
 				</Link>
 
-				<Link to="forcompanies">
-					<Button variant="default">for companies</Button>
+				<Link to="forcompanies" prefetch="intent">
+					<Button className="capitalize" variant="default">
+						for companies
+					</Button>
 				</Link>
 			</div>
 		</div>

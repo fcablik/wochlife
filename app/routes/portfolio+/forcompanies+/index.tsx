@@ -3,7 +3,7 @@ import { Button } from '#app/components/ui/button.tsx'
 
 export default function PortfolioForCompaniesIndex() {
 	return (
-		<div className="grid gap-3">
+		<div className="grid gap-3 max-md-to-lg:hidden">
 			<Link to="11ts">
 				<Button variant="default">Freelance in 11teamsports</Button>
 			</Link>

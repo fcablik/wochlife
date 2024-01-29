@@ -4,7 +4,7 @@ import { Button } from '#app/components/ui/button.tsx'
 export default function PortfolioFreelanceIndex() {
 	return (
 		<>
-			<div className="grid gap-3">
+			<div className="grid gap-3 max-md-to-lg:hidden">
 				<Link to="remix-ts">
 					<Button variant="default">Remix.run / TypeScript Apps</Button>
 				</Link>
