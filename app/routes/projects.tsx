@@ -40,6 +40,7 @@ export default function ProjectsRoute() {
 				<MobileModalCaretOpener
 					isMobExtraMenuToggled={isMobExtraMenuToggled}
 					handleToggle={handleToggle}
+					triggerTitle='menu'
 				/>
 
 				<RouteSelector

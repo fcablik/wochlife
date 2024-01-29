@@ -20,12 +20,12 @@ export function Menu() {
 
 	return (
 		<div className="delayed-fade-in-500 custom-bottom-alignment fixed w-full max-lg:text-xs lg:text-sm">
-			<div className="mx-2">
-				<div className="mx-auto flex max-h-[95px] max-w-[850px] justify-center rounded-xl bg-menu-box-gradient shadow-menu lg:rounded-2xl">
+			<div className="mx-1 sm:mx-2">
+				<div className="mx-auto flex max-h-[95px] max-w-[900px] justify-center rounded-xl bg-menu-box-gradient shadow-menu lg:rounded-2xl">
 					<nav
 						className={cn(
 							menuSidesClassList,
-							'rounded-xl bg-background-bases shadow-menu-container max-lg:w-full lg:w-3/5 lg:rounded-2xl',
+							'rounded-xl bg-background-bases lg:shadow-menu-container max-lg:w-full lg:w-3/5 lg:rounded-2xl',
 						)}
 					>
 						<NavLink to="/">
@@ -36,15 +36,6 @@ export function Menu() {
 								</div>
 							)}
 						</NavLink>
-
-						{/* <NavLink to="projects">
-							{({ isActive }) => (
-								<div className={menuItemClassList(isActive)}>
-									<Icon name="dashboard" className="h-5 w-5 lg:h-6 lg:w-6" />
-									<p className={menuItemTextClassList}>projects</p>
-								</div>
-							)}
-						</NavLink> */}
 
 						<NavLink to="portfolio">
 							{({ isActive }) => (
@@ -63,6 +54,15 @@ export function Menu() {
 										className="h-5 w-5 lg:h-6 lg:w-6"
 									/>
 									<p className={menuItemTextClassList}>about</p>
+								</div>
+							)}
+						</NavLink>
+
+						<NavLink to="projects">
+							{({ isActive }) => (
+								<div className={menuItemClassList(isActive)}>
+									<Icon name="dashboard" className="h-5 w-5 lg:h-6 lg:w-6" />
+									<p className={menuItemTextClassList}>projects</p>
 								</div>
 							)}
 						</NavLink>

@@ -1,10 +1,13 @@
-import { NavLink, Outlet } from '@remix-run/react'
+import {
+	// NavLink,
+	Outlet,
+} from '@remix-run/react'
 
 export default function PortfolioFreelance() {
 	return (
 		<div className="relative">
 			<Outlet />
-			<div className="absolute right-0 top-0">
+			{/* <div className="absolute right-0 top-0">
 				<NavLink
 					to="custom-apps"
 					className={({ isActive }) => (isActive ? 'text-highlight' : '')}
@@ -17,7 +20,7 @@ export default function PortfolioFreelance() {
 				>
 					custom apps
 				</NavLink>
-			</div>
+			</div> */}
 		</div>
 	)
 }

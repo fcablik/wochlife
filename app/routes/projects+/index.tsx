@@ -5,38 +5,13 @@ export default function PortfolioFreelance() {
 				wochlife projects
 			</h3>
 
-			<div className="custom-content-box-height overflow-y-scroll pt-6">
-				<div>
-					<h5 className="mb-2 text-lg md:text-xl font-semibold capitalize">Web Dev</h5>
-
-					<div>web dev content</div>
-				</div>
-
-				<div className="mt-8">
-					<h5 className="mb-2 text-lg md:text-xl font-semibold capitalize">
-						streetwear art
-					</h5>
-
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>streetwear art content</div>
-					<div>test</div>
+			<div className="custom-content-box-height">
+				{/* overflow-y-scroll */}
+				<div className="mb-6">
+					<h5 className="mb-2 text-lg md:text-xl font-semibold capitalize">..Thanks for patience.</h5>
+					<div>Projects' base content is getting ready..
+						<span className="md-to-lg:hidden mt-4 block">Discover base overview in the menu..</span>
+					</div>
 				</div>
 			</div>
 		</div>

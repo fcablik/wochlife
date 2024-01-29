@@ -73,7 +73,7 @@ export async function action({ request }: DataFunctionArgs) {
 
 	const response = await sendEmail({
 		to: user.email,
-		from: 'noreply@Wochlife.com',
+		from: 'noreply@wochlife.com',
 		subject: `Wochlife Password Reset`,
 		react: (
 			<ForgotPasswordEmail onboardingUrl={verifyUrl.toString()} otp={otp} />

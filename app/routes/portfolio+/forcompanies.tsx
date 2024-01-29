@@ -9,7 +9,7 @@ export default function PortfolioForCompanies() {
 			</h3>
 
 			<div className="custom-content-box-height overflow-y-scroll">
-				<div className="mb-6 flex gap-3 max-xl:flex-wrap md-to-lg:hidden">
+				<div className="mb-6 flex gap-3 flex-wrap md-to-lg:hidden">
 					<NavLink to="11ts">
 						{({ isActive }) => (
 							<Button variant={isActive ? 'highlight' : 'default'}>

@@ -77,7 +77,7 @@ export const extendedTheme = {
 	boxShadow: {
 		'admin-detail-box': '0px 0px 15px rgba(0, 0, 0, .15)',
 		menu: '0px -10px 15px rgba(0, 0, 0, .1)',
-		'menu-container': '5px 0px 15px rgba(0, 0, 0, .1)',
+		'menu-container': '7px 0px 11px 1px rgb(0 0 0 / 25%)',
 		'page-container': '0px 10px 10px rgba(0, 0, 0, .1)',
 	},
 	width: {

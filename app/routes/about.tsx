@@ -1,4 +1,4 @@
-import { type DataFunctionArgs, type MetaFunction } from '@remix-run/node'
+import { type MetaFunction } from '@remix-run/node'
 import { NavLink, Outlet } from '@remix-run/react'
 import { useState } from 'react'
 import {
@@ -21,12 +21,6 @@ import {
 } from '#app/components/modal-helpers.tsx'
 import { Button } from '#app/components/ui/button.tsx'
 import { cn } from '#app/utils/misc.tsx'
-import { requireUserWithRole } from '#app/utils/permissions.ts'
-
-export async function loader({ request }: DataFunctionArgs) {
-	await requireUserWithRole(request, 'admin') // Temporary DEVelopment Phase
-	return null
-}
 
 export default function AboutRoute() {
 	const [isMobExtraMenuToggled, setMobExtraMenuToggled] = useState(false)
@@ -59,16 +53,12 @@ export default function AboutRoute() {
 			/>
 
 			<div className={cn('delayed-fade-in-200', contentsRouteContentCol2)}>
-				<div className={cn(darkContentBoxBgClassList, "custom-content-box-height flex flex-wrap gap-3 overflow-y-scroll")}>
-					<h3 className="mb-6 text-xl font-semibold capitalize md:text-2xl">
-						about
-					</h3>
-
-					<div className="mb-6 flex gap-3 max-xl:flex-wrap md-to-lg:hidden">
+				<div className={cn(darkContentBoxBgClassList, "custom-content-box-height")}>
+					<div className="flex gap-3 max-xl:flex-wrap md-to-lg:hidden justify-center">
 						<NavLink to="filip">
 							{({ isActive }) => (
 								<Button variant={isActive ? 'highlight' : 'default'}>
-									about Filip
+									About Filip
 								</Button>
 							)}
 						</NavLink>
@@ -76,7 +66,7 @@ export default function AboutRoute() {
 						<NavLink to="wochlife">
 							{({ isActive }) => (
 								<Button variant={isActive ? 'highlight' : 'default'}>
-									about Wochlife
+									About Wochlife
 								</Button>
 							)}
 						</NavLink>
@@ -123,7 +113,7 @@ function RouteSelector({
 						{({ isActive }) => (
 							<AboutContentBox
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
-								name={'wochlife'}
+								name={'Wochlife'}
 								description={'2023'}
 								innerBoxClass="bg-light-green-radial-gradient"
 							/>

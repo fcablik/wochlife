@@ -187,7 +187,7 @@ export default function Index() {
 
 							<LogoPhil className="max-lg:max-h-[24px]" />
 
-							<Link to="about/phil" className="w-full">
+							<Link to="about/filip" className="w-full">
 								<Button
 									className="w-full p-2 text-sm capitalize 2xl:text-md"
 									variant="default"
@@ -198,7 +198,7 @@ export default function Index() {
 						</div>
 
 						<div className={purpleBoxBgClassListSm2}>
-							<h3 className="pt-6 text-md font-semibold capitalize md:pt-4 xg:pt-6 lg:text-lg 2xl:pt-6 4xl:pt-8">
+							<h3 className="pt-6 text-md font-semibold capitalize md:pt -4 xg:pt-6 lg:text-lg 2xl:pt-6 4xl:pt-8">
 								schedule <br />
 								free call
 							</h3>
