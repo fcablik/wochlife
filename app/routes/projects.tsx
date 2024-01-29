@@ -1,4 +1,4 @@
-import { type DataFunctionArgs, type MetaFunction } from '@remix-run/node'
+import { type MetaFunction } from '@remix-run/node'
 import { NavLink, Outlet } from '@remix-run/react'
 import { useState } from 'react'
 import {
@@ -21,12 +21,6 @@ import {
 } from '#app/components/modal-helpers.tsx'
 import { Icon, type IconName } from '#app/components/ui/icon.tsx'
 import { cn } from '#app/utils/misc.tsx'
-import { requireUserWithRole } from '#app/utils/permissions.ts'
-
-export async function loader({ request }: DataFunctionArgs) {
-	await requireUserWithRole(request, 'admin') // Temporary DEVelopment Phase
-	return null
-}
 
 export default function ProjectsRoute() {
 	const [isMobExtraMenuToggled, setMobExtraMenuToggled] = useState(false)
