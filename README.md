@@ -1,4 +1,4 @@
-# Wochlife Portfolio APP
+# Wochlife Portfolio APP - wochlife.com
 
 ### About 
   Wochlife is a lightweight & solid Full-Stack Development Environment used to create high performance Web Applications. That's why I'm using it in my customly modified version for my own application.
