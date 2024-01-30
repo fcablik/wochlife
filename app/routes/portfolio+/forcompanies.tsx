@@ -8,7 +8,7 @@ export default function PortfolioForCompanies() {
 				company projects
 			</h3>
 
-			<div className="custom-content-box-height overflow-y-scroll">
+			<>
 				<div className="mb-6 flex gap-3 flex-wrap md-to-lg:hidden">
 					<NavLink to="11ts">
 						{({ isActive }) => (
@@ -36,7 +36,7 @@ export default function PortfolioForCompanies() {
 				</div>
 
 				<Outlet />
-			</div>
+			</>
 		</div>
 	)
 }

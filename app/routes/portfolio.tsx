@@ -15,6 +15,9 @@ import {
 	innerContentBoxWrapperOfBoxesInBox,
 	mobContentsRouteSelectorCol1,
 } from '#app/components/classlists.tsx'
+import reactjs from '#app/components/logos/reactjs.svg'
+import remix from '#app/components/logos/remix.svg'
+import wordpress from '#app/components/logos/wordpress.svg'
 import {
 	MobileModalCaretOpener,
 	ModalCloserIcon,
@@ -104,8 +107,9 @@ function RouteSelector({
 							<PortfolioContentBox
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
 								name={'Remix.run / Typescript / TailwindCSS'}
+								imgSrc={remix}
 								description={'since 2022'}
-								innerBoxClass="bg-light-green-radial-gradient"
+								innerBoxClass="bg-highlight"
 							/>
 						)}
 					</NavLink>
@@ -114,9 +118,10 @@ function RouteSelector({
 						{({ isActive }) => (
 							<PortfolioContentBox
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
+								imgSrc={reactjs}
 								name={'React JS / Sass'}
 								description={'since 2021'}
-								innerBoxClass="bg-light-green-radial-gradient"
+								innerBoxClass="bg-background/80"
 							/>
 						)}
 					</NavLink>
@@ -125,9 +130,10 @@ function RouteSelector({
 						{({ isActive }) => (
 							<PortfolioContentBox
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
+								imgSrc={wordpress}
 								name={'WordPress / PHP / JS'}
 								description={'since 2019'}
-								innerBoxClass="bg-light-green-radial-gradient"
+								innerBoxClass="bg-background/80"
 							/>
 						)}
 					</NavLink>

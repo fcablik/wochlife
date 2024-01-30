@@ -1,6 +1,6 @@
 export default function PortfolioForCompaniesMedi() {
 	return (
-		<>
+		<div className="custom-content-box-height overflow-y-scroll">
 			<h4 className="mb-2 text-lg">
 				medi: Latte + JavaScript + Sass ( + intro into PHP Nette)
 			</h4>
@@ -45,6 +45,6 @@ export default function PortfolioForCompaniesMedi() {
 				<li>shoptet</li>
 				<li>ajax</li>
 			</div>
-		</>
+		</div>
 	)
 }

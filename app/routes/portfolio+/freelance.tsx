@@ -8,7 +8,7 @@ export default function PortfolioFreelance() {
 				personal&nbsp;projects /&nbsp;freelance
 			</h3>
 
-			<div className="custom-content-box-height overflow-y-scroll">
+			<>
 				<div className="mb-6 flex gap-3 max-xl:flex-wrap md-to-lg:hidden">
 					<NavLink to="remix-ts">
 						{({ isActive }) => (
@@ -36,7 +36,7 @@ export default function PortfolioFreelance() {
 				</div>
 
 				<Outlet />
-			</div>
+			</>
 		</div>
 	)
 }

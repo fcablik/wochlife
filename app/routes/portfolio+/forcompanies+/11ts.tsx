@@ -1,6 +1,6 @@
 export default function PortfolioForCompanies11Ts() {
 	return (
-		<>
+		<div className="custom-content-box-height overflow-y-scroll">
 			<h4 className="mb-2 text-lg">
 				11ts: PHP Nette + Latte + JavaScript + Sass
 			</h4>
@@ -45,6 +45,6 @@ export default function PortfolioForCompanies11Ts() {
 				<li>abtesting - firstly with custom solution, later bloomreach</li>
 				{/* <li>(TODO) - shopware, trim, vue?, eslint, </li> */}
 			</div>
-		</>
+		</div>
 	)
 }

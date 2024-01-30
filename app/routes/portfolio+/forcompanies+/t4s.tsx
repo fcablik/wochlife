@@ -1,6 +1,6 @@
 export default function PortfolioForCompaniesT4s() {
 	return (
-		<>
+		<div className="custom-content-box-height overflow-y-scroll">
 			<h4 className="mb-2 text-lg">
 				t4s: PHP Nette + Latte + JavaScript + Sass
 			</h4>
@@ -44,6 +44,6 @@ export default function PortfolioForCompaniesT4s() {
 				<li>bloomreach (exponea)</li>
 				<li>abtesting - firstly with custom solution, later bloomreach</li>
 			</div>
-		</>
+		</div>
 	)
 }
