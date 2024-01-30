@@ -53,7 +53,7 @@ export default function AboutRoute() {
 			/>
 
 			<div className={cn('delayed-fade-in-200', contentsRouteContentCol2)}>
-				<div className={cn(darkContentBoxBgClassList, "custom-content-box-height")}>
+				<div className={darkContentBoxBgClassList}>
 					<div className="flex gap-3 max-xl:flex-wrap md-to-lg:hidden justify-center">
 						<NavLink to="filip">
 							{({ isActive }) => (

@@ -34,10 +34,8 @@ export default function AboutWochlife() {
 				<h4 className='text-lg'>
 					This Wochlife App serves 2&nbsp;goals:
 				</h4>
-				<h5 className='text-sm'>
-					<li>creating awareness about its purpose</li>
-					<li>as my personal portfolio and&nbsp;work overview</li>
-				</h5>
+				<li>creating awareness about its purpose</li>
+				<li>as my personal portfolio and&nbsp;work overview</li>
 			</div>
 		</div>
 	)

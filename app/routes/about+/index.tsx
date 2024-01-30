@@ -4,7 +4,8 @@ import { Button } from '#app/components/ui/button.tsx'
 export default function AboutFilip() {
 	return (
 		<>
-			<div className="custom-content-box-height">{/*  overflow-y-scroll */}
+			<div className="custom-content-box-height">
+				{/*  overflow-y-scroll */}
 				{/* <p className="mb-6">
 					Discover more about Me (Filip) or The Wochlife project.
 				</p> */}
