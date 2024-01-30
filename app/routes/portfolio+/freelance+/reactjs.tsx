@@ -11,7 +11,7 @@ import {
 export default function PortfolioFreelanceReactJS() {
 	return (
 		<>
-			<h4 className="mb-2 text-lg">ReactJS + CSS + JavaScript + css</h4>
+			<h4 className="mb-2 text-lg">ReactJS / Sass / JavaScript / css</h4>
 
 			<div>
 				<li>

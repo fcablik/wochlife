@@ -10,7 +10,7 @@ export default function PortfolioFreelanceRemixTypescript() {
 	return (
 		<div className='custom-content-box-height max-xl:overflow-y-scroll'>
 			<h4 className="mb-2 text-lg">
-				Remix.run + TypeScript + Prisma (SQLite) + TailwindCSS + Radix UI
+				Remix.run / TypeScript / Prisma / SQLite / TailwindCSS
 			</h4>
 
 			<div>

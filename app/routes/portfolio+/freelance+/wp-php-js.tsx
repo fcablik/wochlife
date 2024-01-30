@@ -9,7 +9,7 @@ import {
 export default function PortfolioFreelanceWordpress() {
 	return (
 		<>
-			<h4 className="mb-2 text-lg">Wordpress + PHP + JavaScript + css</h4>
+			<h4 className="mb-2 text-lg">Wordpress / PHP / JavaScript / css</h4>
 
 			<div>
 				<li>

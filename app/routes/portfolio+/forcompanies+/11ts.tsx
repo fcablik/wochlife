@@ -1,9 +1,10 @@
 export default function PortfolioForCompanies11Ts() {
 	return (
 		<div className="custom-content-box-height overflow-y-scroll">
-			<h4 className="mb-2 text-lg">
-				11ts: PHP Nette + Latte + JavaScript + Sass
+			<h4 className="text-lg mb-2 font-semibold">
+				11teamsports<br/>- FrontEnd/FullStack Web Developer
 			</h4>
+			<p className="mb-4">#stack: PHP Nette / Latte / JavaScript / Sass</p>
 
 			<div className="mb-4">
 				<p>

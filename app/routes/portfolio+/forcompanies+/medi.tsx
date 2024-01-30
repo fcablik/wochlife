@@ -1,9 +1,10 @@
 export default function PortfolioForCompaniesMedi() {
 	return (
 		<div className="custom-content-box-height overflow-y-scroll">
-			<h4 className="mb-2 text-lg">
-				medi: Latte + JavaScript + Sass ( + intro into PHP Nette)
+			<h4 className="text-lg mb-2 font-semibold">
+				medi<br/>- FrontEnd Web Developer
 			</h4>
+			<p className="mb-4">#stack: Latte  JavaScript / Sass / (+intro into PHP Nette)</p>
 
 			<div className="mb-4">
 				<p className="mb-2">

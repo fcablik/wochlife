@@ -1,9 +1,10 @@
 export default function PortfolioForCompaniesT4s() {
 	return (
 		<div className="custom-content-box-height overflow-y-scroll">
-			<h4 className="mb-2 text-lg">
-				t4s: PHP Nette + Latte + JavaScript + Sass
+			<h4 className="text-lg mb-2 font-semibold">
+				Top4Sport<br/>- FrontEnd Web Developer
 			</h4>
+			<p className="mb-4">#stack: PHP Nette / Latte / JavaScript / Sass</p>
 
 			<div className="mb-4">
 				<p>
