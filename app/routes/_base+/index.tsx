@@ -11,6 +11,9 @@ import {
 	purpleBoxBgClassList,
 	purpleBoxInnerContentBox,
 } from '#app/components/classlists.tsx'
+import reactjs from '#app/components/logos/reactjs.svg'
+import remix from '#app/components/logos/remix.svg'
+import wordpress from '#app/components/logos/wordpress.svg'
 import {
 	LogoPhil,
 	// LogoWochlife
@@ -25,9 +28,9 @@ export default function Index() {
 	const col1 = 'w-full lg:w-3/4 lg-to-xl-3:w-2/5 flex flex-col justify-end'
 	const col2 = 'flex w-full gap-8 max-sm:flex-col lg-to-xl-3:w-3/5'
 	const col2_col1 =
-		'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[44.17%] max-sm:order-2'
+		'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[44.17%]'
 	const col2_col2 =
-		'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[55.83%] flex flex-col justify-between max-sm:order-1'
+		'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[55.83%] flex flex-col justify-between'
 
 	const purpleBoxBgClassListSm =
 		boxProps +
@@ -102,23 +105,26 @@ export default function Index() {
 						<Link to="portfolio/freelance/remix-ts" prefetch='intent'>
 							<PortfolioContentBox
 								name="Remix.run / Typescript / TailwindCSS"
+								imgSrc={remix}
 								description="since 2022"
-								innerBoxClass={lightGreenGradient}
+								innerBoxClass="bg-highlight"
 							/>
 						</Link>
 						<Link to="portfolio/freelance/reactjs" prefetch='intent'>
 							<PortfolioContentBox
 								name="React JS / Sass"
+								imgSrc={reactjs}
 								description="since 2021"
-								innerBoxClass={lightGreenGradient}
+								innerBoxClass="bg-background/80"
 							/>
 						</Link>
 						<Link to="portfolio/freelance/wp-php-js" prefetch='intent'>
 							<PortfolioContentBox
 								boxClass="mb-0 4xl:mb-0"
+								imgSrc={wordpress}
 								name="WordPress / PHP / JS"
 								description="since 2019"
-								innerBoxClass={lightGreenGradient}
+								innerBoxClass="bg-background/80"
 							/>
 						</Link>
 					</div>
@@ -317,7 +323,7 @@ function PortfolioContentBox({
 				)}
 			>
 				{!!imgSrc && imgSrc.length && (
-					<img src={imgSrc} alt="" className="max-w-2/3 rounded-md" />
+					<img src={imgSrc} alt="" className="rounded-md" width="75%" height="75%" />
 				)}
 			</div>
 			<div className="flex max-w-[67%] flex-col max-md-to-lg:ml-4 md-to-lg:ml-5">
