@@ -10,14 +10,6 @@ export default function PortfolioFreelance() {
 
 			<div className="custom-content-box-height overflow-y-scroll">
 				<div>
-					<p className="mb-8">
-						Hey, I'm Filip. A very passionate Fullstack Web Developer. <br />I
-						like to discover and learn new tech, frameworks & services.
-						Continuous progress, learning and small steps ahead is what makes my
-						job and life so awesome. I love to solve problems, in both logical
-						and graphical ways.
-					</p>
-
 					<p className="mb-4">
 						<span>
 							In each category, you'll find unique skills I've been
