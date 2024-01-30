@@ -29,16 +29,16 @@ export default function PortfolioForCompaniesT4s() {
 
 			<div>
 				<p>worked with</p>
-				<li>php</li>
-				<li>nette - php framework</li>
-				<li>xDebug</li>
-				<li>latte templating engine</li>
 				<li>js</li>
 				<li>jquery</li>
 				<li>npms</li>
 				<li>sass</li>
 				<li>bootstrap</li>
 				<li>ajax</li>
+				<li>php</li>
+				<li>Nette - php framework</li>
+				<li>xDebug</li>
+				<li>Latte - templating engine</li>
 				<li>phpstorm</li>
 				<li>gitlab</li>
 				<li>bloomreach (exponea)</li>

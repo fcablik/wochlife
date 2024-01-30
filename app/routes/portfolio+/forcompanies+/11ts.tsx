@@ -29,21 +29,21 @@ export default function PortfolioForCompanies11Ts() {
 
 			<div>
 				<p>worked with</p>
-				<li>php</li>
-				<li>Nette - php framework</li>
-				<li>xDebug</li>
-				<li>latte - templating engine</li>
 				<li>js</li>
 				<li>jquery</li>
 				<li>npms</li>
 				<li>sass</li>
 				<li>bootstrap</li>
 				<li>ajax</li>
+				<li>php</li>
+				<li>Nette - php framework</li>
+				<li>xDebug</li>
+				<li>Latte - templating engine</li>
 				<li>phpstorm</li>
 				<li>gitlab</li>
 				<li>bloomreach (exponea)</li>
 				<li>abtesting - firstly with custom solution, later bloomreach</li>
-				<li>(TODO) - shopware, trim, vue?, eslint, </li>
+				{/* <li>(TODO) - shopware, trim, vue?, eslint, </li> */}
 			</div>
 		</>
 	)

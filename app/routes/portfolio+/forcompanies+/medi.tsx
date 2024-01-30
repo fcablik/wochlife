@@ -32,14 +32,13 @@ export default function PortfolioForCompaniesMedi() {
 			<div>
 				<p className="mb-2 capitalize">worked with</p>
 				<li>css, sass</li>
-				<li>latte - templating engine</li>
+				<li>Latte - templating engine</li>
 				<li>html</li>
 				<li>bootstrap</li>
 				<li>js</li>
 				<li>jquery</li>
 				<li>php</li>
-				<li>nette - php framework</li>
-				<li>nette</li>
+				<li>Nette - php framework</li>
 				<li>custom cms</li>
 				<li>erp</li>
 				<li>api connections</li>
