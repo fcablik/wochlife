@@ -19,8 +19,11 @@ export default function AboutWochlife() {
 					bring a purpose of reducing chaos by providing various services, tools
 					or products.
 				</p>
-				<p className='mb-8'>
-					Wochlife is not only a SW brand. More about purpose coming soon.. In
+				<p>
+					Wochlife is not only a SW brand. But more about purpose coming soon..
+				</p>
+
+				<p className='mb-6'>In
 					the meantime, You can discover more projects in the{' '}
 					<Link
 						to="/projects"
@@ -28,14 +31,15 @@ export default function AboutWochlife() {
 					>
 						projects
 					</Link>{' '}
-					section
-				</p>
+					section</p>
 
 				<h4 className='text-lg'>
-					This Wochlife App serves 2&nbsp;goals:
+					This wochlife.com application serves 2&nbsp;goals:
 				</h4>
-				<li>creating awareness about its purpose</li>
-				<li>as my personal portfolio and&nbsp;work overview</li>
+				<p>
+					<li>as my personal portfolio and&nbsp;work overview</li>
+					<li>creating awareness about the brand's purpose</li>
+				</p>
 			</div>
 		</div>
 	)
