@@ -6,6 +6,13 @@ import { z } from 'zod'
 import { ContactFormEmail } from '#app/components/emails/contact-email.server.tsx'
 import { GeneralErrorBoundary } from '#app/components/error-boundary.tsx'
 import { Button } from '#app/components/ui/button.tsx'
+import { Icon } from '#app/components/ui/icon.tsx'
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from '#app/components/ui/tooltip.tsx'
 import { sendEmail } from '#app/utils/email.server.ts'
 import { redirectWithToast } from '#app/utils/toast.server.ts'
 import { EmailSchema } from '#app/utils/user-validation.ts'
@@ -72,23 +79,65 @@ export const meta: MetaFunction = () => {
 export default function ContactForm() {
 	return (
 		<div className="container mx-auto flex flex-col justify-center pb-32 pt-20">
-			<div className='delayed-fade-in-100'>
+			<div className="delayed-fade-in-100">
 				<div className="text-center">
 					<h1 className="text-h3">Contact</h1>
 					<p className="mt-6">Get in touch with me through socials </p>
 
-					<div className='mt-4'>
-					<a
-						href="https://instagram.com/wochlife"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<Button variant="highlight">@wochlife</Button>
-					</a>
+					<div className="my-8">
+						<div className="flex justify-center gap-5">
+							<TooltipProvider>
+								<Tooltip>
+									<TooltipTrigger asChild>
+										<a
+											href="https://github.com/fcablik/"
+											target="_blank"
+											rel="noreferrer"
+											className='hover:text-highlight transition'
+										>
+											<Icon name="github-logo" size="xl" />
+										</a>
+									</TooltipTrigger>
+									<TooltipContent>GitHub / @fcablik</TooltipContent>
+								</Tooltip>
+							</TooltipProvider>
+
+							<TooltipProvider>
+								<Tooltip>
+									<TooltipTrigger asChild>
+										<a
+											href="https://www.linkedin.com/in/filipcablik/"
+											target="_blank"
+											rel="noreferrer"
+											className='hover:text-highlight transition'
+										>
+											<Icon name="linkedin-logo" size="xl" />
+										</a>
+									</TooltipTrigger>
+									<TooltipContent>LinkedIn / filipcablik</TooltipContent>
+								</Tooltip>
+							</TooltipProvider>
+
+							<TooltipProvider>
+								<Tooltip>
+									<TooltipTrigger asChild>
+										<a
+											href="https://instagram.com/filipcablik"
+											target="_blank"
+											rel="noreferrer"
+											className='hover:text-highlight transition'
+										>
+											<Icon name="instagram-logo" size="xl" />
+										</a>
+									</TooltipTrigger>
+									<TooltipContent>Instagram / @filipcablik</TooltipContent>
+								</Tooltip>
+							</TooltipProvider>
+						</div>
 					</div>
 				</div>
 
-				<div className="mt-4 text-center">
+				<div className="text-center">
 					<Link to="form">
 						<Button>Or Send a Message</Button>
 					</Link>
