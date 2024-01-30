@@ -120,18 +120,6 @@ export default function AboutFilip() {
 								</a>
 								)
 							</span>
-							<br />
-							<span className="ml-2">
-								<Icon className="mb-[.1rem]" name="caret-right" />{' '}
-								<a
-									href="https://fullstackopen.com/en/"
-									className="underline transition hover:text-highlight"
-									target="_blank"
-									rel="noreferrer"
-								>
-									Full Stack open
-								</a>
-							</span>
 						</p>
 
 						<p className="mb-2">
@@ -147,6 +135,18 @@ export default function AboutFilip() {
 									rel="noreferrer"
 								>
 									Full Stack open
+								</a>
+							</span>
+							<br />
+							<span className="ml-2">
+								<Icon className="mb-[.1rem]" name="caret-right" />{' '}
+								<a
+									href="https://frontendmasters.com/"
+									className="underline transition hover:text-highlight"
+									target="_blank"
+									rel="noreferrer"
+								>
+									Frontend Masters
 								</a>
 							</span>
 							<br />
