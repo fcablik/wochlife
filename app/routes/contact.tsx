@@ -79,11 +79,11 @@ export default function ContactForm() {
 
 					<div className='mt-4'>
 					<a
-						href="https://instagram.com/filapps"
+						href="https://instagram.com/wochlife"
 						target="_blank"
 						rel="noreferrer"
 					>
-						<Button variant="highlight">@filapps</Button>
+						<Button variant="highlight">@wochlife</Button>
 					</a>
 					</div>
 				</div>
