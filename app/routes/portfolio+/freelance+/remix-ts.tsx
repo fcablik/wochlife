@@ -14,6 +14,7 @@ export default function PortfolioFreelanceRemixTypescript() {
 			</h4>
 
 			<div>
+				<li>using this stack <strong>since 2022</strong></li>
 				<li>
 					custom built progressive web applications, both from the ground up and
 					with a usage of starting templates as provided by Remix and then with

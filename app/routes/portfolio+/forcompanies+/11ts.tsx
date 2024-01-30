@@ -2,7 +2,7 @@ export default function PortfolioForCompanies11Ts() {
 	return (
 		<div className="custom-content-box-height overflow-y-scroll">
 			<h4 className="text-lg mb-2 font-semibold">
-				11teamsports<br/>- FrontEnd/FullStack Web Developer
+				11teamsports<br/>- Front End / Full Stack Development
 			</h4>
 			<p className="mb-4">#stack: PHP Nette / Latte / JavaScript / Sass</p>
 
@@ -29,7 +29,7 @@ export default function PortfolioForCompanies11Ts() {
 			</div>
 
 			<div>
-				<p>worked with</p>
+				<p className="capitalize">worked with</p>
 				<li>js</li>
 				<li>jquery</li>
 				<li>npms</li>

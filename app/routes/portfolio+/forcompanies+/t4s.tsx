@@ -2,7 +2,7 @@ export default function PortfolioForCompaniesT4s() {
 	return (
 		<div className="custom-content-box-height overflow-y-scroll">
 			<h4 className="text-lg mb-2 font-semibold">
-				Top4Sport<br/>- FrontEnd Web Developer
+				Top4Sport<br/>- Front End Development
 			</h4>
 			<p className="mb-4">#stack: PHP Nette / Latte / JavaScript / Sass</p>
 
@@ -10,7 +10,7 @@ export default function PortfolioForCompaniesT4s() {
 				<p>
 					Freelance services provider at Top4sport/(later)11teamsports company.
 					Work firstly mostly on Frontend features with escalating overlap into
-					the backend, databases, etc.
+					the backend, databases, etc.:
 				</p>
 				<li>new features implementation</li>
 				<li>UX/UI redesigns</li>
@@ -29,7 +29,7 @@ export default function PortfolioForCompaniesT4s() {
 			</div>
 
 			<div>
-				<p>worked with</p>
+				<p className="capitalize">worked with</p>
 				<li>js</li>
 				<li>jquery</li>
 				<li>npms</li>
