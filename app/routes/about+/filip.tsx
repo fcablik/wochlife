@@ -162,7 +162,7 @@ export default function AboutFilip() {
 						<Link to="/portfolio">
 							<Button
 								className="capitalize"
-								size="sm"
+								size="xs"
 								variant="highlight-secondary"
 							>
 								in portfolio
@@ -171,7 +171,7 @@ export default function AboutFilip() {
 						<Link to="/projects">
 							<Button
 								className="capitalize"
-								size="sm"
+								size="xs"
 								variant="highlight-secondary"
 							>
 								in projects
@@ -184,7 +184,7 @@ export default function AboutFilip() {
 						>
 							<Button
 								className="capitalize"
-								size="sm"
+								size="xs"
 								variant="highlight-secondary"
 							>
 								or github
