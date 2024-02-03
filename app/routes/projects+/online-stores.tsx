@@ -18,7 +18,7 @@ export default function PortfolioFreelance() {
 						rel="noreferrer"
 					>
 						<Button variant="highlight-secondary">
-							World Of Chaos ReactJS Shop App
+							GitHub ReactJS Shop App
 						</Button>
 					</a>
 				</div>

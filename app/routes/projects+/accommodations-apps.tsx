@@ -18,7 +18,7 @@ export default function PortfolioFreelance() {
 						rel="noreferrer"
 					>
 						<Button variant="highlight-secondary">
-							Wochlife Accommodations
+							GitHub Wochlife Accommodations
 						</Button>
 					</a>
 				</div>

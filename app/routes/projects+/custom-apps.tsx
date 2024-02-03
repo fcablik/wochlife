@@ -1,3 +1,5 @@
+import { Button } from "#app/components/ui/button.tsx"
+
 export default function PortfolioFreelance() {
 	return (
 		<div>
@@ -9,8 +11,16 @@ export default function PortfolioFreelance() {
 				{/* overflow-y-scroll */}
 				{/* custom apps content */}
 				<div className="mb-6">
-					<h5 className="mb-2 text-lg md:text-xl font-semibold capitalize">..Thanks for patience.</h5>
-					<div>Custom Apps content is getting ready..</div>
+					<p className="mb-4">I develop custom applications with my Wochlife Stack. Discover more in this applications' GitHub repository:</p>
+					<a
+						href="https://github.com/fcablik/wochlife.com"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Button variant="highlight-secondary">
+							GitHub wochlife.com
+						</Button>
+					</a>
 				</div>
 			</div>
 		</div>

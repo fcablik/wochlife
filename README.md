@@ -22,6 +22,19 @@
 
 <br/>
 
+## Upcoming Updates
+  - update remix.run (to the latest stable, currently 2.3.1)
+
+<br />
+
+### About The Wochlife Stack
+  Wochlife Stack is a solid and lightweight FullStack Development Environment (with the Epic-Stack as a base foundation) built to be able to create high performance Web Applications such as Wochlife Accommodations.
+
+### Base Stack & Decisions
+  To get a break from 'analysis paralysis' right from the start, I had decided to start with the already throughout tested Remix starting stack - The Epic Stack, developed by Kent C Dodds & the community. The Epic Stack is an opinionated project starter, open-source - under the MIT license. I'd used it as a starter stack to get solid selection of technologies and tools, and of-course, to ship faster. Even further on into advanced development phases, The Epic Stack is a great project reference to look up to and make better decisions in implementations. -me/fcablik
+
+<br/>
+
 ### Used Fonts
   Source Code Pro (Adobe - SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007)
 
