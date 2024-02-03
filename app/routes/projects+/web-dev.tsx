@@ -15,7 +15,7 @@ export default function PortfolioFreelance() {
 					custom apps
 				</NavLink>
 				<NavLink
-					to="booking-systems"
+					to="accommodations-apps"
 					className={({ isActive }) => (isActive ? 'text-highlight' : '')}
 				>
 					custom apps

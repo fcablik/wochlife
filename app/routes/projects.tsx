@@ -102,11 +102,11 @@ function RouteSelector({
 							/>
 						)}
 					</NavLink>
-					<NavLink to="booking-systems" onClick={handleClick}>
+					<NavLink to="accommodations-apps" onClick={handleClick}>
 						{({ isActive }) => (
 							<ProjectsContentBox
 								boxClass={isActive ? 'bg-highlight-dark' : ''}
-								name={'Booking Systems'}
+								name={'Accommodations Apps'}
 								description={'since 2022'}
 								iconName="desktop"
 								innerBoxClass={cn(

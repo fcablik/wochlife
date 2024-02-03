@@ -4,7 +4,7 @@
 ##### Description: Wochlife App serves 2 purposes:
   1. as Filip Čablík's personal portfolio and&nbsp;work overview
   2. creating awareness about the brand's purpose
-##### #Stack: Remix.run / TypeScript / SQLite / Fly.io / prisma / GitHub Actions / Resend / and more..
+##### #Stack:
 ![Remix](https://img.shields.io/badge/remix-%23000.svg?style=for-the-badge&logo=remix&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) 
 ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)

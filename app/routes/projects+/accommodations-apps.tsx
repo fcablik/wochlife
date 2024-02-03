@@ -4,7 +4,7 @@ export default function PortfolioFreelance() {
 	return (
 		<div>
 			<h3 className="mb-6 text-xl font-semibold capitalize md:text-2xl">
-				E-commerce (Online Stores)
+				Accommodations Management Applications
 			</h3>
 
 			<div className="custom-content-box-height">
@@ -13,12 +13,12 @@ export default function PortfolioFreelance() {
 				<div className="mb-6">
 					<p className="mb-4">Discover more from the GitHub repo:</p>
 					<a
-						href="https://github.com/fcablik/worldofchaos.com-shop-reactjs_app"
+						href="https://github.com/fcablik/wochlife-accomodations"
 						target="_blank"
 						rel="noreferrer"
 					>
 						<Button variant="highlight-secondary">
-							World Of Chaos ReactJS Shop App
+							Wochlife Accommodations
 						</Button>
 					</a>
 				</div>

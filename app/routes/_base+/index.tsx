@@ -241,9 +241,9 @@ export default function Index() {
 									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
-							<Link to="projects/booking-systems">
+							<Link to="projects/accommodations-apps">
 								<ProjectsContentBox
-									name={'Webs /w Booking Systems'}
+									name={'Webs /w Accommodations Apps'}
 									description={'since 2022'}
 									iconName="desktop"
 									innerBoxClass={lightGreenGradient}
