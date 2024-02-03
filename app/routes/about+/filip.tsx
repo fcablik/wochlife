@@ -12,7 +12,7 @@ export default function AboutFilip() {
 			<div className="custom-content-box-height overflow-y-scroll ">
 				<div>
 					<p className="mb-6">
-						Hey, I'm Filip. A very passionate Fullstack Web Developer. <br />I
+						Hey, I'm Filip. A very passionate FullStack Web Developer. <br />I
 						like to discover and learn new tech, frameworks & services.
 						Continuous progress, learning and small steps ahead is what makes my
 						job and life so awesome. I love to solve problems, in both logical
