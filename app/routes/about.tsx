@@ -104,7 +104,7 @@ function RouteSelector({
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
 								name={'Filip'}
 								description={'Dev since 2019'}
-								innerBoxClass="bg-light-green-radial-gradient"
+								innerBoxClass="bg-purple-box-gradient"
 							/>
 						)}
 					</NavLink>
