@@ -68,13 +68,13 @@ export default function Index() {
 						<span dangerouslySetInnerHTML={{ __html: welcomeBoxText }} />
 					</div>
 
-					<div className="absolute right-[-1em] top-[-8em] overflow-x-hidden max-lg-to-xl-3:scale-x-flip max-md:overflow-x-hidden sm:top-[-10em] md:right-[-3.5em] lg:top-[-9em] xl:right-[-5em] xl:top-[-8em] 2xl:right-[-4em] 2xl:top-[-9em] 3xl:top-[-3em]">
+					<div className="absolute right-[-1em] top-[-8em] overflow-x-hidden max-lg-to-xl-3:scale-x-flip max-md:overflow-x-hidden sm:top-[-10em] md:right-[-3.5em] lg:top-[-9em] xl:right-[-5em] xl:top-[-8em] 2xl:right-[-3em] 2xl:top-[-9em] 3xl:top-[-2em]">
 						<img
 							src="/img/the_little_woch.png"
 							alt="The Little Woch - wochlife.com"
 							className="delayed-fade-in-500 max-lg:max-w-[10rem]"
-							width="270px"
-							height="350px"
+							width="250px"
+							height="330px"
 						/>
 					</div>
 				</div>
