@@ -42,7 +42,7 @@ export default function Index() {
 
 	//* copy translations
 	const welcomeTitle = 'Welcome <br /> to Wochlife'
-	const welcomeSubTitle = "Fil's world of creations"
+	const welcomeSubTitle = "Filip's world of creations"
 	const welcomeBoxText =
 		"<p class='mb-3 md:mb-5'>Hey, I'm Filip.</p><p class='mb-3 md:mb-5'>Frontend Web Developer with<br class='sm:hidden'/> passion for design in tech.</p><p>Applications are not just a&nbsp;product to me, it's a&nbsp;form of an&nbsp;art, an expression.</p>"
 	const aboutText = 'about'

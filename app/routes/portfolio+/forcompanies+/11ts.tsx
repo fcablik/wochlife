@@ -1,6 +1,6 @@
 export default function PortfolioForCompanies11Ts() {
 	return (
-		<div className="custom-content-box-height overflow-y-scroll">
+		<>
 			<h4 className="text-lg mb-2 font-semibold">
 				11teamsports<br/>- Front End / Full Stack Development
 			</h4>
@@ -10,7 +10,7 @@ export default function PortfolioForCompanies11Ts() {
 				<p>
 					Freelance services provider at Top4sport/(later)11teamsports company.
 					Work firstly mostly on Frontend features with escalating overlap into
-					the backend, databases, etc.
+					the backend, databases, etc.:
 				</p>
 				<li>new features implementation</li>
 				<li>UX/UI redesigns</li>
@@ -46,6 +46,6 @@ export default function PortfolioForCompanies11Ts() {
 				<li>abtesting - firstly with custom solution, later bloomreach</li>
 				{/* <li>(TODO) - shopware, trim, vue?, eslint, </li> */}
 			</div>
-		</div>
+		</>
 	)
 }

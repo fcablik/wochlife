@@ -1,6 +1,6 @@
 export default function PortfolioForCompaniesMedi() {
 	return (
-		<div className="custom-content-box-height overflow-y-scroll">
+		<>
 			<h4 className="text-lg mb-2 font-semibold">
 				medi<br/>- FrontEnd Web Developer
 			</h4>
@@ -46,6 +46,6 @@ export default function PortfolioForCompaniesMedi() {
 				<li>shoptet</li>
 				<li>ajax</li>
 			</div>
-		</div>
+		</>
 	)
 }
