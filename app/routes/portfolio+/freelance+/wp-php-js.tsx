@@ -12,11 +12,11 @@ import {
 
 export default function PortfolioFreelanceWordpress() {
 	return (
-		<>
+		<div className='custom-content-box-height'>
 			<h4 className="mb-2 text-lg">Wordpress / PHP / JavaScript / css</h4>
 
 			<div>
-				<li>using this stack <strong>since 2019</strong></li>
+				<li>used this stack <strong>2019 - 2021</strong></li>
 				<li>
 					custom theme and templates development + custom webs development for
 					clients
@@ -126,6 +126,6 @@ export default function PortfolioFreelanceWordpress() {
 					</TooltipProvider>
 				</ul>
 			</div>
-		</>
+		</div>
 	)
 }

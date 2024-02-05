@@ -1,6 +1,6 @@
 # Wochlife Portfolio App - Filip Čablík
 
-##### current version: 3.0.0
+##### current version: 3.0.2
 ##### Description: Wochlife App serves 2 purposes:
   1. as Filip Čablík's personal portfolio and&nbsp;work overview
   2. creating awareness about the brand's purpose

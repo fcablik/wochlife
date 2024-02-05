@@ -120,7 +120,7 @@ function RouteSelector({
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
 								imgSrc={reactjs}
 								name={'React JS / Sass'}
-								description={'since 2021'}
+								description={'2020-2022'}
 								innerBoxClass="bg-background/80"
 							/>
 						)}
@@ -132,7 +132,7 @@ function RouteSelector({
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
 								imgSrc={wordpress}
 								name={'WordPress / PHP / JS'}
-								description={'since 2019'}
+								description={'2019-2021'}
 								innerBoxClass="bg-background/80"
 							/>
 						)}
@@ -160,7 +160,7 @@ function RouteSelector({
 								innerBoxClass="bg-11ts-radial-gradient"
 								imgSrc="/img/11ts.webp"
 								name="11teamsports.com"
-								description="2023-present"
+								description="since 2023"
 							/>
 						)}
 					</NavLink>
@@ -172,7 +172,7 @@ function RouteSelector({
 								innerBoxClass="bg-t4s-radial-gradient"
 								imgSrc="/img/t4s.webp"
 								name="top4sport.com"
-								description="2022-present"
+								description="2022-2023"
 							/>
 						)}
 					</NavLink>

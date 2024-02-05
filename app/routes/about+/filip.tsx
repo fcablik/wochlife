@@ -9,7 +9,7 @@ export default function AboutFilip() {
 				about filip
 			</h4>
 
-			<div className="custom-content-box-height overflow-y-scroll ">
+			<div className="custom-content-box-height overflow-y-scroll">
 				<div>
 					<p className="mb-6">
 						Hey, I'm Filip. A very passionate FullStack Web Developer. <br />I

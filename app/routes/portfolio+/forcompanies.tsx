@@ -3,7 +3,7 @@ import { Button } from '#app/components/ui/button.tsx'
 
 export default function PortfolioForCompanies() {
 	return (
-		<div>
+		<div className='custom-content-box-height'>
 			<h3 className="mb-6 text-xl font-semibold capitalize md:text-2xl">
 				company projects
 			</h3>

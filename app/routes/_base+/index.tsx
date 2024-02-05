@@ -25,10 +25,10 @@ import { cn } from '#app/utils/misc.tsx'
 export default function Index() {
 	//* styling classes
 	// 1. grid, responsivness
-	const col1 = 'w-full lg:w-3/4 lg-to-xl-3:w-2/5 flex flex-col justify-end'
+	const col1 =
+		'w-full lg:w-3/4 lg-to-xl-3:w-2/5 flex flex-col justify-end delayed-fade-in-200'
 	const col2 = 'flex w-full gap-8 max-sm:flex-col lg-to-xl-3:w-3/5'
-	const col2_col1 =
-		'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[44.17%]'
+	const col2_col1 = 'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[44.17%]'
 	const col2_col2 =
 		'custom-max-heights w-full sm:w-1/2 lg-to-xl-3:w-[55.83%] flex flex-col justify-between'
 
@@ -38,22 +38,19 @@ export default function Index() {
 	const purpleBoxBgClassListSm2 =
 		'text-center flex flex-col rounded-3xl lg:rounded-6xl pt-4 px-0 md:pt-6 bg-purple-box-gradient justify-between items-center pb-5 w-1/2 min-h-[175px] md-to-lg:h-[210px] lg:h-[180px] xl:h-[185px] 2xl:h-[195px] 4xl:h-[215px]'
 
+	const lightGreenGradient = 'bg-light-green-radial-gradient'
+
 	//* copy translations
 	const welcomeTitle = 'Welcome <br /> to Wochlife'
 	const welcomeSubTitle = "Fil's world of creations"
 	const welcomeBoxText =
-		"<p class='mb-3 md:mb-5'>Hey, I'm Filip.</p><p class='mb-3 md:mb-5'>Web Developer with<br class='sm:hidden'/> passion for combining tech <br class='sm:hidden'/>&&nbsp;design.</p>Applications are not just a&nbsp;product to me, it's a&nbsp;form of an&nbsp;art, an expression. My apps show the world, who You are."
-
-	// "Applications are not just a product to me, it's a form of an art, an expression. My apps show the world who You are.
-
+		"<p class='mb-3 md:mb-5'>Hey, I'm Filip.</p><p class='mb-3 md:mb-5'>Frontend Web Developer with<br class='sm:hidden'/> passion for design in tech.</p><p>Applications are not just a&nbsp;product to me, it's a&nbsp;form of an&nbsp;art, an expression.</p>"
 	const aboutText = 'about'
 	const discoverText = 'discover'
 
-	const lightGreenGradient = 'bg-light-green-radial-gradient'
-
 	return (
 		<div className="custom-hp-spacing mx-auto flex gap-8 max-xl:px-4 max-lg-to-xl-3:flex-col md:max-xl:mx-8 xl:max-w-[1250px] 2xl:max-w-[1350px] 4xl:max-w-[1450px]">
-			<div className={cn(col1, 'delayed-fade-in-200')}>
+			<div className={col1}>
 				<h1 className="mt-24 text-h1-sm opacity-90 max-lg:ml-2 max-lg:text-h3 lg:mt-8 lg:text-h1-md 3xl:text-h1">
 					<div dangerouslySetInnerHTML={{ __html: welcomeTitle }} />
 				</h1>
@@ -71,17 +68,13 @@ export default function Index() {
 						<span dangerouslySetInnerHTML={{ __html: welcomeBoxText }} />
 					</div>
 
-					<div
-						className={cn(
-							'absolute overflow-x-hidden max-lg-to-xl-3:scale-x-flip max-md:overflow-x-hidden',
-							'top-[-8em] sm:top-[-10em] md:right-[-3.5em] lg:top-[-9em] xl:top-[-8em] 2xl:top-[-9em] 3xl:top-[-3em]',
-							'right-[-1em] xl:right-[-5em] 2xl:right-[-4em]',
-						)}
-					>
+					<div className="absolute right-[-1em] top-[-8em] overflow-x-hidden max-lg-to-xl-3:scale-x-flip max-md:overflow-x-hidden sm:top-[-10em] md:right-[-3.5em] lg:top-[-9em] xl:right-[-5em] xl:top-[-8em] 2xl:right-[-4em] 2xl:top-[-9em] 3xl:top-[-3em]">
 						<img
-							src="/img/woch_testing_4.png"
-							alt=""
+							src="/img/the_little_woch.png"
+							alt="The Little Woch - wochlife.com"
 							className="delayed-fade-in-500 max-lg:max-w-[10rem]"
+							width="270px"
+							height="350px"
 						/>
 					</div>
 				</div>
@@ -95,14 +88,14 @@ export default function Index() {
 
 					<h5 className="mb-3 text-center text-lg capitalize">
 						<div
-							// to="portfolio/freelance"
-							// className="transition-colors hover:text-highlight"
+						// to="portfolio/freelance"
+						// className="transition-colors hover:text-highlight"
 						>
 							freelance
 						</div>
 					</h5>
 					<div className={innerContentBoxWrapperOfBoxesInBox}>
-						<Link to="portfolio/freelance/remix-ts" prefetch='intent'>
+						<Link to="portfolio/freelance/remix-ts" prefetch="intent">
 							<PortfolioContentBox
 								name="Remix.run / Typescript / TailwindCSS"
 								imgSrc={remix}
@@ -110,20 +103,20 @@ export default function Index() {
 								innerBoxClass="bg-highlight"
 							/>
 						</Link>
-						<Link to="portfolio/freelance/reactjs" prefetch='intent'>
+						<Link to="portfolio/freelance/reactjs" prefetch="intent">
 							<PortfolioContentBox
 								name="React JS / Sass"
 								imgSrc={reactjs}
-								description="since 2021"
+								description="2020-2022"
 								innerBoxClass="bg-background/80"
 							/>
 						</Link>
-						<Link to="portfolio/freelance/wp-php-js" prefetch='intent'>
+						<Link to="portfolio/freelance/wp-php-js" prefetch="intent">
 							<PortfolioContentBox
 								boxClass="mb-0 4xl:mb-0"
 								imgSrc={wordpress}
 								name="WordPress / PHP / JS"
-								description="since 2019"
+								description="2019-2021"
 								innerBoxClass="bg-background/80"
 							/>
 						</Link>
@@ -131,8 +124,8 @@ export default function Index() {
 
 					<h5 className="mb-3 mt-6 text-center text-lg capitalize">
 						<div
-							// to="portfolio/forcompanies"
-							// className="transition-colors hover:text-highlight"
+						// to="portfolio/forcompanies"
+						// className="transition-colors hover:text-highlight"
 						>
 							for companies
 						</div>
@@ -164,7 +157,7 @@ export default function Index() {
 								innerBoxClass="bg-11ts-radial-gradient"
 								imgSrc="/img/11ts.webp"
 								name="11teamsports.com"
-								description="2022-present"
+								description="since 2023"
 							/>
 						</Link>
 						<Link to="portfolio/forcompanies/t4s">
@@ -172,7 +165,7 @@ export default function Index() {
 								innerBoxClass="bg-t4s-radial-gradient"
 								imgSrc="/img/t4s.webp"
 								name="top4sport.com"
-								description="2022-present"
+								description="2022-2023"
 							/>
 						</Link>
 						<Link to="portfolio/forcompanies/medi">
@@ -204,7 +197,7 @@ export default function Index() {
 						</div>
 
 						<div className={purpleBoxBgClassListSm2}>
-							<h3 className="pt-6 text-md font-semibold capitalize md:pt -4 xg:pt-6 lg:text-lg 2xl:pt-6 4xl:pt-8">
+							<h3 className="md:pt -4 xg:pt-6 pt-6 text-md font-semibold capitalize lg:text-lg 2xl:pt-6 4xl:pt-8">
 								schedule <br />
 								free call
 							</h3>
@@ -228,7 +221,7 @@ export default function Index() {
 							'custom-projects-box-max-height delayed-fade-in-400 h-full pt-6 max-sm:mt-6', //pt-6 => "md:pt-6" is already in purpleBoxClassList
 						)}
 					>
-						<h3 className={cn(bigBoxTitle, "text-xl transition-colors")}>
+						<h3 className={cn(bigBoxTitle, 'text-xl transition-colors')}>
 							my fields & projects
 						</h3>
 
@@ -243,15 +236,15 @@ export default function Index() {
 							</Link>
 							<Link to="projects/accommodations-apps">
 								<ProjectsContentBox
-									name={'Webs /w Accommodations Apps'}
+									name={'Accommodations Apps'}
 									description={'since 2022'}
 									iconName="desktop"
 									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
-							<Link to="projects/online-stores">
+							<Link to="projects/e-commerce">
 								<ProjectsContentBox
-									name={'Webs /w E-commerce'}
+									name={'E-commerce'}
 									description={'since 2020'}
 									iconName="desktop"
 									innerBoxClass={lightGreenGradient}
@@ -261,36 +254,36 @@ export default function Index() {
 							<div className="mx-4 mb-3 border-b-2 border-highlight-dark/30 4xl:mb-4" />
 
 							{/* <Link to="projects/streetwear"> */}
-								<ProjectsContentBox
-									boxClass="opacity-30 cursor-auto"
-									name={'Street-Wear Designs'}
-									// description={'2022-present'}
-									description={'preview coming soon'}
-									iconName="accessibility"
-									innerBoxClass={lightGreenGradient}
-								/>
+							<ProjectsContentBox
+								boxClass="opacity-30 cursor-auto"
+								name={'Street-Wear Designs'}
+								// description={'2022-present'}
+								description={'preview coming soon'}
+								iconName="accessibility"
+								innerBoxClass={lightGreenGradient}
+							/>
 							{/* </Link> */}
 
 							{/* <Link to="projects/nft-collection"> */}
-								<ProjectsContentBox
-									boxClass="opacity-30 cursor-auto"
-									name={'NFT Collection'}
-									// description={'2022-present'}
-									description={'preview coming soon'}
-									iconName="rocket"
-									innerBoxClass={lightGreenGradient}
-								/>
+							<ProjectsContentBox
+								boxClass="opacity-30 cursor-auto"
+								name={'NFT Collection'}
+								// description={'2022-present'}
+								description={'preview coming soon'}
+								iconName="rocket"
+								innerBoxClass={lightGreenGradient}
+							/>
 							{/* </Link> */}
 
 							{/* <Link to="projects/web3-nft-game"> */}
-								<ProjectsContentBox
-									boxClass="opacity-30 cursor-auto"
-									name={'Web3 NFT Online Game'}
-									// description={'2023-present'}
-									description={'preview coming soon'}
-									iconName="mix"
-									innerBoxClass={lightGreenGradient}
-								/>
+							<ProjectsContentBox
+								boxClass="opacity-30 cursor-auto"
+								name={'Web3 NFT Online Game'}
+								// description={'2023-present'}
+								description={'preview coming soon'}
+								iconName="mix"
+								innerBoxClass={lightGreenGradient}
+							/>
 							{/* </Link> */}
 						</div>
 					</div>
@@ -323,7 +316,13 @@ function PortfolioContentBox({
 				)}
 			>
 				{!!imgSrc && imgSrc.length && (
-					<img src={imgSrc} alt="" className="rounded-md" width="75%" height="75%" />
+					<img
+						src={imgSrc}
+						alt=""
+						className="rounded-md"
+						width="75%"
+						height="75%"
+					/>
 				)}
 			</div>
 			<div className="flex max-w-[67%] flex-col max-md-to-lg:ml-4 md-to-lg:ml-5">

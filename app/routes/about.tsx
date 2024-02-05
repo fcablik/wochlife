@@ -103,7 +103,7 @@ function RouteSelector({
 							<AboutContentBox
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
 								name={'Filip'}
-								description={'2019-present'}
+								description={'Dev since 2019'}
 								innerBoxClass="bg-light-green-radial-gradient"
 							/>
 						)}
@@ -113,9 +113,10 @@ function RouteSelector({
 						{({ isActive }) => (
 							<AboutContentBox
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
+								imgSrc='/favicons/favicon-32x32.png'
 								name={'Wochlife'}
-								description={'2023'}
-								innerBoxClass="bg-light-green-radial-gradient"
+								description={'since 2022'}
+								innerBoxClass="bg-background"
 							/>
 						)}
 					</NavLink>
@@ -148,7 +149,7 @@ function AboutContentBox({
 				)}
 			>
 				{!!imgSrc && imgSrc.length && (
-					<img src={imgSrc} alt="" className="max-w-2/3 rounded-md" />
+					<img src={imgSrc} alt="" className="rounded-md" width="75%" height="75%" />
 				)}
 			</div>
 			<div className={contentRouteSelectorContentBoxes}>

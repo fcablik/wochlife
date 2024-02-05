@@ -118,7 +118,7 @@ function RouteSelector({
 							/>
 						)}
 					</NavLink>
-					<NavLink to="online-stores" onClick={handleClick}>
+					<NavLink to="e-commerce" onClick={handleClick}>
 						{({ isActive }) => (
 							<ProjectsContentBox
 								boxClass={isActive ? 'bg-highlight-dark' : ''}

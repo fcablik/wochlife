@@ -13,11 +13,12 @@ import {
 
 export default function PortfolioFreelanceReactJS() {
 	return (
-		<>
+		<div className='custom-content-box-height'>
+			{/* max-xl:overflow-y-scroll */}
 			<h4 className="mb-2 text-lg">ReactJS / Sass / JavaScript / css</h4>
 
 			<div>
-				<li>using this stack <strong>since 2020</strong></li>
+				<li>used this stack <strong>2020-2022</strong></li>
 				<li>
 					custom built applications, both for clients and for services and tools
 					testing
@@ -147,6 +148,6 @@ export default function PortfolioFreelanceReactJS() {
 					</TooltipProvider>
 				</ul>
 			</div>
-		</>
+		</div>
 	)
 }
