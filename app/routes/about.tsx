@@ -54,11 +54,15 @@ export default function AboutRoute() {
 
 			<div className={cn('delayed-fade-in-200', contentsRouteContentCol2)}>
 				<div className={darkContentBoxBgClassList}>
-					<div className="flex gap-3 max-xl:flex-wrap md-to-lg:hidden justify-center">
+					<h4 className="mb-6 text-lg md-to-lg:hidden font-semibold text-center capitalize md:text-xl">
+						Discover More About
+					</h4>
+
+					<div className="pb-2 flex gap-3 max-xl:flex-wrap md-to-lg:hidden justify-center">
 						<NavLink to="filip">
 							{({ isActive }) => (
 								<Button variant={isActive ? 'highlight' : 'default'}>
-									About Filip
+									Filip
 								</Button>
 							)}
 						</NavLink>
@@ -66,7 +70,7 @@ export default function AboutRoute() {
 						<NavLink to="wochlife">
 							{({ isActive }) => (
 								<Button variant={isActive ? 'highlight' : 'default'}>
-									About Wochlife
+									Wochlife
 								</Button>
 							)}
 						</NavLink>

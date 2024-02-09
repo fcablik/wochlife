@@ -1,50 +1,53 @@
 export default function PortfolioForCompanies11Ts() {
+	const listStyleClasslist =
+		"flex items-center before:mr-2 before:content-['#'] before:text-highlight before:text-lg"
+	const listStyleClasslist2 =
+		"before:mr-2 before:content-['#'] before:text-highlight before:text-lg"
+
 	return (
 		<>
-			<h4 className="text-lg mb-2 font-semibold">
-				11teamsports<br/>- Front End / Full Stack Development
-			</h4>
-			<p className="mb-4">#stack: PHP Nette / Latte / JavaScript / Sass</p>
+			<h4 className="mb-2 text-lg font-semibold">11teamsports</h4>
+			<p className="mb-6">- Full Stack Web Development</p>
 
-			<div className="mb-4">
-				<p>
-					Freelance services provider at Top4sport/(later)11teamsports company.
-					Work firstly mostly on Frontend features with escalating overlap into
-					the backend, databases, etc.:
+			<div className="mb-6">
+				<p className="mb-2">
+					After a company merger from Top4sport into 11teamsports Group, the services remained the same
+					- continuing at freelance fullstack web development for Top4sport's e-commerce platform:
 				</p>
-				<li>new features implementation</li>
-				<li>UX/UI redesigns</li>
-				<li>UX/UI + design + features testings</li>
-				<li>
-					bugs fixing - a lot of debugging and finding problems, then
-					implementing solutions on existing code
-				</li>
-				<li>seasonal sales pages preps,</li>
-				<li>
-					{'—->'} overall my goal with providing programming services for this
-					company always was to help get better design, better user experiences
-					and interface as a whole, level-up traffic, repair existing parts or
-					implement new better solutions to speed up the store
-				</li>
+				<ul className="pl-2">
+					<li className={listStyleClasslist2}>new features implementation</li>
+					<li className={listStyleClasslist2}>UX/UI redesigns</li>
+					<li className={listStyleClasslist2}>debugging and bug solutions implementation</li>
+					<li className={listStyleClasslist2}>seasonal sales pages preps</li>
+					<li className={listStyleClasslist2}>
+						my goal for Top4Sport / 11teamsports platforms has always been to achieve more functional and user-friendlier UX/UI, level-up traffic, repair existing parts and implement new better solutions to speed up the applications
+					</li>
+				</ul>
 			</div>
 
-			<div>
-				<p className="capitalize">worked with</p>
-				<li>js</li>
-				<li>jquery</li>
-				<li>npms</li>
-				<li>sass</li>
-				<li>bootstrap</li>
-				<li>ajax</li>
-				<li>php</li>
-				<li>Nette - php framework</li>
-				<li>xDebug</li>
-				<li>Latte - templating engine</li>
-				<li>phpstorm</li>
-				<li>gitlab</li>
-				<li>bloomreach (exponea)</li>
-				<li>abtesting - firstly with custom solution, later bloomreach</li>
-				{/* <li>(TODO) - shopware, trim, vue?, eslint, </li> */}
+			<div className="max-lg:mb-4">
+				<p>Development-Stack:</p>
+
+				<ul className="pl-2">
+					<li className={listStyleClasslist}>JavaScript</li>
+					<li className={listStyleClasslist}>jQuery</li>
+					<li className={listStyleClasslist}>npm</li>
+					<li className={listStyleClasslist}>Node.js</li>
+					<li className={listStyleClasslist}>SASS / scss</li>
+					<li className={listStyleClasslist}>Bootstrap</li>
+					<li className={listStyleClasslist}>ajax</li>
+					<li className={listStyleClasslist}>PHP</li>
+					<li className={listStyleClasslist}>Nette - PHP framework</li>
+					<li className={listStyleClasslist}>xDebug</li>
+					<li className={listStyleClasslist}>Latte - templating engine</li>
+					<li className={listStyleClasslist}>PHPStorm</li>
+					<li className={listStyleClasslist}>GitLab</li>
+					<li className={listStyleClasslist}>Bloomreach (Exponea)</li>
+					<li className={listStyleClasslist}>
+						AB-Testing - firstly with custom solution, later bloomreach
+					</li>
+					{/* <li>(TODO) - shopware, trim, vue?, eslint, </li> */}
+				</ul>
 			</div>
 		</>
 	)
