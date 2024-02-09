@@ -242,6 +242,14 @@ export default function Index() {
 									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
+							<Link to="projects/chaos-escape-app">
+								<ProjectsContentBox
+									name={'Car Dealer Finder App'}
+									description={'since 2023'}
+									iconName="magnifying-glass"
+									innerBoxClass={lightGreenGradient}
+								/>
+							</Link>
 							<Link to="projects/e-commerce">
 								<ProjectsContentBox
 									name={'E-commerce'}

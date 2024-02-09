@@ -8,10 +8,8 @@ export default function PortfolioFreelance() {
 			<div className="custom-content-box-height">
 				{/* overflow-y-scroll */}
 				<div className="mb-6">
-					<h5 className="mb-2 text-lg md:text-xl font-semibold capitalize">..Thanks for patience.</h5>
-					<div>Projects' base content is getting ready..
-						<span className="md-to-lg:hidden mt-4 block">Discover base overview in the menu..</span>
-					</div>
+					<p>Projects' base content is getting ready..</p>
+					<p>..Discover base overview in the menu.</p>
 				</div>
 			</div>
 		</div>

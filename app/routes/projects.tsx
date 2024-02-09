@@ -118,6 +118,22 @@ function RouteSelector({
 							/>
 						)}
 					</NavLink>
+					<NavLink to="chaos-escape-app" onClick={handleClick}>
+						{({ isActive }) => (
+							<ProjectsContentBox
+								boxClass={isActive ? 'bg-highlight-dark' : ''}
+								name={'Car Dealer Finder App'}
+								description={'since 2023'}
+								iconName="magnifying-glass"
+								innerBoxClass={cn(
+									lightGreenGradient,
+									isActive
+										? 'bg-light-blue-radial-gradient'
+										: 'text-highlight group-hover:text-foreground',
+								)}
+							/>
+						)}
+					</NavLink>
 					<NavLink to="e-commerce" onClick={handleClick}>
 						{({ isActive }) => (
 							<ProjectsContentBox

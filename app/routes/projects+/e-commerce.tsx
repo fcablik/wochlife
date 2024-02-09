@@ -3,7 +3,7 @@ import { Button } from '#app/components/ui/button.tsx'
 export default function PortfolioFreelance() {
 	return (
 		<div>
-			<h3 className="mb-6 text-xl font-semibold capitalize md:text-2xl">
+			<h3 className="mb-8 text-xl font-semibold capitalize md:text-2xl">
 				E-commerce
 			</h3>
 

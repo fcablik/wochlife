@@ -4,7 +4,7 @@ export default function PortfolioFreelance() {
 	return (
 		<div>
 			<h3 className="mb-8 text-xl font-semibold capitalize md:text-2xl">
-				Accommodations Management Applications
+				Chaos Escape - Car Dealer Finder
 			</h3>
 
 			<div className="custom-content-box-height">
@@ -13,12 +13,12 @@ export default function PortfolioFreelance() {
 				<div className="mb-8">
 					<p className="mb-4">Discover more from the GitHub repo:</p>
 					<a
-						href="https://github.com/fcablik/wochlife-accomodations"
+						href="https://github.com/fcablik/chaos-escape"
 						target="_blank"
 						rel="noreferrer"
 					>
 						<Button variant="highlight-secondary">
-							GitHub Wochlife Accommodations
+							GitHub Chaos Escape
 						</Button>
 					</a>
 				</div>
@@ -26,12 +26,12 @@ export default function PortfolioFreelance() {
 				<div className="mb-6">
 					<p className="mb-4">Or discover the staging app:</p>
 					<a
-						href="https://wochlife-accommodations.fly.dev/"
+						href="https://chaos-escape.fly.dev/"
 						target="_blank"
 						rel="noreferrer"
 					>
 						<Button size="sm" variant="default">
-							wochlife-accommodations.fly.dev
+							chaos-escape.fly.dev
 						</Button>
 					</a>
 				</div>
