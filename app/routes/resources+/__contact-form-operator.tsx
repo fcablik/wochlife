@@ -30,7 +30,10 @@ const ContactEditorSchema = z.object({
 	message: z.string(),
 })
 
-export async function action({ params, request }: DataFunctionArgs) {
+export async function action({
+	// params,
+	request,
+}: DataFunctionArgs) {
 	const formData = await request.formData()
 
 	const submission = await parse(formData, {
@@ -152,7 +155,7 @@ export function ContactFormOperator() {
 	return (
 		<div className="contactModalCustomMaxHeight fixed z-2001 flex flex-col justify-between overflow-scroll rounded-[40px] bg-dark-gradient shadow-lg max-md:bottom-0 max-md:left-0 max-md:max-h-full max-md:w-full md:right-0 md:top-1/2 md:min-w-[500px] md:-translate-y-1/2">
 			<div className="relative">
-				<div className="flex items-center justify-between px-8 lg:px-12 my-8">
+				<div className="my-8 flex items-center justify-between px-8 lg:px-12">
 					<div className="flex flex-col justify-between">
 						<h5 className="text-h5">Contact Me</h5>
 					</div>
@@ -237,7 +240,7 @@ export function ContactFormOperator() {
 						type="submit"
 						status={isSubmitting ? 'pending' : actionData?.status ?? 'idle'}
 						disabled={isSubmitting}
-						className="w-2/3 py-3 capitalize rounded-2xl hover:text-foreground"
+						className="w-2/3 rounded-2xl py-3 capitalize hover:text-foreground"
 					>
 						send message
 					</StatusButton>

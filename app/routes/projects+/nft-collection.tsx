@@ -1,4 +1,4 @@
-export default function PortfolioForCompanies() {
+export default function ProjectNftCollectionRoute() {
 	return (
 		<div>
 			<h3 className="mb-6 text-xl font-semibold capitalize md:text-2xl">

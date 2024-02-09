@@ -1,7 +1,7 @@
 import { NavLink } from '@remix-run/react'
 import { Button } from '#app/components/ui/button.tsx'
 
-export default function AboutFilip() {
+export default function AboutIndexRoute() {
 	return (
 		<div className='max-md-to-lg:hidden'>
 			<h4 className="mb-6 text-lg font-semibold text-center capitalize md:text-xl">

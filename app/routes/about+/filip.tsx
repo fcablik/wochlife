@@ -2,7 +2,7 @@ import { Link } from '@remix-run/react'
 import { Button } from '#app/components/ui/button.tsx'
 import { Icon } from '#app/components/ui/icon.tsx'
 
-export default function AboutFilip() {
+export default function AboutFilipRoute() {
 	return (
 		<div className="max-md-to-lg:mt-6">
 			<h4 className="mb-6 text-lg font-semibold capitalize md:text-xl">

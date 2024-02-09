@@ -1,4 +1,4 @@
-export default function PortfolioForCompanies11Ts() {
+export default function PortfolioForCompanies11ts() {
 	const listStyleClasslist =
 		"flex items-center before:mr-2 before:content-['#'] before:text-highlight before:text-lg"
 	const listStyleClasslist2 =

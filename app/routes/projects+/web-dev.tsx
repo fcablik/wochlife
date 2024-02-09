@@ -3,7 +3,7 @@ import {
 	Outlet,
 } from '@remix-run/react'
 
-export default function PortfolioFreelance() {
+export default function ProjectWebDevRoute() {
 	return (
 		<div className="relative">
 			<Outlet />

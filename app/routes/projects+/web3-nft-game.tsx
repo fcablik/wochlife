@@ -1,4 +1,4 @@
-export default function PortfolioForCompanies() {
+export default function ProjectWeb3NftGameRoute() {
 	return (
 		<div>
 			<h3 className="mb-6 text-xl md:text-2xl font-semibold capitalize">

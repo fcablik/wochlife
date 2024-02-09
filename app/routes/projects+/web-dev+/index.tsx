@@ -1,4 +1,4 @@
-export default function PortfolioFreelance() {
+export default function ProjectWebDevIndexRoute() {
 	return (
 		<div>
 			<h3 className="mb-6 text-xl font-semibold capitalize md:text-2xl">

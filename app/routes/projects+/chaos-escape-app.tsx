@@ -1,6 +1,6 @@
 import { Button } from '#app/components/ui/button.tsx'
 
-export default function PortfolioFreelance() {
+export default function ProjectChaosEscapeAppRoute() {
 	return (
 		<div>
 			<h3 className="mb-8 text-xl font-semibold capitalize md:text-2xl">

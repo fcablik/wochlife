@@ -1,6 +1,6 @@
 import { Link } from '@remix-run/react'
 
-export default function AboutWochlife() {
+export default function AboutWochlifeRoute() {
 	return (
 		<div className='max-md-to-lg:mt-6'>
 			<h4 className="mb-6 text-lg font-semibold capitalize md:text-xl">
