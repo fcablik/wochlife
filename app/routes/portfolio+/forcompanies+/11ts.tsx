@@ -7,18 +7,18 @@ export default function PortfolioForCompanies11ts() {
 	return (
 		<>
 			<h4 className="mb-2 text-lg font-semibold">11teamsports</h4>
-			<p className="mb-6">- Full Stack Web Development</p>
+			<p className="mb-6">- Fullstack Web Development</p>
 
-			<div className="mb-6">
+			<div className="mb-6 md:pr-6">
 				<p className="mb-2">
 					After a company merger from Top4sport into 11teamsports Group, the services remained the same
 					- continuing at freelance fullstack web development for Top4sport's e-commerce platform:
 				</p>
 				<ul className="pl-2">
-					<li className={listStyleClasslist2}>new features implementation</li>
-					<li className={listStyleClasslist2}>UX/UI redesigns</li>
-					<li className={listStyleClasslist2}>debugging and bug solutions implementation</li>
-					<li className={listStyleClasslist2}>seasonal sales pages preps</li>
+					<li className={listStyleClasslist2}>new features and components implementation</li>
+					<li className={listStyleClasslist2}>focusing on achieving better and more functional UX/UI</li>
+					<li className={listStyleClasslist2}>bug solutions, looking for advanced frontend code solutions</li>
+					<li className={listStyleClasslist2}>improving platform's speed</li>
 					<li className={listStyleClasslist2}>
 						my goal for Top4Sport / 11teamsports platforms has always been to achieve more functional and user-friendlier UX/UI, level-up traffic, repair existing parts and implement new better solutions to speed up the applications
 					</li>
