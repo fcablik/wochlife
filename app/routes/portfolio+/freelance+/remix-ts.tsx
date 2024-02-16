@@ -9,7 +9,7 @@ import {
 
 export default function PortfolioFreelanceRemixTypescript() {
 	return (
-		<div className='custom-content-box-height overflow-y-scroll'>
+		<div className='custom-content-box-height max-4xl:overflow-y-scroll'>
 			<h4 className="mb-2 text-lg">
 				Remix.run / TypeScript / Prisma / SQLite / TailwindCSS
 			</h4>
@@ -29,12 +29,12 @@ export default function PortfolioFreelanceRemixTypescript() {
 					</li>
 				</ul>
 
-				<ul className="grid grid-cols-4 gap-3 py-8 sm:grid-cols-5 md:gap-3 xl:gap-5 lg:grid-cols-7 xl:grid-cols-8">
+				<ul className="grid grid-cols-4 gap-3 pt-6 sm:grid-cols-5 md:px-4 xl:px-6 md:gap-3 xl:gap-4 lg:grid-cols-6 lg-to-xl:grid-cols-7 xl:grid-cols-8">
 					<TooltipProvider>
 						{logos.map((logo, i) => (
 							<li
 								key={logo.href}
-								className="animate-roll-reveal flex rounded-xl bg-foreground/90 transition [animation-fill-mode:backwards] hover:-rotate-[-6deg] hover:bg-violet-200 md:rounded-2xl"
+								className="animate-roll-reveal flex rounded-xl bg-foreground/90 transition [animation-fill-mode:backwards] hover:-rotate-[-6deg] hover:bg-violet-200"
 								style={{ animationDelay: `${i * 0.07}s` }}
 							>
 								<Tooltip>

@@ -28,7 +28,7 @@ export default function PortfolioFreelanceWordpress() {
 					</li>
 				</ul>
 
-				<ul className="grid grid-cols-4 gap-3 py-8 sm:grid-cols-5 md:gap-5 md:px-4 xl:grid-cols-7">
+				<ul className="grid grid-cols-4 gap-3 pt-6 sm:grid-cols-6 md:px-4 xl:px-6 md:gap-3 xl:gap-4 lg-to-xl:grid-cols-6 xl:grid-cols-7">
 					<TooltipProvider>
 						<li
 							key="wordpress"
