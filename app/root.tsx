@@ -232,10 +232,9 @@ function App() {
 	const nonce = useNonce()
 	// const theme = useTheme() //* temporary untill both developed
 
-	const [isToggled, setToggled] = useState(false)
-
-	const handleToggle = () => {
-		setToggled(prev => !prev)
+	const [isSeeRoomToggled, setSeeRoomToggled] = useState(false)
+	const handleSeeRoomToggle = () => {
+		setSeeRoomToggled(prev => !prev)
 	}
 
 	return (
@@ -243,17 +242,17 @@ function App() {
 			{/* theme={theme} //* temporary untill both developed */}
 			<div className="flex md:min-h-screen flex-col md-to-lg:justify-center">
 				<div className="custom-hp-bg-main z-1" />
-				{isToggled && (
+				{isSeeRoomToggled && (
 					<div
 						className="fixed left-0 top-0 z-9999 h-full w-full"
-						onClick={handleToggle}
+						onClick={handleSeeRoomToggle}
 					/>
 				)}
 				<div className="z-2">
 					<div
 						className={cn(
 							'custom-base-responsive-spacing transition-opacity duration-300',
-							isToggled ? 'opacity-5' : '',
+							isSeeRoomToggled ? 'opacity-5' : '',
 						)}
 					>
 						<Outlet />
@@ -264,7 +263,7 @@ function App() {
 					<div className="fixed bottom-2 right-2 mb-2 text-right max-lg-to-xl:bottom-16 delayed-fade-in-500">
 						<Button
 							size="xs"
-							onClick={handleToggle}
+							onClick={handleSeeRoomToggle}
 							type="button"
 							className="opacity-50 hover:opacity-80"
 							variant="highlight"

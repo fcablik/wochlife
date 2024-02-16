@@ -16,7 +16,7 @@ export const purpleBoxBgClassList = boxProps + ' bg-purple-box-gradient'
 export const purpleBoxBg40ClassList = boxProps + ' bg-purple-box-gradient-40'
 
 export const darkContentBoxBgClassList =
-	'flex flex-col rounded-3xl lg:rounded-6xl p-4 md:p-5 lg:p-8 bg-dark-gradient'
+	'flex flex-col rounded-3xl lg:rounded-6xl p-4 md:p-8 bg-dark-gradient'
 
 //* box items inside boxes
 export const boxInnerContentBoxProps =
@@ -59,7 +59,13 @@ export const contentsRouteContentCol2 =
 export const contentsRouteWrapper =
 	'mx-auto flex gap-8 max-xl:px-4 max-md-to-lg:flex-col md:max-xl:mx-8 xl:max-w-[1250px] 2xl:max-w-[1350px] 4xl:max-w-[1450px]'
 export const contentRouteSelectorContentBoxes =
-	'max-md-to-lg:ml-3 md-to-lg:ml-6 flex max-w-[67%] flex-col'
+	'max-md-to-lg:ml-3 md-to-lg:ml-4 flex max-w-[67%] flex-col'
 
 export const destructiveModalWrapperClassList =
 	'absolute left-1/2 top-20 z-3001 w-full max-w-1/3 -translate-x-1/2 rounded-xl border-4 border-destructive bg-white p-4'
+
+
+
+
+export const customHashtagListStyleClasslist =
+	"flex items-center before:mr-2 before:content-['#'] before:text-highlight before:text-lg"

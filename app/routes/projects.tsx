@@ -19,6 +19,7 @@ import {
 	MobileModalCaretOpener,
 	ModalCloserIcon,
 } from '#app/components/modal-helpers.tsx'
+import { Button } from '#app/components/ui/button.tsx'
 import { Icon, type IconName } from '#app/components/ui/icon.tsx'
 import { cn } from '#app/utils/misc.tsx'
 
@@ -34,7 +35,7 @@ export default function ProjectsRoute() {
 				<MobileModalCaretOpener
 					isMobExtraMenuToggled={isMobExtraMenuToggled}
 					handleToggle={handleToggle}
-					triggerTitle='menu'
+					triggerTitle="menu"
 				/>
 
 				<RouteSelector
@@ -54,6 +55,98 @@ export default function ProjectsRoute() {
 
 			<div className={cn('delayed-fade-in-200', contentsRouteContentCol2)}>
 				<div className={darkContentBoxBgClassList}>
+					<h4 className="mb-6 text-center text-lg font-semibold capitalize md:text-xl md-to-lg:hidden">
+						Discover My Projects
+					</h4>
+
+					<div className="flex justify-center gap-3 pb-2 max-xl:flex-wrap md-to-lg:hidden">
+						<NavLink to="custom-apps">
+							{({ isActive }) => (
+								<Button
+									className="w-full capitalize"
+									variant={isActive ? 'highlight' : 'default'}
+								>
+									custom web apps
+								</Button>
+							)}
+						</NavLink>
+
+						<NavLink to="e-commerce">
+							{({ isActive }) => (
+								<Button
+									className="w-full capitalize"
+									variant={isActive ? 'highlight' : 'default'}
+								>
+									e-commerce
+								</Button>
+							)}
+						</NavLink>
+
+						<NavLink to="accommodations-apps">
+							{({ isActive }) => (
+								<Button
+									className="w-full capitalize"
+									variant={isActive ? 'highlight' : 'default'}
+								>
+									accommodations web apps
+								</Button>
+							)}
+						</NavLink>
+
+						{/* <NavLink to="chaos-escape-app">
+						{({ isActive }) => (
+							<Button
+								className="capitalize"
+								variant={isActive ? 'highlight' : 'default'}
+							>
+								Car Dealer Finder App
+							</Button>
+						)}
+					</NavLink> */}
+
+						{/* <NavLink to="steretwear">
+						{({ isActive }) => ( */}
+						<div>
+							<Button
+								className="w-full capitalize"
+								// variant={isActive ? 'highlight' : 'default'}
+								variant="disabled"
+							>
+								streetwear
+							</Button>
+						</div>
+						{/* )}
+					</NavLink> */}
+
+						{/* <NavLink to="nft-collection">
+						{({ isActive }) => ( */}
+						<div>
+							<Button
+								className="w-full capitalize"
+								// variant={isActive ? 'highlight' : 'default'}
+								variant="disabled"
+							>
+								nft collection
+							</Button>
+						</div>
+						{/* )}
+					</NavLink> */}
+
+						{/* <NavLink to="web3-nft-game">
+						{({ isActive }) => ( */}
+						<div>
+							<Button
+								className="w-full capitalize"
+								// variant={isActive ? 'highlight' : 'default'}
+								variant="disabled"
+							>
+								web3 NFT game
+							</Button>
+						</div>
+						{/* )}
+					</NavLink> */}
+					</div>
+
 					<Outlet />
 				</div>
 			</div>
@@ -102,38 +195,6 @@ function RouteSelector({
 							/>
 						)}
 					</NavLink>
-					<NavLink to="accommodations-apps" onClick={handleClick}>
-						{({ isActive }) => (
-							<ProjectsContentBox
-								boxClass={isActive ? 'bg-highlight-dark' : ''}
-								name={'Accommodations Apps'}
-								description={'since 2022'}
-								iconName="desktop"
-								innerBoxClass={cn(
-									lightGreenGradient,
-									isActive
-										? 'bg-light-blue-radial-gradient'
-										: 'text-highlight group-hover:text-foreground',
-								)}
-							/>
-						)}
-					</NavLink>
-					<NavLink to="chaos-escape-app" onClick={handleClick}>
-						{({ isActive }) => (
-							<ProjectsContentBox
-								boxClass={isActive ? 'bg-highlight-dark' : ''}
-								name={'Car Dealer Finder App'}
-								description={'since 2023'}
-								iconName="magnifying-glass"
-								innerBoxClass={cn(
-									lightGreenGradient,
-									isActive
-										? 'bg-light-blue-radial-gradient'
-										: 'text-highlight group-hover:text-foreground',
-								)}
-							/>
-						)}
-					</NavLink>
 					<NavLink to="e-commerce" onClick={handleClick}>
 						{({ isActive }) => (
 							<ProjectsContentBox
@@ -150,6 +211,38 @@ function RouteSelector({
 							/>
 						)}
 					</NavLink>
+					<NavLink to="accommodations-apps" onClick={handleClick}>
+						{({ isActive }) => (
+							<ProjectsContentBox
+								boxClass={isActive ? 'bg-highlight-dark' : ''}
+								name={'Accommodations Apps'}
+								description={'since 2022'}
+								iconName="desktop"
+								innerBoxClass={cn(
+									lightGreenGradient,
+									isActive
+										? 'bg-light-blue-radial-gradient'
+										: 'text-highlight group-hover:text-foreground',
+								)}
+							/>
+						)}
+					</NavLink>
+					{/* <NavLink to="chaos-escape-app" onClick={handleClick}>
+						{({ isActive }) => (
+							<ProjectsContentBox
+								boxClass={isActive ? 'bg-highlight-dark' : ''}
+								name={'Car Dealer Finder App'}
+								description={'since 2023'}
+								iconName="magnifying-glass"
+								innerBoxClass={cn(
+									lightGreenGradient,
+									isActive
+										? 'bg-light-blue-radial-gradient'
+										: 'text-highlight group-hover:text-foreground',
+								)}
+							/>
+						)}
+					</NavLink> */}
 
 					<div className="mx-4 mb-3 border-b-2 border-highlight-dark 4xl:mb-4" />
 

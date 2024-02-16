@@ -29,7 +29,7 @@ const buttonVariants = cva(
 				'highlight-secondary':
 					'font-500 shadow-highlight bg-highlight text-highlight-foreground hover:text-highlight hover:bg-highlight/20 border-2 border-highlight',
 
-				disabled: 'border border-input bg-background cursor-auto opacity-60',
+				disabled: 'border border-input bg-foreground/20 cursor-auto opacity-60',
 				activedashboardSidebar:
 					'shadow-lg shadow-highlight bg-highlight text-highlight-foreground',
 				dashboardSidebar: 'bg-transparent ',

@@ -1,3 +1,4 @@
+import { customHashtagListStyleClasslist } from '#app/components/classlists.tsx'
 import css from '#app/components/logos/css-3.svg'
 import html from '#app/components/logos/html.svg'
 import javascript from '#app/components/logos/javascript.svg'
@@ -12,15 +13,20 @@ import {
 
 export default function PortfolioFreelanceWordpress() {
 	return (
-		<div className='custom-content-box-height'>
+		<div className="custom-content-box-height">
 			<h4 className="mb-2 text-lg">Wordpress / PHP / JavaScript / css</h4>
 
 			<div>
-				<li>used this stack <strong>2019 - 2021</strong></li>
-				<li>
-					custom theme and templates development + custom webs development for
-					clients
-				</li>
+				<ul className="pl-2">
+					<li className={customHashtagListStyleClasslist}>
+						used this stack&nbsp;
+						<strong>2019 - 2021</strong>
+					</li>
+					<li className={customHashtagListStyleClasslist}>
+						custom theme and templates development + custom webs development for
+						clients
+					</li>
+				</ul>
 
 				<ul className="grid grid-cols-4 gap-3 py-8 sm:grid-cols-5 md:gap-5 md:px-4 xl:grid-cols-7">
 					<TooltipProvider>
@@ -77,7 +83,7 @@ export default function PortfolioFreelanceWordpress() {
 										target="_blank"
 										rel="noreferrer"
 									>
-										<img src={javascript} alt="" className='max-h-[70px]' />
+										<img src={javascript} alt="" className="max-h-[70px]" />
 									</a>
 								</TooltipTrigger>
 								<TooltipContent>JavaScript</TooltipContent>
@@ -97,7 +103,7 @@ export default function PortfolioFreelanceWordpress() {
 										target="_blank"
 										rel="noreferrer"
 									>
-										<img src={css} alt="" className='max-h-[70px]' />
+										<img src={css} alt="" className="max-h-[70px]" />
 									</a>
 								</TooltipTrigger>
 								<TooltipContent>CSS</TooltipContent>
@@ -117,7 +123,7 @@ export default function PortfolioFreelanceWordpress() {
 										target="_blank"
 										rel="noreferrer"
 									>
-										<img src={html} alt="" className='max-h-[70px]' />
+										<img src={html} alt="" className="max-h-[70px]" />
 									</a>
 								</TooltipTrigger>
 								<TooltipContent>HTML</TooltipContent>

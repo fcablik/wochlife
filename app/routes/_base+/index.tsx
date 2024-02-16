@@ -234,22 +234,6 @@ export default function Index() {
 									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
-							<Link to="projects/accommodations-apps">
-								<ProjectsContentBox
-									name={'Accommodations Apps'}
-									description={'since 2022'}
-									iconName="desktop"
-									innerBoxClass={lightGreenGradient}
-								/>
-							</Link>
-							<Link to="projects/chaos-escape-app">
-								<ProjectsContentBox
-									name={'Car Dealer Finder App'}
-									description={'since 2023'}
-									iconName="magnifying-glass"
-									innerBoxClass={lightGreenGradient}
-								/>
-							</Link>
 							<Link to="projects/e-commerce">
 								<ProjectsContentBox
 									name={'E-commerce'}
@@ -258,6 +242,22 @@ export default function Index() {
 									innerBoxClass={lightGreenGradient}
 								/>
 							</Link>
+							<Link to="projects/accommodations-apps">
+								<ProjectsContentBox
+									name={'Accommodations Apps'}
+									description={'since 2022'}
+									iconName="desktop"
+									innerBoxClass={lightGreenGradient}
+								/>
+							</Link>
+							{/* <Link to="projects/chaos-escape-app">
+								<ProjectsContentBox
+									name={'Car Dealer Finder App'}
+									description={'since 2023'}
+									iconName="magnifying-glass"
+									innerBoxClass={lightGreenGradient}
+								/>
+							</Link> */}
 
 							<div className="mx-4 mb-3 border-b-2 border-highlight-dark/30 4xl:mb-4" />
 

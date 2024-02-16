@@ -54,11 +54,11 @@ export default function AboutRoute() {
 
 			<div className={cn('delayed-fade-in-200', contentsRouteContentCol2)}>
 				<div className={darkContentBoxBgClassList}>
-					<h4 className="mb-6 text-lg md-to-lg:hidden font-semibold text-center capitalize md:text-xl">
+					<h4 className="mb-6 text-center text-lg font-semibold capitalize md:text-xl md-to-lg:hidden">
 						Discover More About
 					</h4>
 
-					<div className="pb-2 flex gap-3 max-xl:flex-wrap md-to-lg:hidden justify-center">
+					<div className="flex justify-center gap-3 pb-2 max-xl:flex-wrap md-to-lg:hidden">
 						<NavLink to="filip">
 							{({ isActive }) => (
 								<Button variant={isActive ? 'highlight' : 'default'}>
@@ -117,7 +117,7 @@ function RouteSelector({
 						{({ isActive }) => (
 							<AboutContentBox
 								boxClass={isActive ? 'bg-foreground text-background' : ''}
-								imgSrc='/favicons/favicon-32x32.png'
+								imgSrc="/favicons/favicon-32x32.png"
 								name={'Wochlife'}
 								description={'since 2022'}
 								innerBoxClass="bg-background"
@@ -153,7 +153,13 @@ function AboutContentBox({
 				)}
 			>
 				{!!imgSrc && imgSrc.length && (
-					<img src={imgSrc} alt="" className="rounded-md" width="75%" height="75%" />
+					<img
+						src={imgSrc}
+						alt=""
+						className="rounded-md"
+						width="75%"
+						height="75%"
+					/>
 				)}
 			</div>
 			<div className={contentRouteSelectorContentBoxes}>

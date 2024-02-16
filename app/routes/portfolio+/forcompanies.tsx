@@ -3,12 +3,12 @@ import { Button } from '#app/components/ui/button.tsx'
 
 export default function PortfolioForCompanies() {
 	return (
-		<div className='custom-content-box-height overflow-y-scroll'>
+		<div>
 			<h3 className="mb-6 text-xl font-semibold capitalize md:text-2xl">
 				company projects
 			</h3>
 
-			<>
+			<div className='custom-content-box-height overflow-y-scroll'>
 				<div className="mb-6 flex gap-3 flex-wrap md-to-lg:hidden">
 					<NavLink to="11ts">
 						{({ isActive }) => (
@@ -36,7 +36,7 @@ export default function PortfolioForCompanies() {
 				</div>
 
 				<Outlet />
-			</>
+			</div>
 		</div>
 	)
 }

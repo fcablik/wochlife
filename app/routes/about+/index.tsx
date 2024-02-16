@@ -3,8 +3,8 @@ import { Button } from '#app/components/ui/button.tsx'
 
 export default function AboutIndexRoute() {
 	return (
-		<div className='max-md-to-lg:hidden'>
-			<h4 className="mb-6 text-lg font-semibold text-center capitalize md:text-xl">
+		<div className="max-md-to-lg:hidden">
+			<h4 className="mb-9 text-center text-lg font-semibold capitalize md:text-xl">
 				Discover More About
 			</h4>
 

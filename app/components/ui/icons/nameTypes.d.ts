@@ -15,6 +15,7 @@ export type IconName =
 	| 'cross-1'
 	| 'dashboard'
 	| 'desktop'
+	| 'discord-logo'
 	| 'dots-horizontal'
 	| 'download'
 	| 'envelope-closed'

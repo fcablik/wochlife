@@ -1,3 +1,4 @@
+import { customHashtagListStyleClasslist } from '#app/components/classlists.tsx'
 import { logos } from '#app/components/logos/logos.ts'
 import {
 	Tooltip,
@@ -8,21 +9,27 @@ import {
 
 export default function PortfolioFreelanceRemixTypescript() {
 	return (
-		<div className='custom-content-box-height max-xl:overflow-y-scroll'>
+		<div className='custom-content-box-height overflow-y-scroll'>
 			<h4 className="mb-2 text-lg">
 				Remix.run / TypeScript / Prisma / SQLite / TailwindCSS
 			</h4>
 
 			<div>
-				<li>using this stack <strong>since 2022</strong></li>
-				<li>
-					custom built progressive web applications, both from the ground up and
-					with a usage of starting templates as provided by Remix and then with
-					epic-stack by Kent C. Dodds
-				</li>
-				<li>custom components for custom apps</li>
+				<ul className="pl-2">
+					<li className={customHashtagListStyleClasslist}>
+						using this stack&nbsp;<strong>since 2022</strong>	
+					</li>
+					<li className={customHashtagListStyleClasslist}>
+						custom built progressive web applications, both from the ground up and
+						with a usage of starting templates as provided by Remix and then with
+						epic-stack by Kent C. Dodds
+					</li>
+					<li className={customHashtagListStyleClasslist}>
+						custom components for custom apps
+					</li>
+				</ul>
 
-				<ul className="grid grid-cols-4 gap-3 py-8 sm:grid-cols-5 md:gap-5 md:px-4 lg:grid-cols-6 xl:grid-cols-8">
+				<ul className="grid grid-cols-4 gap-3 py-8 sm:grid-cols-5 md:gap-3 xl:gap-5 lg:grid-cols-7 xl:grid-cols-8">
 					<TooltipProvider>
 						{logos.map((logo, i) => (
 							<li

@@ -16,6 +16,7 @@ export function IconNames(): string[] {
 		'cross-1',
 		'dashboard',
 		'desktop',
+		'discord-logo',
 		'dots-horizontal',
 		'download',
 		'envelope-closed',

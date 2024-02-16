@@ -106,6 +106,22 @@ export default function ContactForm() {
 								<Tooltip>
 									<TooltipTrigger asChild>
 										<a
+											href="https://discordapp.com/users/1051502197105508482"
+											target="_blank"
+											rel="noreferrer"
+											className='hover:text-highlight transition'
+										>
+											<Icon name="discord-logo" size="xl" />
+										</a>
+									</TooltipTrigger>
+									<TooltipContent>Discord / @filipcablik</TooltipContent>
+								</Tooltip>
+							</TooltipProvider>
+
+							<TooltipProvider>
+								<Tooltip>
+									<TooltipTrigger asChild>
+										<a
 											href="https://www.linkedin.com/in/filipcablik/"
 											target="_blank"
 											rel="noreferrer"

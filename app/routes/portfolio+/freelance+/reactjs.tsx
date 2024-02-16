@@ -1,3 +1,4 @@
+import { customHashtagListStyleClasslist } from '#app/components/classlists.tsx'
 import bootstrap from '#app/components/logos/bootstrap.svg'
 import ESLint from '#app/components/logos/eslint.svg'
 import github from '#app/components/logos/github.svg'
@@ -18,11 +19,15 @@ export default function PortfolioFreelanceReactJS() {
 			<h4 className="mb-2 text-lg">ReactJS / Sass / JavaScript / css</h4>
 
 			<div>
-				<li>used this stack <strong>2020-2022</strong></li>
-				<li>
-					custom built applications, both for clients and for services and tools
-					testing
-				</li>
+				<ul className="pl-2">
+					<li className={customHashtagListStyleClasslist}>
+						used this stack&nbsp;<strong>2020-2022</strong>
+					</li>
+					<li className={customHashtagListStyleClasslist}>
+						custom built applications, both for clients and for services and tools
+						testing
+					</li>
+				</ul>
 
 				<ul className="grid grid-cols-4 gap-3 py-8 sm:grid-cols-5 md:gap-5 md:px-4 lg:grid-cols-6 xl:grid-cols-8">
 					<TooltipProvider>

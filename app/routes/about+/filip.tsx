@@ -5,14 +5,14 @@ import { Icon } from '#app/components/ui/icon.tsx'
 export default function AboutFilipRoute() {
 	return (
 		<div className="max-md-to-lg:mt-6">
-			<h4 className="mb-6 text-lg font-semibold capitalize md:text-xl">
+			<h3 className="mb-8 text-xl font-semibold capitalize md:text-2xl">
 				about filip
-			</h4>
+			</h3>
 
 			<div className="custom-content-box-height overflow-y-scroll">
-				<div>
+				<div className="mb-6 md:pr-6">
 					<p className="mb-6">
-						Hey, I'm Filip. A very passionate FullStack Web Developer. <br />I
+						Hey, I'm Filip. A&nbsp;very passionate FullStack Web Developer. <br />I
 						like to discover and learn new tech, frameworks & services.
 						Continuous progress, learning and small steps ahead is what makes my
 						job and life so awesome. I love to solve problems, in both logical
@@ -20,7 +20,7 @@ export default function AboutFilipRoute() {
 					</p>
 					<div className="mb-6">
 						<p className="mb-4">
-							I could write a lot here..
+							I could write a&nbsp;lot here..
 							<br />
 							Or you can just head over to my LinkedIn.. 😀
 						</p>
@@ -36,7 +36,7 @@ export default function AboutFilipRoute() {
 					</div>
 
 					<div className="mb-8">
-						<p className="mb-4">..or take a look at my portfolio overview.</p>
+						<p className="mb-4">..or take a&nbsp;look at my portfolio overview.</p>
 						<Link to="/portfolio">
 							<Button size="sm" variant="highlight-secondary">
 								Portfolio
@@ -95,7 +95,7 @@ export default function AboutFilipRoute() {
 									target="_blank"
 									rel="noreferrer"
 								>
-									Kent C Dodds as a teacher
+									Kent C Dodds as a&nbsp;teacher
 								</a>
 							</span>
 							<br />

@@ -2,7 +2,7 @@ import { Button } from "#app/components/ui/button.tsx"
 
 export default function ProjectCustomAppsRoute() {
 	return (
-		<div>
+		<div className="max-md-to-lg:mt-6">
 			<h3 className="mb-8 text-xl font-semibold capitalize md:text-2xl">
 				custom apps
 			</h3>
