@@ -5,7 +5,7 @@
   1. as Filip Čablík's personal portfolio and&nbsp;work overview
   2. creating awareness about the brand's purpose
 
-##### Link: [wochlife.com](https://wochlife.com/)
+##### Link: [wochlife.fly.dev](https://wochlife.fly.dev/)
 ##### #Stack:
 ![Remix](https://img.shields.io/badge/remix-%23000.svg?style=for-the-badge&logo=remix&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) 
